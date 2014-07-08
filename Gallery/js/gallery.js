@@ -182,7 +182,7 @@
         }); // End .get
 
 
-// ----------------------- Initialization complete, image, gallery, and related data loaded -------------------------
+// ----------------------- Initialization complete; image, gallery, and related data loaded -------------------------
 
 // ----------------------- Event handlers -----------------------
         // --- General ---
@@ -307,6 +307,7 @@
                 location = " to the right of ",
                 cardFeature = " the signature box.",
                 ccLen = "16",
+                defaultPrompt = null,
                 prompt,
                 promptPrefix = "Enter your ";
             switch (ccType) {
@@ -324,15 +325,27 @@
                     location = " just above and to the right of ";
                     cardFeature = " your main credit card number.";
                     break;
+                default:
+                    ccLen = "0";
+                    digits = "0";
+                    defaultPrompt = "Select your card type";
             }
             var placeholderPrompt = prompt + " # (no dashes or spaces)",
                 fullPrompt = promptPrefix + placeholderPrompt,
                 helpPrompt = "Your " + card + " card's " + digits + "-digit security number is located on the" + side +
                 " of the card" + location + cardFeature;
 
+            if (defaultPrompt) {
+                fullPrompt = defaultPrompt;
+                placeholderPrompt = defaultPrompt;
+                helpPrompt = null;
+            }
             $("#card_number").attr({"placeholder": placeholderPrompt, "title": fullPrompt, "maxlength": ccLen});
             $("#ccn_label").attr("title", fullPrompt);
-            $("#security_code_help").attr("title", helpPrompt).fadeIn(300);
+            $("#security_code").attr("maxlength", digits);
+            if (helpPrompt) {
+                $("#security_code_help").attr("title", helpPrompt).fadeIn(300);
+            } else {$("#security_code_help").hide(); }
         });  // End card_type change event handler
 // ---------- End event handlers -------------
 
