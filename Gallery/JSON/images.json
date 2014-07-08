@@ -1,0 +1,656 @@
+{   "title": "Digital Serenity",
+    "author": "Catherine",
+    "copyright": "Catherine Pratt",
+    "disclaimer": [
+        { "para": "This is a 'mock' site created for educational purposes.  No orders are placed from this site and no user data is saved."},
+        { "para": "The images on this site are used by permission.  The owner retains control over these images.  Permission is <em>not</em> granted to copy or download these images."}
+    ],
+    "galleries": [
+    { "id": "water_sky",
+        "name": "Water and Sky"},
+    { "id": "leaves",
+      "name": "Leaves"},
+    { "id": "land_light",
+        "name": "Land and Light"}
+    ],
+    "dimensions": [
+        {"width": 20, "height": 15},
+        {"width": 16, "height": 12},
+        {"width": 12, "height": 9},
+        {"width": 8, "height": 6},
+        {"width": 4, "height": 3}
+    ],
+    "pwd": "Pratt_Family",
+    "images": [
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_1",
+        "title":"Light Through Trees 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_2",
+        "title":"Frozen Evergreen Needles",
+        "size_price": [
+            {"size": 1, "price":200},
+            {"size": 3, "price":60},
+            {"size": 4, "price":30}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_3",
+        "title":"Sunset Silhouette 1",
+        "size_price": [
+            {"size": 0, "price": 250},
+            {"size": 1, "price": 210},
+            {"size": 4, "price": 35}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_4",
+        "title":"Sunset Silhouette 1",
+        "size_price": [
+            {"size": 0, "price": 250},
+            {"size": 1, "price": 210},
+            {"size": 4, "price": 35}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_5",
+        "title":"Misty Mountain",
+        "size_price": [
+            {"size": 0, "price": 250},
+            {"size": 1, "price": 210},
+            {"size": 2, "price": 100}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_6",
+        "title":"Sunburst Path",
+        "size_price": [
+            {"size": 0, "price": 250},
+            {"size": 1, "price": 210},
+            {"size": 2, "price": 100}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_7",
+        "title":"Light Through Trees 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_8",
+        "title":"Trail to Light",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_9",
+        "title":"Cedar and Maple",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_10",
+        "title":"Light Through Trees 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_11",
+        "title":"Orange and Blue",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_12",
+        "title":"Winter Reflected 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_13",
+        "title":"Snowy Path",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_14",
+        "title":"Winter Sunset",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_15",
+        "title":"Green Light",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_16",
+        "title":"Winter Relected 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_17",
+        "title":"Ferns and Firs",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_18",
+        "title":"Misty Walk",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_19",
+        "title":"Single Berry",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_20",
+        "title":"Moss Illuminated",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"land_light",
+        "fileName":"land_light_21",
+        "title":"Shafts of Light",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_1",
+        "title":"Backlit Leaf 1",
+        "size_price": [
+            {"size": 0, "price":195},
+            {"size": 2, "price":75},
+            {"size": 3, "price":50}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_2",
+        "title":"Autumn Symphony 1",
+        "size_price": [
+            {"size": 0, "price":235},
+            {"size": 1, "price":185},
+            {"size": 2, "price":105},
+            {"size": 4, "price":40}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_3",
+        "title":"Frosted Leaf 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_4",
+        "title":"Frost on Orange 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_5",
+        "title":"Frost on Brown 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_6",
+        "title":"Frost on Gray 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_7",
+        "title":"Backlit Leaf 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_8",
+        "title":"Frost on Brown 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_9",
+        "title":"Frost on Gray 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_10",
+        "title":"Heavy Frost 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_11",
+        "title":"Frost and Shadow",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_12",
+        "title":"Ice and Green",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_13",
+        "title":"Frontlit Leaf 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_14",
+        "title":"Backlit Leaf 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_15",
+        "title":"Solitary Leaf",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_16",
+        "title":"Frosted Brown",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_17",
+        "title":"Frosted Green",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_18",
+        "title":"Frozen in Time",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_19",
+        "title":"Mottled Green",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_20",
+        "title":"Frost and Shadow",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"leaves",
+        "fileName":"leaf_21",
+        "title":"Frosted Brown 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_1",
+        "title":"Ice Patterns 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_2",
+        "title":"Ice Patterns 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_3",
+        "title":"Ice Patterns 3",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_4",
+        "title":"Icy Sunset 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_5",
+        "title":"Icy Sunset 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_6",
+        "title":"Sunset Reflection 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_7",
+        "title":"Sunset Reflection 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_8",
+        "title":"Sunset Reflection 3",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_9",
+        "title":"Sunburst",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_10",
+        "title":"Flowing Water 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_11",
+        "title":"Green Under Water",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_12",
+        "title":"Misty Lake",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_13",
+        "title":"Raindrops",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_14",
+        "title":"Winter Sunrise",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_15",
+        "title":"Spring Reflection 1",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_16",
+        "title":"Spring Reflection 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_17",
+        "title":"Flowing Water 2",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_18",
+        "title":"Spring Reflection 3",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_19",
+        "title":"Reflected Clouds",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_20",
+        "title":"Enigmatic Reflection",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    },
+    {
+        "gallery":"water_sky",
+        "fileName":"water_sky_21",
+        "title":"Spring Reflection 4",
+        "size_price": [
+            {"size": 0, "price":225},
+            {"size": 2, "price":95},
+            {"size": 3, "price":60}
+        ]
+    }
+]}

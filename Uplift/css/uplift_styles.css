@@ -1,0 +1,303 @@
+@charset "UTF-8";
+article, aside, figure, figcaption, footer, header, nav, section {
+    display: block;
+}
+
+body {
+    background-color: white;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    padding:2px 20px;
+    min-width: 320px;
+}
+
+h1 {
+    font-size: 96px;
+    font-size: 6rem;
+    font-weight: 100;
+    color:#FEFFFF;
+    text-shadow: 6px 6px 18px #000500;
+}
+
+h2 {
+    margin:20px 40px;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+h2:hover {
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: 5px 5px 16px #112;
+}
+
+h3 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 19px;
+    font-size: 1.188rem;
+    margin-left: 10px;
+}
+
+div {
+    display: none;
+    margin-left: 55px;
+    border:1px solid #F0F0F0;
+    border-radius: 3px;
+    padding:20px;
+    max-width: 930px;
+}
+
+
+header {
+    background: url('../images/Shafts.jpg');
+    background-repeat: no-repeat;
+    height: 150px;
+    line-height: 135px;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+footer {
+    max-width: 930px;
+}
+
+p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+    margin-bottom: 18px;
+}
+
+br {
+    margin-bottom: 24px;
+}
+
+a {
+    color:#800000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 2px 2px 24px #000000;
+}
+
+a:active {
+    color: #2211FF;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub { top:1.25rem; }
+
+#floating_main_link {
+    font-size:12px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 14px;
+    padding:3px 8px;
+    background-color: rgba(255, 255, 255, .85);
+    border: 1px solid rgba(55, 55, 55, .85);
+    border-radius:14px;
+    color: rgba(33, 66, 33, .85);
+    opacity: 0.2;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#floating_main_link:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#floating_main_link:active {
+    box-shadow:inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sub_head {
+    font-size: 22px;
+    font-size: 1.375rem;
+    font-weight: 900;
+    margin-left:30px;
+    text-shadow: 2px 2px 8px #003000;
+    color:white;
+    line-height: 96px;
+    line-height: 6rem;
+}
+
+.soft {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 24px #000000;
+}
+
+.center {
+    text-align: center;
+}
+
+.align_left {
+    text-align: left;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.left_pad {
+    padding-right: 80px;    /* counter intuitive, but we're pushing it to the left by adding padding to the right */
+}
+
+.right_pad {
+    padding-left: 80px;     /* same logic as for .left_pad */
+}
+
+.small {
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-style: italic;
+    color:#666666;
+}
+
+.close {
+    background-color: #FbFbFb;
+    color: #B3B3B3;
+    cursor: pointer;
+}
+
+.close:hover {
+    color:#666;
+}
+
+.close:active {
+    color:#FFFFFF;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media queries */
+@media only screen and (max-width: 1047px) {
+    #wide_subhead {
+        display: none;
+    }
+
+    #narrow_subhead {
+        display: inline;
+        margin:0 0 0 10px;
+        font-size: 32px;
+        font-size: 2rem;
+    }
+
+    img, iframe {
+        max-width:100%;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 80px;
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-size: 1.375rem;
+    }
+
+    #narrow_subhead {
+        font-size: 28px;
+        font-size: 1.75rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    h1 {
+        font-size: 64px;
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
+
+}
+
+@media only screen and (max-width: 520px) {
+    body {
+        padding: 0;
+    }
+    h1 {
+        font-size: 48px;
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+
+    .right_pad {
+        padding-left: 40px;
+    }
+
+    .left_pad {
+        padding-right: 40px;
+    }
+
+    #narrow_subhead {
+        font-size: 24px;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    h1 {
+        font-size: 40px;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 15px;
+        font-size:0.938rem;
+    }
+
+    h4 {
+        font-size: 16px;
+        font-size:1rem;
+    }
+
+    p {
+        font-size:14px;
+        font-size:0.875rem;
+    }
+
+    .right_pad {
+        padding-left: 20px;
+    }
+
+    .left_pad {
+        padding-right: 20px;
+    }
+    #narrow_subhead {
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
+}
+

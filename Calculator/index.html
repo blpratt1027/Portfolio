@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <link rel="stylesheet" href="css/HTML5_CSSReset.css">
+    <link rel="stylesheet" href="css/calc.css">
+    <link rel="shortcut icon" href="images/Calculator.ico">
+    <title>Calculator</title>
+</head>
+<body>
+<section>  <!-- Calculator -->
+    <div id="full_wrapper">
+        <div id="calc_wrapper">
+            <!-- First row of buttons -->
+            <input type="text" id="display" maxlength="12" disabled placeholder="0">
+            <div class="button wide dark" id="clear" title="Clear - Keyboard shortcut: 'C' or 'Esc'"> C </div>
+            <div class="button regular dark" id="sign" title="Change sign - Keyboard shortcut: 'S'"> &plusmn; </div>
+            <div class="button regular dark" id="percent" title="Percent - Keyboard shortcut: 'P'"> % </div>
+            <!-- Second row of buttons -->
+            <!-- Old Pi symbol...  Leaving here for now because I'm not sure the new one is better.
+            <div class="button regular dark" id="pi" title="Pi - Keyboard shortcut: 'i'"> &Pi; </div>-->
+
+            <!-- TODO - for enhanced version, use a better Pi symbol...-->
+            <div class="button regular dark" id="pi" title="Pi - Keyboard shortcut: 'i'">
+                <img class="bksp" src="images/pi.png" alt="Pi symbol"> </div>
+            <div class="button regular dark" id="x2"
+                 title="Squared - Keyboard shortcut: 'q'"> X<span class="sup">2</span> </div>
+            <div class="button regular dark" id="sqrt" title="Square root - Keyboard shortcut: 'R'"> &radic;</div>
+            <div class="button regular function" id="op_divide"> &divide; </div>
+            <!-- Third row of buttons -->
+            <div class="button regular" id="7"> 7 </div>
+            <div class="button regular" id="8"> 8 </div>
+            <div class="button regular" id="9"> 9 </div>
+            <div class="button regular function" id="op_multiply"> x </div>
+            <!-- Fourth row of buttons -->
+            <div class="button regular" id="4"> 4 </div>
+            <div class="button regular" id="5"> 5 </div>
+            <div class="button regular" id="6"> 6 </div>
+            <div class="button regular function" id="op_subtract"> &ndash; </div>
+            <!-- Fifth row of buttons -->
+            <div class="button regular" id="1"> 1 </div>
+            <div class="button regular" id="2"> 2 </div>
+            <div class="button regular" id="3"> 3 </div>
+            <div class="button regular function" id="op_add"> + </div>
+            <!-- Sixth row of buttons -->
+            <div class="button regular" id="0"> 0 </div>
+            <div class="button regular" id="."> . </div>
+            <div class="button regular dark" id="back" title="Backspace">
+                <img class="bksp" src="images/backspace.png" alt="Backspace symbol"> </div>
+            <div class="button regular function" id="calculate"> = </div>
+            <!-- Keyboard icon-->
+            <div id="bottom_panel">
+                <img id="keyboard_icon" class="helpIcon" src="images/keyboard_add.png" alt="small image of keyboard"
+                                    title="Keyboard enabled. (Press F1 for help)">
+
+                <img id="help_icon" class="helpIcon" src="images/help.png" alt="help icon - small question mark" title="Help (F1)">
+            </div>
+
+        </div>
+    </div>
+</section>
+<section>   <!-- Help pop-up -->
+    <div id="help_popup" class="hidden" title="Click to close">
+        <h3>Keyboard shortcuts</h3>
+        <ul>
+            <li>
+                <label class="header">Action</label>
+                <span class="header">Command</span>
+            </li>
+            <li>
+                <label>Clear display</label>
+                C
+            </li>
+            <li>
+                <label>Change sign</label>
+                S
+            </li>
+            <li>
+                <label>Percent</label>
+                P
+            </li>
+            <li>
+                <label>Pi</label>
+                I
+            </li>
+            <li>
+                <label>Square</label>
+                Q
+            </li>
+            <li>
+                <label>Square root</label>
+                R
+            </li>
+            <li>
+                <label>Help</label>
+                F1
+            </li>
+        </ul>
+    </div>
+</section>
+<p id="floating_main_link">Return to Bryan's Portfolio</p>
+
+<script src="js/calc.js"></script>
+</body>
+</html>

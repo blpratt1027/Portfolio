@@ -1,0 +1,13 @@
+@charset "UTF-8";
+article, aside, figure, figcaption, footer, header, nav, section {
+    display: block;
+}
+
+body {
+    padding:5px 10px;
+}
+
+.inline_list {
+    display: inline-block;
+    list-style-type: none;
+}

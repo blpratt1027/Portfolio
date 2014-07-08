@@ -1,0 +1,172 @@
+@charset "UTF-8";
+article, aside, figure, figcaption, footer, header, nav, section {
+    display: block;
+}
+
+body {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size:16px;
+    font-size:1rem;
+}
+
+hr {
+    width:80%;
+    margin: 6px auto;
+    text-align: center;
+}
+
+#value_statement {
+    width: 75%;
+    margin: 30px auto;
+    text-align: center;
+    font-style: italic;
+}
+
+#resume_content {
+    max-width: 1024px;
+}
+#keywords {
+    font-size: 11px;
+    font-size: 0.688rem;
+    font-style: italic;
+    line-height: 12px;
+    line-height: 0.75rem;
+    margin-top: 30px;
+    color: #aaaaaa;
+}
+
+#toc, #toc_tab {
+    position: absolute;
+    position: fixed;
+    top: 145px;
+    left: 11px;
+    background-color: antiquewhite;
+    border-top:1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding:3px 5px;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.15);
+}
+
+#toc {
+    width:240px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    line-height: 25px;
+    line-height: 1.5rem;
+}
+
+#toc li {
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+#toc h4 {
+    text-align: center;
+}
+#toc a {
+    text-decoration: none;
+}
+
+#toc a:hover {
+    color: #606070;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#toc a:active {
+    color: #A0A0B0;
+    text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#toc_tab {
+    height:24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+#toc_tab img {
+    width:24px;
+    height:24px;
+    opacity: 0.25;
+}
+
+#toc_tab img:hover {
+    opacity: 1;
+}
+
+#linkedin_logo {
+    width:120px;
+    margin:auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.faux_hidden {
+    font-size:1px;
+    line-height: 0;
+    margin-top: 3px;
+    color:white;
+}
+
+.resume {
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    line-height: 20px;
+    line-height: 1.25rem;
+}
+
+.resume h1 {
+    text-align: left;
+    font-size:28px;
+    font-size:1.75rem;
+    line-height: 40px;
+    line-height: 2.5rem;
+}
+
+.resume h1 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.resume h1 a:hover {
+    text-decoration: underline;
+    color: #606070;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.resume h1 a:active {
+    color: #A0A0B0;
+    text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.resume h2 {
+    font-size: 22px;
+    font-size: 1.375rem;
+    font-style: normal;
+}
+
+.resume h3 {
+    text-align: left;
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin:8px 0;
+}
+
+.resume p {
+    line-height: 24px;
+    line-height: 1.5rem;
+}
+
+.level1 {
+    margin-left:8px;
+    margin-left: 1rem;
+}
+
+.level2 {
+    margin-left:16px;
+    margin-left: 2rem;
+}
+
+

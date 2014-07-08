@@ -1,0 +1,22 @@
+@charset "UTF-8";
+article, aside, figure, figcaption, footer, header, nav, section {
+    display: block;
+}
+
+/* #portfolio_tab ul, li {
+    display: inline-block;
+    list-style-type: none;
+}
+*/
+
+#portfolio_tab a {
+    text-decoration: none;
+}
+
+#portfolio_tab img {
+    width:250px;
+    border:3px solid #cccccc;
+    border-radius: 5px;
+    margin: 6px;
+    box-shadow: 2px 2px 6px #C0C0C0;
+}

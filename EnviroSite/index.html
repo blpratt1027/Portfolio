@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- Note that a CSS file needs to begin with...
+		@charset "UTF-8";
+	-->
+    <!-- Use the HTML5 shiv for production code that may be used on older versions of IE.  
+	    OTHERWISE, remove the next three lines. -->
+    <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+	 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+    <script src="scripts/additional-methods.min.js"></script>
+    <!-- Optional link to jQueryUI.  Check periodically for updated version.  Activate
+	    the jquery-ui stylesheet below when using jQueryUI.
+	 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	 -->
+    <!-- Links for CSS -->
+	 <link rel="stylesheet" href="styles/HTML5_CSSReset.css">
+	 <link rel="stylesheet" href="styles/enviro.css">  <!-- Link to project specific CSS file(s) here
+	 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">  <!-- jQueryUI stylesheet -->
+	 <link rel="shortcut icon" href="images/tree.ico">		<!-- Link to icon here
+	 -->
+    <title>United For Action</title>
+</head>
+<body>
+    <section>
+        <div id="content_wrapper" class="hidden">
+            <h1>United for Action</h1>
+            <div id="premise" class="div_style">
+                <h2 class="center">Our Premise</h2>
+                <h4 class="center">Global climate change is real.
+                    <sub><img src="images/world.png" alt="earth"></sub>
+                    It is primarily the result of human activity.
+                    <sub><img src="images/world.png" alt="earth"></sub>
+                    Denial must end.
+                    <sub><img src="images/world.png" alt="earth"></sub>
+                    Action must be taken.</h4>
+                <div id="premise_content" class="hidden">
+                    <img src="images/C02_temps.PNG"
+                         alt="Chart showing relationship between increase in atmospheric CO2 levels and global temperature"
+                         title = "From 'Climate Change Impacts in the United States: U.S. National Climate Assessment.' U.S. Global Change Research Program, 2014" class="float-right">
+                    <p>Integer facilisis lacinia nunc in dignissim. Ut nibh tellus,
+                    convallis vel euismod in, ullamcorper scelerisque tellus. Integer sit amet pulvinar massa, quis
+                    mollis nunc. Pellentesque auctor eu nulla vel elementum. Morbi egestas felis urna, eu lacinia velit
+                    varius in. Nam suscipit libero eu urna porttitor consequat. Cras mollis feugiat sapien eu blandit.
+                    Aliquam a dui eget lorem pulvinar consequat sit amet nec nisl. Nulla pulvinar tellus at iaculis
+                    hendrerit. Nulla at sapien ullamcorper, dictum urna ac, facilisis dui. Ut et accumsan odio, ut
+                    mollis nisi. Donec imperdiet adipiscing commodo. Sed sed aliquam neque. Nam sit amet scelerisque
+                    lectus. Cras tincidunt semper lorem nec sollicitudin. Phasellus vel facilisis quam, ac eleifend
+                    enim.</p>
+                </div>
+                <p id="expand_premise" class="expand center">Click to expand</p>
+            </div>
+            <div id="evidence_wrapper" class="center">
+                <div id="evidence1" class="div_style actions">
+                    <h3 class="center">Evidence - Local</h3>
+                    <p id="ev1_content" class="hidden">Donec vehicula nisl mattis, dapibus justo at, consectetur lacus.
+                        Curabitur pellentesque pellentesque ullamcorper. Donec nec purus quis turpis euismod feugiat.
+                        Vestibulum accumsan viverra vehicula. Fusce accumsan libero urna, sed dictum nunc sagittis ut.
+                        Aenean id ante vel lorem commodo pulvinar. Nullam non lacus est. Etiam malesuada luctus lectus,
+                        nec cursus arcu molestie quis. Nullam pulvinar ligula quis magna gravida, feugiat euismod metus
+                        sodales. Integer auctor iaculis libero, id auctor lectus sodales a.</p>
+                    <p id="expand_ev1" class="expand center">Click to expand</p>
+                </div>
+                <div id="evidence2" class="div_style actions">
+                    <h3 class="center">Evidence - Regional</h3>
+                    <p id="ev2_content" class="hidden">Sed ante elit, rutrum ut nulla non, tempor commodo mi. Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend sem quis interdum gravida.
+                        Aliquam a aliquam dui. Nunc sed massa cursus, tincidunt enim quis, dignissim sapien. Sed neque
+                        odio, viverra id libero quis, congue faucibus ipsum. Vivamus lobortis felis eget interdum
+                        faucibus.</p>
+                    <p id="expand_ev2" class="expand center">Click to expand</p>
+                </div>
+                <div id="evidence3" class="div_style actions">
+                    <h3 class="center">Evidence - Global</h3>
+                    <p id="ev3_content" class="hidden">Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. Morbi magna neque, vehicula id tellus vitae, malesuada blandit quam.
+                        Nullam fermentum eleifend enim. Sed quis lorem blandit lectus porta consequat ac nec orci. Nunc
+                        at elementum ipsum. Donec vitae eros a ipsum lacinia molestie tempor vel velit. Duis at mi vitae
+                        turpis cursus pretium eu condimentum felis. Phasellus ut eros pretium, fringilla ante eget,
+                        porta elit.</p>
+                    <p id="expand_ev3" class="expand center">Click to expand</p>
+                </div>
+            </div>
+            <!-- New section insert begins here -->
+
+            <div id="consequences_wrapper" class="center">
+                <div id="consequences1" class="div_style actions">
+                    <h3 class="center">Consequences 1</h3>
+                    <p id="con1_content" class="hidden">Donec vehicula nisl mattis, dapibus justo at, consectetur lacus.
+                        Curabitur pellentesque pellentesque ullamcorper. Donec nec purus quis turpis euismod feugiat.
+                        Vestibulum accumsan viverra vehicula. Fusce accumsan libero urna, sed dictum nunc sagittis ut.
+                        Aenean id ante vel lorem commodo pulvinar. Nullam non lacus est. Etiam malesuada luctus lectus,
+                        nec cursus arcu molestie quis. Nullam pulvinar ligula quis magna gravida, feugiat euismod metus
+                        sodales. Integer auctor iaculis libero, id auctor lectus sodales a.</p>
+                    <p id="expand_con1" class="expand center">Click to expand</p>
+                </div>
+                <div id="consequences2" class="div_style actions">
+                    <h3 class="center">Consequences 2</h3>
+                    <p id="con2_content" class="hidden">Sed ante elit, rutrum ut nulla non, tempor commodo mi. Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend sem quis interdum gravida.
+                        Aliquam a aliquam dui. Nunc sed massa cursus, tincidunt enim quis, dignissim sapien. Sed neque
+                        odio, viverra id libero quis, congue faucibus ipsum. Vivamus lobortis felis eget interdum
+                        faucibus.</p>
+                    <p id="expand_con2" class="expand center">Click to expand</p>
+                </div>
+                <div id="consequences3" class="div_style actions">
+                    <h3 class="center">Consequences 3</h3>
+                    <p id="con3_content" class="hidden">Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. Morbi magna neque, vehicula id tellus vitae, malesuada blandit quam.
+                        Nullam fermentum eleifend enim. Sed quis lorem blandit lectus porta consequat ac nec orci. Nunc
+                        at elementum ipsum. Donec vitae eros a ipsum lacinia molestie tempor vel velit. Duis at mi vitae
+                        turpis cursus pretium eu condimentum felis. Phasellus ut eros pretium, fringilla ante eget,
+                        porta elit.</p>
+                    <p id="expand_con3" class="expand center">Click to expand</p>
+                </div>
+            </div>
+
+
+            <!-- New section insert ends here -->
+
+            <div id="actions_wrapper" class="center">
+                <div id="action1" class="div_style actions">
+                    <h3 class="center">Action 1</h3>
+                    <p id="act1_content" class="hidden">Aliquam mauris metus, eleifend et ante quis, sollicitudin
+                        pharetra ligula. Praesent laoreet turpis eget neque elementum lobortis. Donec laoreet, orci ac
+                        suscipit dapibus, enim est molestie augue, id pharetra nisi nisl ac velit. Nam bibendum mi
+                        sapien, nec malesuada ipsum luctus vitae. Donec hendrerit, sem eu dignissim sagittis, mi ligula
+                        dapibus diam, sit amet iaculis orci dui nec tellus. Aenean non purus eget nisl tincidunt
+                        interdum eu eget neque. Mauris sollicitudin odio in odio ullamcorper, a vestibulum nisi
+                        fermentum. Nunc risus velit, volutpat in lacinia ut, sollicitudin nec sapien. Cras consectetur,
+                        leo vel congue venenatis, nibh libero viverra sapien, eu varius arcu leo vel libero.</p>
+                    <p id="expand_act1" class="expand center">Click to expand</p>
+                </div>
+                <div id="action2" class="div_style actions">
+                    <h3 class="center">Action 2</h3>
+                    <p id="act2_content" class="hidden">Duis sodales feugiat blandit. Donec est urna, consectetur non
+                        ultrices sed, pretium eget tortor. Sed tortor purus, consequat non nisi a, tincidunt accumsan
+                        tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                        himenaeos. Donec pellentesque lorem vel nunc vestibulum, vel euismod elit pulvinar. Donec in
+                        purus nibh. Pellentesque aliquam tortor purus, pellentesque pulvinar metus molestie a.
+                        Pellentesque ornare ligula ut nisl consectetur venenatis. Maecenas metus enim, rutrum nec
+                        condimentum ac, lobortis vitae lacus. Duis tempus vulputate orci in tincidunt. Vivamus sodales
+                        auctor velit, vitae cursus lacus molestie vitae. Curabitur lacus nibh, consequat ac placerat at,
+                        suscipit in nisi.</p>
+                    <p id="expand_act2" class="expand center">Click to expand</p>
+                </div>
+                <div id="action3" class="div_style actions">
+                    <h3 class="center">Action 3</h3>
+                    <p id="act3_content" class="hidden">Curabitur suscipit, massa at sagittis tempus, libero ipsum
+                        egestas justo, in elementum mauris tellus sit amet orci. Vivamus sem enim, sollicitudin quis
+                        semper non, scelerisque in turpis. Praesent consequat varius cursus. Aliquam ut ornare leo, a
+                        placerat tellus. Vestibulum scelerisque, nunc eu imperdiet accumsan, arcu eros porttitor nisl,
+                        sed gravida quam lectus a elit. Morbi commodo purus libero, sodales cursus massa faucibus ut.
+                        Nunc non dignissim quam. Nullam vitae massa sed lectus pellentesque suscipit. Proin hendrerit,
+                        velit sit amet lobortis tempus, nulla nisi condimentum lorem, at sagittis augue metus eu
+                        diam.</p>
+                    <p id="expand_act3" class="expand center">Click to expand</p>
+                </div>
+            </div>
+            <section> <!-- Petition form -->
+                <div id="petition" class="div_style hidden"> <!-- TODO - Make this hidden (add "hidden" class) -->
+                    <h2 class="center">Petition to President Obama and all members of Congress</h2>
+                    <div id="petition_content">
+                        <div class="inline_block two_col">
+                            <h4>Introduction to the petition:</h4>
+                            <p>It is time for the voice of the people to be heard in Washington D.C. more loudly than
+                            the voices of those who profit from destroying our planet.</p>
+
+                            <div id="petition_form">
+                                <h4>Complete the form and click 'Submit'</h4>
+                                <form action="thanks.html" method="post" name="petition_signup" id="petition_signup">
+                                    <input type="text" id="first_name" class="medium" placeholder="First name (required)">
+                                    <input type="text" id="last_name"  class="medium" placeholder="Last name (required)">
+                                    <input type="text" id="address" class="wide" placeholder="Address (optional)">
+                                    <input type="text" id="city" class="medium" placeholder="City (optional)">
+                                    <label for="state">State (optional)</label>
+                                    <select id="state" title="State (optional)">
+                                        <option value="Alabama">AL</option>
+                                        <option value="Alaska">AK</option>
+                                        <option value="Arizona">AZ</option>
+                                        <option value="Arkansas">AR</option>
+                                        <option value="California">CA</option>
+                                        <option value="Colorado">CO</option>
+                                        <option value="Connecticut">CT</option>
+                                        <option value="Delaware">DE</option>
+                                        <option value="District of Columbia">DC</option>
+                                        <option value="Florida">FL</option>
+                                        <option value="Georgia">GA</option>
+                                        <option value="Hawaii">HI</option>
+                                        <option value="Idaho">ID</option>
+                                        <option value="Illinois">IL</option>
+                                        <option value="Indiana">IN</option>
+                                        <option value="Iowa">IA</option>
+                                        <option value="Kansas">KS</option>
+                                        <option value="Kentucky">KY</option>
+                                        <option value="Louisiana">LA</option>
+                                        <option value="Maine">ME</option>
+                                        <option value="Maryland">MD</option>
+                                        <option value="Massachusetts">MA</option>
+                                        <option value="Michigan">MI</option>
+                                        <option value="Minnesota">MN</option>
+                                        <option value="Mississippi">MS</option>
+                                        <option value="Missouri">MO</option>
+                                        <option value="Montana">MT</option>
+                                        <option value="Nebraska">NE</option>
+                                        <option value="Nevada">NV</option>
+                                        <option value="New Hampshire">NH</option>
+                                        <option value="New Jersey">NJ</option>
+                                        <option value="New Mexico">NM</option>
+                                        <option value="New York">NY</option>
+                                        <option value="North Carolina">NC</option>
+                                        <option value="North Dakota">ND</option>
+                                        <option value="Ohio">OH</option>
+                                        <option value="Oklahoma">OK</option>
+                                        <option value="Oregon">OR</option>
+                                        <option value="Pennsylvania">PA</option>
+                                        <option value="Rhode Island">RI</option>
+                                        <option value="South Carolina">SC</option>
+                                        <option value="South Dakota">SD</option>
+                                        <option value="Tennessee">TN</option>
+                                        <option value="Texas">TX</option>
+                                        <option value="Utah">UT</option>
+                                        <option value="Vermont">VT</option>
+                                        <option value="Virginia">VA</option>
+                                        <option value="Washington">WA</option>
+                                        <option value="West Virginia">WV</option>
+                                        <option value="Wisconsin">WI</option>
+                                        <option value="Wyoming">WY</option>
+                                    </select><br>
+                                    <input type="number" id="zip" class="narrow" placeholder="Zip (required)"><br>
+                                    <input type="email" id="email" name="email" class="medium" placeholder="Email address (required)"><br>
+                                    <input type="email" id="confirm_email" name="confirm_email" class="medium" placeholder="Confirm email address"><br>
+                                    <input type="checkbox" id="sign_up"><label for="sign_up">Check to receive periodic updates</label>
+                                    <br><input id="submit" type="submit" value="Submit"><input type="button" id="cancel_petition" value="Cancel">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="inline_block div_style two_col">
+                            <h4>Text of the petition</h4>
+                            <p>Cras ullamcorper mollis fermentum. Donec faucibus dictum faucibus. Maecenas enim nisi, adipiscing
+                                sit amet purus et, pharetra faucibus est. Duis iaculis ipsum vitae venenatis congue. </p>
+                            <p>Proin porta odio ultricies dui aliquet, sed sodales justo porttitor. Duis id luctus tortor. Cras
+                                euismod id tortor sit amet fringilla. Donec et dui venenatis, euismod elit tincidunt, fringilla
+                                mauris. Aenean adipiscing metus et quam placerat, at lobortis felis consequat. </p>
+                        </div>
+                        <div class="validation_div">
+                            <p id="validator" class="invisible">Required data is missing... </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </section>
+    <section> <!-- Flyout menu for links -->
+        <div id="flyout" class="div_style flyout">
+            <div id="banner">
+                <h4 class="inline_block">Links</h4>
+                <img class="float-right menu-icon" src="images/menu-alt.png" alt="Menu icon">
+            </div>
+            <ul class="links-list">
+                <li><a href="needed.txt" target="_blank">Items needed for site</a></li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+                <li>Link 5</li>
+                <li>Link 6</li>
+                <li>Link 7</li>
+                <li>Link 8</li>
+            </ul>
+        </div>
+    </section>
+    <section> <!-- Flyout menu for social -->
+        <div id="social" class="div_style flyout">
+            <div id="social_banner">
+                <h4 class="inline_block">Social</h4>
+                <img class="float-right menu-icon" src="images/social.png" alt="Menu icon">
+            </div>
+            <ul class="links-list">
+                <li id="sign_petition" class="link">Sign our petition</li>
+                <li>Email a link to this page</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+                <li>Link 5</li>
+                <li>Link 6</li>
+                <li>Link 7</li>
+                <li>Link 8</li>
+            </ul>
+
+        </div>
+    </section>
+    <p id="floating_main_link">Return to Bryan's Portfolio</p>
+    <script src="scripts/enviro.js"></script>
+</body>
+</html>

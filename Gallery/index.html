@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1">
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- TODO - local copy of jQuery for when I am off-line.  Remove before deploying -->
+    <!--<script src="js/jquery-1.9.1.min.js"></script>-->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.storageapi.min.js"></script>
+
+    <!-- owl-carousel assets links -->
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <script src="owl-carousel/owl.carousel.min.js"></script>
+    <!-- end owl-carousel links -->
+
+    <script src="js/gallery.js"></script>
+    <script src="js/validator.js"></script>
+
+	 <link rel="stylesheet" href="css/HTML5_CSSReset.css">
+	 <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/checkout.css">
+	 <link rel="shortcut icon" href="images/assets/Gallery_Alt.png">
+    <title class="gallery_title">Gallery</title>
+</head>
+<body>
+<section> <!-- Main page -->
+    <!-- The 'screen' div is used for the overlay when the light box is displayed. -->
+    <div id="screen">
+    </div>
+    <div id="content_wrapper" >
+        <div id="user_control_panel" class="float-right text-right">
+            <p class="cart-banner">There <span id="cart_count"></span> in your cart.
+                <img id="cart_icon" class="cart-img" alt="Shopping cart icon"
+                     src="images/assets/shopping_cart_empty.png"></p>
+        </div>
+        <h1 class="gallery_title"></h1>
+        <h2>A Gallery of <span id="author"></span>'s photography...</h2>
+        <div class="gallery-frame">
+            <h3 id="gallery_1_name" class="gallery_caption"></h3>
+            <div id="gallery_1" class="owl-carousel">
+
+            </div>
+        </div>
+        <div class="gallery-frame">
+            <h3 id="gallery_2_name" class="gallery_caption"></h3>
+            <div id="gallery_2" class="owl-carousel">
+            </div>
+        </div>
+        <div class="gallery-frame">
+            <h3 id="gallery_3_name" class="gallery_caption"></h3>
+            <div id="gallery_3" class="owl-carousel">
+
+            </div>
+        </div>
+        <p id="floating_main_link">Return to Bryan's Portfolio</p>
+    </div>
+</section> <!-- End main page -->
+<section> <!-- 'Lightbox' - larger version of image with order placement options -->
+    <div id="light_box" class="draggable hidden pop-up">
+        <div id="lbox_close"></div>
+        <div class="inner-border">
+            <!-- The following elements are positioned by CSS & JS -->
+            <p id="watermark">&copy; <span class="gallery_title"></span><br> <span class="cr-small"> All rights reserved.</span></p>
+            <p id="left_arrow" class="arrow">&lsaquo;</p>
+            <p id="right_arrow" class="arrow">&rsaquo;</p>
+
+            <h2 id="lightbox_title">&nbsp;</h2>
+
+            <div id="image_info" class="inner-border in-line-float">
+                <p class="text-center negative-indent">Sizes / Prices:
+                    <span class="help-icon" title='You may select any or all of the listed items, then click "Add to Cart" to add them to your order. &#10;You may change quantities in the shopping cart.'>?</span> </p>
+                <hr>
+                <div id="price_list" action="#">
+                </div>
+                <hr>
+                <div id="cart_button" class="text-center">
+                    <!--<p id="add_to_cart_button" class="button-style disabled">Add to Cart</p>-->
+                </div>
+            </div>
+            <div id="full_image_wrapper" class="inner-border in-line-float">
+
+            </div>
+        </div>
+    </div>
+</section> <!-- End 'lightbox' -->
+<section> <!-- Popup used to confirm an item has been added to the cart -->
+    <div id="added_to_cart_popup" class="draggable hidden pop-up">
+        <div id="added_to_cart_content">
+
+        </div>
+        <div id="added_to_cart_buttons" class="text-center">
+        </div>
+    </div>
+</section> <!-- End cart confirmation popup -->
+<section> <!-- Shopping cart -->
+    <div id="cart" class="draggable pop-up cart-div thick-border auto-height hidden">
+        <div id="cart_content" class="cart-inner-div">
+        </div>
+    </div>
+</section> <!-- End shopping cart -->
+<section> <!-- Delete confirmation popup -->
+    <div id="confirm_delete" class="draggable pop-up thick-border auto-height hidden">
+
+    </div>
+</section> <!-- End delete confirmation popup -->
+<section>   <!-- Disclaimer - this is a mock site -->
+    <div id="disclaimer" class="draggable pop-up auto-height thick-border hidden">
+        <h2>Disclaimer</h2>
+        <div id="disclaimer_statements"></div>
+        <p id="disclaimer_copyright_notice" class="size-detail">Images &copy; <span class="copyright_holder"></span></p>
+    </div>
+</section>  <!-- End disclaimer-->
+<section>   <!-- Checkout -->
+    <div id="checkout_page" class=" draggable checkout-wrapper thick-border pop-up hidden">
+    <div id="co_close"></div>
+    <h2 class="slim-h in-line">Checkout</h2>
+    <p class="float-right detail in-line">This is a mock site.  No order will be placed.</p>
+
+    <div id="checkout_wrapper" class="inner-border plain-page">
+        <h3 id="checkout_disclaimer" class="hidden">Reminder: This site is not live.  No order will be placed, and no data will be saved.</h3>
+        <fieldset class="co-fieldset" id="billing_info">
+            <legend id="billing_info_caption"> Billing Information </legend>
+
+            <p><span class="in-line text-right float-right detail thin-detail">* indicates a required field.</span></p>
+            <table class="checkout-table">
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="b_first_name" ><sup>*</sup> First name: </label>
+                    </td>
+
+                    <td class="right-col">
+                        <input class="co-input" id="b_first_name" name="b_first_name" maxlength="25">
+                        <span id="b_first_name_error" class="error hidden"></span>
+                        <label class="co-label" for="b_MI">MI: </label><input id="b_MI" maxlength="1" class="tiny-input co-input">
+                        <label class="co-label" for="b_last_name"><sup>*</sup> Last name: </label>
+                            <input class="co-input" id="b_last_name" name="b_last_name" maxlength="25">
+                            <span id="b_last_name_error" class="error hidden"></span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="b_address1" ><sup>*</sup> Address line 1: </label>
+                    </td>
+                    <td class="right-col">
+                        <input class="long-input co-input" id="b_address1" name="b_address1" maxlength="50">
+                        <span id="b_address1_error" class="error hidden"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="b_address2" >Address line 2: </label>
+                    </td>
+                    <td class="right-col">
+                        <input class="long-input co-input" id="b_address2" name="b_address2" maxlength="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="b_city" ><sup>*</sup> City</label>
+                    </td>
+                    <td class="right-col">
+                        <input class="co-input" id="b_city" name="b_city" maxlength="25">
+                        <span id="b_city_error" class="error hidden"></span>
+                        <p class="co-label in-line" ><sup>*</sup> State: </p>
+                        <div id="b_state_list" class="in-line"></div><span id="b_state_error" class="error"></span>
+
+                        <label class="co-label" for="b_zip"><sup>*</sup> Zip: </label>
+                            <input class="short-input co-input" id="b_zip" name="b_zip" maxlength="10">
+                        <span id="b_zip_error" class="error hidden"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="b_email" ><sup>*</sup> Email address</label>
+                    </td>
+                    <td class="right-col">
+                        <input class="co-input" id="b_email" name="b_email" type="email" maxlength="254">
+                        <span id="b_email_error" class="error hidden"></span>
+                        <label class="co-label" for="b_confirm_email"><sup>*</sup> Confirm Email address</label>
+                        <input class="co-input" id="b_confirm_email" name="b_confirm_email" type="email" maxlength="254">
+                        <span id="b_confirm_email_error" class="error hidden"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="b_phone" title="Optional.  May be used in the event of a shipping problem.">Telephone: </label>
+                    </td>
+                    <td class="right-col">
+                        <input class="co-input" id="b_phone" name="b_phone" type="tel" maxlength="14" placeholder="(Optional)"
+                               title="Optional.  May be used in the event of a shipping problem.">
+                        <span id="b_phone_error" class="error hidden"></span>
+                    </td>
+                </tr>
+            </table>
+            <input class="co-input hidden" type="checkbox" id="edit_shipping" ><span id="es_label" class="detail hidden" title="This is a 'mock' site.  Images are not actually for sale."> Edit shipping information</span>
+        </fieldset>
+        <fieldset class="co-fieldset" id="shipping_info">
+            <legend> Shipping Information </legend>
+            <input class="co-input" type="checkbox" id="use_billing" ><span class="detail"> Use billing information</span><br> <!-- TODO - make this a label -->
+
+            <table class="checkout-table">
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="s_first_name" >First name: </label>
+                    </td>
+
+                    <td class="right-col">
+                        <input class="co-input" id="s_first_name" maxlength="25">
+                        <label class="co-label" for="s_MI">MI: </label><input id="s_MI" maxlength="1" class="tiny-input co-input">
+                        <label class="co-label" for="s_last_name">Last name: </label><input class="co-input" id="s_last_name" maxlength="25">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="s_address1" >Address line 1: </label>
+                    </td>
+                    <td class="right-col">
+                        <input class="long-input co-input" id="s_address1" maxlength="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="s_address2" >Address line 2: </label>
+                    </td>
+                    <td class="right-col">
+                        <input class="long-input co-input" id="s_address2" maxlength="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="s_city" >City</label>
+                    </td>
+                    <td class="right-col">
+                        <input class="co-input" id="s_city" maxlength="25">
+                        <p class="co-label in-line">State: </p>
+                        <div id="s_state_list" class="in-line"></div>
+                        <label class="co-label" for="s_zip">Zip: </label>
+                            <input class="short-input co-input" id="s_zip" maxlength="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="s_email" >Email address</label>
+                    </td>
+                    <td class="right-col">
+                        <input class="co-input" id="s_email" type="email" maxlength="254">
+                        <label class="co-label" for="s_confirm_email">Confirm Email address</label>
+                        <input class="co-input" id="s_confirm_email" type="email" maxlength="254">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label" for="s_phone" title="Optional.  May be used in the event of a shipping problem.">Telephone: </label>
+                    </td>
+                    <td class="right-col">
+                        <input class="co-input" id="s_phone" type="tel" maxlength="14" placeholder="(Optional)"
+                               title="Optional.  May be used in the event of a shipping problem.">
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+        <fieldset class="co-fieldset" id="payment_info">
+            <legend> Payment </legend>
+
+            <table class="checkout-table">
+                <tr>
+                    <td class="left-label">
+                        <div id="card_images" class="inline thin-detail">
+                            <img src="images/assets/payment_method_card_visa.png" alt="Visa" title="Visa" class="cc-image">
+                            <img src="images/assets/payment_method_card_mastercard.png" alt="Mastercard" title="Mastercard" class="cc-image">
+                            <img src="images/assets/payment_method_amex.gif" alt="American Express" title="American Express" class="cc-image">
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label left-label" for="card_type">* Card type: </label>
+                    </td>
+                    <td class="right-col">
+                        <select id="card_type" name="card_type">
+                            <option value="">...</option>
+                            <option value="visa">Visa</option>
+                            <option value="mc">Mastercard</option>
+                            <option value="amx">American Express</option>
+                        </select>
+                        <span id="card_type_error" class="error hidden"></span>
+                        <label class="co-label" id="ccn_label" for="card_number">* Credit Card #:</label>
+                        <input class="medium-input co-input" id="card_number" name="card_number" placeholder="Select your card type" maxlength="0">
+                        <span id="card_number_error" class="error hidden"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-label">
+                        <label class="co-label left-label" id="security_code_label" for="security_code" title="Security code">* CSC:
+                            <span id="security_code_help" class="help-icon small-help hidden">?</span></label>
+                    </td>
+                    <td class="right-col">
+                        <input class="very-short-input co-input" id="security_code" name="security_code" maxlength="4">
+                        <span id="security_code_error" class="error hidden"></span>
+                        <label class="co-label">* Expiration date: </label>
+                        <div id="exp_month" class="in-line"></div>
+                        <div id="exp_year" class="in-line"></div>
+                        <span id="exp_yr_error" class="error hidden"></span>
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+
+        <fieldset class="co-fieldset" id="summary_info">
+            <legend> Summary </legend>
+            <table class="summary-table">
+                <tr>
+                    <td>Total of Items</td>
+                    <td id="item_total"></td>
+                </tr>
+                <tr>
+                    <td>Shipping and Handling</td>
+                    <td id="s_h"></td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td id="tx"></td>
+                </tr>
+                <tr >
+                    <td class="grand-total">Total</td>
+                    <td id="grand_total" class="grand-total"></td>
+                </tr>
+            </table>
+            <div class="text-center">
+                <hr>
+                <div id="co_buttons"></div>
+            </div>
+        </fieldset>
+        </div>
+    </div>
+
+</section>  <!-- End checkout page -->
+<section>   <!-- Order confirmation page -->
+    <div id="order_confirmation" class="pop-up thick-border auto-height hidden">
+        <div id="oc_close"></div>
+        <!--<img id="close_confirmation_icon" class="close-icon" src="images/assets/Close.png" alt="Close icon" title="Close">-->
+        <h2 class="slim-h in-line">Order Confirmation</h2>
+        <p class="float-right detail in-line">This is a mock site.  No order will be placed.</p>
+        <div class="inner-border plain-page">
+            <fieldset id="conf_page_billing_shipping_info" class="co-fieldset">
+                <legend>Billing and Shipping information</legend>
+                <table>
+                    <tr>
+                        <td class="conf-label">Bill to:</td>
+                        <td id="conf_page_billto_summary" class="conf-data text-left"></td>
+                        <td class="conf-label">Ship to:</td>
+                        <td id="conf_page_shipto_summary" class="conf-data text-left"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset id="conf_page_order_summary" class="co-fieldset">
+                <legend>Order summary</legend>
+                <div id="confirmation_info" >
+
+                </div>
+                <hr>
+                <div id="confirmation_totals">
+                    <table>
+                        <tr>
+                            <td class="summary-title" >Total of items:</td>
+                            <td class="cart-column-extprice" ><span id="conf_items_total"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="summary-title">Shipping & handling:</td>
+                            <td><span id="conf_s_h"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="summary-title">Tax:</td>
+                            <td><span id="conf_tax"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="summary-title">Total:</td>
+                            <td><span id="conf_grand_total"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+            <fieldset id="conf_page_payment_summary" class="co-fieldset">
+                <legend>Payment information</legend>
+                <table>
+                    <tr>
+                        <td id="conf_page_payment_info"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <div id="oc_buttons" class="text-center">
+            </div>
+        </div>
+    </div>
+
+</section>  <!-- End order confirmation page-->
+<section>
+    <!-- Generic popup -->
+    <div id="msg_box" class="draggable pop-up thick-border auto-height hidden">
+
+    </div>
+</section>    <!-- End generic popup -->
+<section>
+    <div id="pwd_popup" class="draggable hidden pop-up thick-border auto-height">
+    </div>
+</section>
+</body>
+</html>

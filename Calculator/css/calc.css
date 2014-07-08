@@ -1,0 +1,438 @@
+@charset "UTF-8";
+article, aside, figure, figcaption, footer, header, nav, section {
+    display: block;
+}
+
+/* This is the default css.  Styles for different sized monitors appear below in the media queries section.
+    The default css will be changed to adapt to the specific screen size. */
+body {
+    /* Cool code for keeping image full screen and resizing found on CSS Hint */
+    background: url(../images/wood.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-size: 32px;    /* Fallback for browsers that don't support rem */
+    font-size: 2rem;
+    line-height: 90px;
+}
+
+label {
+    float: left;
+    width:7rem;
+    padding-left: 5px;
+    padding-right: 25px;
+}
+
+
+.header {
+    padding: 0;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 5px 0;
+}
+
+h3 {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#full_wrapper {
+    width:435px;
+    margin:10px auto;
+    position: relative;
+    border-radius:10px;
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.33);
+    cursor: move;
+}
+
+#calc_wrapper {
+    position: relative;
+    width: 89%;
+    margin: auto;
+    background-color: lightsteelblue;
+    border:5px solid #2b2b2b;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 2px #738591;
+    padding:20px;
+}
+
+#display {
+    position: relative;
+    width:96.5%;
+    height: 45px;
+    font-size: 48px;    /* Fallback for browsers that don't support rem*/
+    font-size: 3rem;
+    font-weight: 100;
+    padding: 5px;
+    text-align: right;
+    border: 1px solid #747f99;
+    box-shadow: inset 1px 1px 1px #aaa;
+    margin-bottom: 20px;
+    background-color: #000000;
+    color: lime;
+}
+
+#bottom_panel {
+    height:8px;
+    text-align: center;
+    position: relative;
+}
+
+#help_popup {
+    margin: 60px auto;
+    border: 3px solid #2b2b2b;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    left:40%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding:20px;
+    font-family: "Garamond", "Times New Roman", serif;
+    font-size:1rem;
+    line-height: 1rem;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.33);
+    cursor: pointer;
+}
+
+#help_popup ul li label {
+    cursor: pointer;
+}
+
+#floating_main_link {
+    font-size:12px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 14px;
+    padding:3px 8px;
+    background-color: rgba(255, 255, 255, .85);
+    border: 1px solid rgba(55, 55, 55, .85);
+    border-radius:14px;
+    color: rgba(33, 66, 33, .85);
+    opacity: 0.2;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#floating_main_link:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#floating_main_link:active {
+    box-shadow:inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+.helpIcon {
+    width:24px;
+    float: left;
+    padding-left: 10px;
+    opacity: 0.33;
+}
+
+#help_icon {
+    float: right;
+}
+
+.helpIcon:hover {
+    cursor: help;
+    opacity: 1;
+}
+
+.sup {
+    vertical-align: baseline;
+    position: relative;
+    top: -1rem;
+}
+
+.button {
+    position: relative;
+    border:1px solid black;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    display: inline-block;
+    background-color: #cccccc;
+    cursor: pointer;
+    margin-right: -9px;
+    margin-top: -3px;
+}
+
+.button:hover {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.button:active {
+    border-right: 2px solid #000000;
+}
+
+.regular {
+    width:24.6%;
+}
+
+.regular:active {
+    box-shadow: inset 2px 2px 2px #a9a9a9;
+    width: 94px;
+
+}
+
+.wide {
+    width:49.45%;
+}
+
+.wide:active {
+    width:190px;
+}
+
+.dark {
+    background-color: #aaaaaa;
+}
+
+.dark:active {
+    box-shadow: inset 2px 2px 2px #848484;
+}
+
+.function {
+    background-color: #87adb7;
+    color:white;
+}
+
+.function:active {
+    box-shadow: inset 2px 2px 2px #258d8f;
+}
+
+.bksp {
+    position: relative;
+    top:6px;
+    left:-3px;
+    opacity: 0.67;
+}
+
+/*  --------- Media queries ---------   */
+/*439px -- width of the full sized calculator
+ *456px with scroll bar*/
+@media only screen and (max-width:439px) {
+    body {
+        background-image: none;
+    }
+
+
+    #full_wrapper {
+        width:100%;
+        left:0;
+        top:0;
+        margin: 0;
+        height: 460px;
+        box-shadow: none;
+    }
+
+    #calc_wrapper {
+        padding: 0;
+        margin: 0;
+        width:100%;
+    }
+
+    #bottom_panel {
+        display: none;
+    }
+
+    #display {
+        width: 96.3%;
+        height: 40px;
+        font-size: 42px;
+    }
+
+    body {
+        line-height: 82px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #full_wrapper {
+        width: 100%;
+        left:0;
+        top:0;
+        margin: 0;
+    }
+    body {
+        line-height: 83px;
+    }
+
+    #display {
+        width: 96%;
+        font-size: 36px;
+        height: 38px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #full_wrapper {
+        width: 100%;
+        left:0;
+        top:0;
+        margin: 0;
+    }
+    body {
+        line-height: 74px;
+        font-size:24px;
+    }
+
+    #display {
+        width: 94.8%;
+        font-size: 30px;
+        height: 32px;
+    }
+
+    .wide {
+        width:48.8%;
+    }
+}
+
+@media only screen
+and (max-width : 320px) {
+    #full_wrapper {
+        width: 100%;
+        left:0;
+        top:0;
+        margin: 0;
+    }
+    body {
+        background-image: none;
+        line-height: 63px;
+        font-size:22px;
+    }
+
+    #display {
+        width: 96%;
+        font-size: 28px;
+        height: 30px;
+    }
+
+    .wide {
+        width:48.6%;
+    }
+
+    .button {
+        margin-top: -6px;
+    }
+}
+
+@media only screen
+and (max-width : 300px) {
+    body {
+        line-height: 60px;
+        font: 20px;
+    }
+
+    #display {
+        width:96%;
+        font-size: 24px;
+        height: 26px;
+    }
+}
+
+@media only screen
+and (max-height: 690px) {
+    body {
+        line-height:80px;
+        font-size:24px;
+    }
+}
+
+@media only screen
+and (max-height: 645px) {
+    body {
+        line-height:75px;
+        font-size:23px;
+    }
+}
+
+@media only screen
+and (max-height: 540px) {
+    body {
+        line-height:70px;
+        font-size:22px;
+    }
+
+    .helpIcon {
+        display: none;
+    }
+}
+
+@media only screen
+and (max-height: 490px) {
+    body {
+        line-height:65px;
+        font-size:20px;
+    }
+}
+
+@media only screen
+and (max-height: 440px) {
+    body {
+        line-height:60px;
+        font-size:18px;
+    }
+
+    .bksp {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media only screen
+and (max-height: 390px) {
+    body {
+        line-height:55px;
+        font-size:16px;
+    }
+
+    #full_wrapper {
+        margin-top:0;
+        margin-bottom: 0;
+    }
+
+    #calc_wrapper {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top:0;
+        padding-bottom: 0;
+    }
+}
+
+@media only screen
+and (max-height: 340px) {
+    body {
+        line-height:50px;
+        font-size:14px;
+    }
+    .bksp {
+        height:20px;
+        width:20px;
+    }
+}
+
+@media only screen
+and (max-height: 320px) {
+    body {
+        line-height:35px;
+        font-size:13px;
+    }
+
+    #display {
+        height: 25px;
+        font-size: 1.5rem;
+    }
+}
+

@@ -1,0 +1,238 @@
+@charset "UTF-8";
+article, aside, figure, figcaption, footer, header, nav, section {
+    display: block;
+}
+
+body {
+    background: #223822 url("../images/Brewster.jpg") no-repeat;
+    font-family: Garamond, 'Times New Roman', serif;
+    font-size:1.125rem;
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: rgb(16, 56, 24);
+}
+
+h2 {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+h4 {
+    font-size: 1.33rem;
+    margin: 2px 0 8px 0;
+}
+
+h4 img {
+    width: 24px;
+}
+
+p {
+    text-align: left;
+}
+
+li {
+    padding-left: 30px;
+    line-height: 1.5rem;
+}
+
+input.wide {
+    width:410px;
+}
+
+input.medium {
+    width:200px;
+}
+
+input.narrow {
+    width:7rem;
+}
+
+input.error {
+    border-color: red;
+}
+
+/* Prevent superscripts and subscripts from affecting line-height */
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub { top: 0.3em; }
+
+#content_wrapper {
+    width: 80%;
+    margin: 40px auto;
+    min-width: 1000px;
+    background-color: rgba(220, 240, 220, 0.25);
+    border: 1px solid white;
+    /*border-radius: 10px;*/
+    box-shadow: 8px 8px 6px 3px rgba(0, 0, 0, 0.33);
+    padding: 8px 20px 16px 20px;
+    position: relative;
+}
+
+#flyout {
+    width: 235px;
+    height: 24px;
+    position: absolute;
+    top:40px;
+    left: -210px;
+    /*padding-left:10px;*/
+}
+
+#flyout:hover {
+    z-index: 1;
+}
+
+#flyout h4 {
+    padding-left: 20px;
+}
+
+#social {
+    width: 235px;
+    height: 24px;
+    position: absolute;
+    top:76px;
+    left: -210px;
+}
+
+#premise {
+    position: relative;
+    width:95%;
+    min-width: 940px;
+    margin: 8px auto;
+}
+
+#premise_content {
+    height:440px;
+    position: relative;
+}
+
+#petition_form {
+    margin-top: 20px;
+    border-top:1px solid #CCCCCC;
+    padding-top:10px;
+}
+
+#floating_main_link {
+    font-size:12px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 14px;
+    padding:3px 8px;
+    background-color: rgba(255, 255, 255, .85);
+    border: 1px solid rgba(55, 55, 55, .85);
+    border-radius:14px;
+    color: rgba(33, 66, 33, .85);
+    opacity: 0.2;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#floating_main_link:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#floating_main_link:active {
+    box-shadow:inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.actions {
+    display: inline-block;
+    margin: 4px 4px;
+    width:30%;
+    min-width: 10px;
+    padding: 3px 5px;
+}
+
+.div_style {
+    background-color: white;
+    border:1px solid #223822;
+    /*border-radius: 6px;*/
+    padding: 3px 8px 6px 8px;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.33);
+}
+
+.flyout {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.validation_div {
+    position: relative;
+    height:80px;
+}
+
+.center {
+    text-align: center;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+.two_col {
+    width:46%;
+    margin: 10px;
+}
+
+.float-right {
+    float: right;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.expand {
+    cursor: pointer;
+    margin:10px;
+    font-size:1rem;
+    font-style: italic;
+    color:#666F66;
+}
+
+.expand:hover {
+    color: brown;
+    text-shadow: 2px 2px 1px #CCC;
+}
+
+.expand:active {
+    color: darkgreen;
+    text-shadow: inset 2px 2px 1px #CCC;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.link:hover {
+    color: brown;
+    text-shadow: 2px 2px 1px #CCC;
+}
+
+.link:active {color: darkgreen;
+    text-shadow: inset 2px 2px 1px #CCC;
+}
