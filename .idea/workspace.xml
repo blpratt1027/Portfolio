@@ -44,7 +44,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.7915759">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.8109966">
+        <splitter split-orientation="vertical" split-proportion="0.2600229">
           <split-first>
             <leaf>
               <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
@@ -90,7 +90,7 @@
               <file leaf-file-name="index_on_hold.html" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/index_on_hold.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.4722222" vertical-offset="1751" max-vertical-offset="3604">
+                    <state vertical-scroll-proportion="2.206107" vertical-offset="1751" max-vertical-offset="3604">
                       <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
                       <folding />
                     </state>
@@ -124,7 +124,7 @@
               <file leaf-file-name="us_quiz.json" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Quiz/json/us_quiz.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="3.3516483" vertical-offset="1242" max-vertical-offset="1717">
+                    <state vertical-scroll-proportion="0.7027972" vertical-offset="1145" max-vertical-offset="1717">
                       <caret line="91" column="71" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
                       <folding />
                     </state>
@@ -704,11 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/gallery.PNG">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/gallery.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1171,7 +1166,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index_on_hold.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4722222" vertical-offset="1751" max-vertical-offset="3604">
+        <state vertical-scroll-proportion="2.206107" vertical-offset="1751" max-vertical-offset="3604">
           <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
           <folding />
         </state>
