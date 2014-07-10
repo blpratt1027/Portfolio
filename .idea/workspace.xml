@@ -22,11 +22,11 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="quiz_script.js" pinned="false" current="true" current-in-tab="true">
+            <file leaf-file-name="quiz_script.js" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Quiz/js/quiz_script.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.03723987" vertical-offset="0" max-vertical-offset="3910">
-                    <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+                  <state vertical-scroll-proportion="0.2757062" vertical-offset="62" max-vertical-offset="3910">
+                    <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
                     <folding />
                   </state>
                 </provider>
@@ -87,11 +87,11 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="index_on_hold.html" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="index_on_hold.html" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/index_on_hold.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.8333333" vertical-offset="2669" max-vertical-offset="3604">
-                      <caret line="187" column="80" selection-start-line="187" selection-start-column="80" selection-end-line="187" selection-end-column="80" />
+                    <state vertical-scroll-proportion="0.4722222" vertical-offset="1751" max-vertical-offset="3604">
+                      <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
                       <folding />
                     </state>
                   </provider>
@@ -202,8 +202,8 @@
         <option value="$PROJECT_DIR$/Quiz/select.html" />
         <option value="$PROJECT_DIR$/Quiz/index.html" />
         <option value="$PROJECT_DIR$/Quiz/json/us_quiz.json" />
-        <option value="$PROJECT_DIR$/index_on_hold.html" />
         <option value="$PROJECT_DIR$/Quiz/js/quiz_script.js" />
+        <option value="$PROJECT_DIR$/index_on_hold.html" />
       </list>
     </option>
   </component>
@@ -332,7 +332,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Gallery" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,29 +346,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Gallery" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -387,6 +369,7 @@
       <recent name="C:\Users\Bryan\Google Drive\Career\Portfolio\Main\Gallery\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bryan\Google Drive\Career\Portfolio\Main\images\assets" />
       <recent name="C:\Users\Bryan\Google Drive\Career\Portfolio\Main\Quiz\images\js" />
       <recent name="C:\Users\Bryan\Google Drive\Career\Portfolio\Main\Quiz\images\assets" />
       <recent name="C:\Users\Bryan\Google Drive\Career\Portfolio\Main\css" />
@@ -578,7 +561,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/menu-alt.png">
+    <entry file="file://$PROJECT_DIR$/images/assets/menu-alt.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1178,18 +1161,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_on_hold.html">
+    <entry file="file://$PROJECT_DIR$/Quiz/js/quiz_script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8333333" vertical-offset="2669" max-vertical-offset="3604">
-          <caret line="187" column="80" selection-start-line="187" selection-start-column="80" selection-end-line="187" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.2757062" vertical-offset="62" max-vertical-offset="3910">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Quiz/js/quiz_script.js">
+    <entry file="file://$PROJECT_DIR$/index_on_hold.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03723987" vertical-offset="0" max-vertical-offset="3910">
-          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.4722222" vertical-offset="1751" max-vertical-offset="3604">
+          <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
           <folding />
         </state>
       </provider>
