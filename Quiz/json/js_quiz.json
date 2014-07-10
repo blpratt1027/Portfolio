@@ -1,0 +1,101 @@
+{
+    "title": "JavaScript and jQuery Quiz",
+    "questions": [
+        {"q": "What is JavaScript?"},
+        {"q": "For what browser was JavaScript originally written?"},
+        {"q": "What is jQuery?"},
+        {"q": "Who created jQuery?"},
+        {"q": "The first version of JavaScript was completed in:"},
+        {"q": "jQuery is used on more than what percentage of the 10,000 most visited web sites?"},
+        {"q": "jQuery eases the process of:"},
+        {"q": "JavaScript was originally created by:"},
+        {"q": "One of JavaScript's strongest advocates, as well as one of its harshest critics is:"},
+        {"q": "jQuery's selector engine is named:"}
+    ],
+    "answers": [
+        {"a": [
+            {"option": "One of the .NET family of languages."},
+            {"option": "A scripting language for running batch processes."},
+            {"option": "A sequential programming language used for applications written for the Linux operating system."},
+            {"option": "A dynamic, object oriented, event driven language used most often in web browsers."}
+            ]
+        },
+        {"a": [
+            {"option": "Microsoft Internet Explorer"},
+            {"option": "Mozilla Firefox"},
+            {"option": "Netscape Navigator"},
+            {"option": "Apple Safari"}
+            ]
+        },
+        {"a": [
+            {"option": "A free, open-source JavaScript library designed to ease the development of client-side scripted HTML pages and applications."},
+            {"option": "A software platform for scalable server-side and networking applications."},
+            {"option": "A server-side scripting language designed for web development but also used as a general-purpose programming language."},
+            {"option": "A software framework that includes a large library and provides language interoperability across several programming languages."}
+            ]
+        },
+        {"a": [
+            {"option": "John Resig"},
+            {"option": "Tim Berners-Lee"},
+            {"option": "Steve Jobs"},
+            {"option": "Al Gore"}
+            ]
+        },
+        {"a": [
+            {"option": "1 year"},
+            {"option": "10 months"},
+            {"option": "10 weeks"},
+            {"option": "10 days"}
+            ]
+        },
+        {"a": [
+            {"option": "30%"},
+            {"option": "50%"},
+            {"option": "80%"},
+            {"option": "95%"}
+            ]
+        },
+        {"a": [
+            {"option": "Selecting DOM elements"},
+            {"option": "Creating animations"},
+            {"option": "Handling events"},
+            {"option": "All of the above"}
+            ]
+        },
+        {"a": [
+            {"option": "Bill Gates"},
+            {"option": "Brendan Eich"},
+            {"option": "John Resig"},
+            {"option": "Tim Berners-Lee"}
+            ]
+        },
+        {"a": [
+            {"option": "Brendan Eich"},
+            {"option": "Douglas Crockford"},
+            {"option": "John Resig"},
+            {"option": "Tim Berners-Lee"}
+            ]
+        },
+        {"a": [
+            {"option": "Flash"},
+            {"option": "Fuze"},
+            {"option": "Sizzle"},
+            {"option": "Elmer"}
+            ]
+        }
+    ],
+    "images" : [
+        {"img_src": "images/js/javascript.jpg", "alt": "JavaScript logo"},
+        {"img_src": "images/js/javascript.png", "alt": "JavaScript image"},
+        {"img_src": "images/js/jquery.png", "alt": "jQuery image"},
+        {"img_src": "images/js/jquery.jpg", "alt": "jQuery image"},
+        {"img_src": "images/js/javascript_the_evil_parts.png", "alt": "JavaScript image"},
+        {"img_src": "images/js/jquery2.jpg", "alt": "jQuery image"},
+        {"img_src": "images/js/jquery2.png", "alt": "jQuery image"},
+        {"img_src": "images/js/js.jpg", "alt": "JavaScript image"},
+        {"img_src": "images/js/JS-logo1.png", "alt": "JavaScript image"},
+        {"img_src": "images/js/jquery3.png", "alt": "jQuery image"},
+        {"img_src": "images/assets/done.gif", "alt": "All Done!"}
+        ],
+    "correct_answer":  [{"a": 4}, {"a": 3}, {"a": 1}, {"a": 1}, {"a": 4}, {"a": 3}, {"a": 4}, {"a": 2}, {"a": 2}, {"a": 3}]
+}

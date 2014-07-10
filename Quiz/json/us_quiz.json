@@ -1,0 +1,95 @@
+{
+    "title": "Signficant Dates in US History",
+    "questions": [
+        {"q": "Year of the first use of nuclear weapon on a civilian target"},
+        {"q": "Year of the attack on the World Trade Center ('9/11')"},
+        {"q": "Year in which Abraham Lincoln was assassinated"},
+        {"q": "Year in which Osama bin Laden was killed"},
+        {"q": "Year the Civil War began"},
+        {"q": "Year the first man landed on the moon"},
+        {"q": "Year of the Louisiana Purchase"},
+        {"q": "Year that US military involvement in Vietnam ended"},
+        {"q": "Year the American Revolution began"},
+        {"q": "Year that John F. Kennedy was assassinated"}
+    ],
+    "answers": [
+        {"a": [
+            {"option": "1943"},
+            {"option": "1944"},
+            {"option": "1945"}        ]
+        },
+        {"a": [
+            {"option": "2000"},
+            {"option": "2001"},
+            {"option": "2002"}
+        ]
+        },
+        {"a": [
+            {"option": "1865"},
+            {"option": "1866"},
+            {"option": "1867"},
+            {"option": "1869"}
+        ]
+        },
+        {"a": [
+            {"option": "2009"},
+            {"option": "2010"},
+            {"option": "2011"}
+        ]
+        },
+        {"a": [
+            {"option": "1860"},
+            {"option": "1861"},
+            {"option": "1862"},
+            {"option": "1863"}
+        ]
+        },
+        {"a": [
+            {"option": "1967"},
+            {"option": "1968"},
+            {"option": "1969"}
+        ]
+        },
+        {"a": [
+            {"option": "1802"},
+            {"option": "1803"},
+            {"option": "1804"}
+        ]
+        },
+        {"a": [
+            {"option": "1969"},
+            {"option": "1972"},
+            {"option": "1975"}
+        ]
+        },
+        {"a": [
+            {"option": "1773"},
+            {"option": "1774"},
+            {"option": "1775"},
+            {"option": "1776"}
+        ]
+        },
+        {"a": [
+            {"option": "1962"},
+            {"option": "1963"},
+            {"option": "1964"}
+        ]
+        }
+    ],
+    "images" : [
+        {"img_src": "images/history/history1.jpg", "alt": "flower"},
+        {"img_src": "images/history/history2.jpg", "alt": "flower"},
+        {"img_src": "images/history/history3.jpg", "alt": "flower"},
+        {"img_src": "images/history/history4.jpg", "alt": "flower"},
+        {"img_src": "images/history/history5.jpg", "alt": "flower"},
+        {"img_src": "images/history/history6.jpg", "alt": "flower"},
+        {"img_src": "images/history/history7.jpg", "alt": "flower"},
+        {"img_src": "images/history/history8.jpg", "alt": "flower"},
+        {"img_src": "images/history/history9.jpg", "alt": "flower"},
+        {"img_src": "images/history/historya.jpg", "alt": "flower"},
+        {"img_src": "images/assets/done.gif", "alt": "All Done!"}
+    ],
+    "correct_answer":  [{"a": 3}, {"a": 2}, {"a": 1}, {"a": 3}, {"a": 2}, {"a": 3}, {"a": 2}, {"a": 3}, {"a": 3}, {"a": 2}],
+    "display_image": true,
+    "credit": {"text": "'Flamehorse', Top 10 Important Events in US History", "url": "http://listverse.com/2011/07/14/top-10-important-events-in-us-history/"}
+}

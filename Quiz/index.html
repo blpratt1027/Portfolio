@@ -9,36 +9,42 @@
      <![endif]-->
 	 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	 <link rel="stylesheet" href="css/quiz_styles.css">
-	 <link rel="shortcut icon" href="images/quiz.ico">
-    <title>JavaScript & jQuery Quiz</title>
+	 <link rel="shortcut icon" href="images/assets/quiz.ico">
+    <title class="title">Quiz</title>
 </head>
 <body>
 <section>
     <div id="content_wrapper">
-        <h1>JavaScript and jQuery Quiz</h1>
-        <div id="quiz_wrapper">
+        <h1 class="title"></h1>
+        <div id="quiz_wrapper" class="hidden">
             <table id="quiz_table">
                 <tr id="quiz_image">
                     <td rowspan="2"><img id="main_image" src="#" alt="Main image"></td>
                     <td id="quiz_question">
                         <h2 id="current_question"></h2>
-                        <form action="#">
-                            <input type="radio" name="q1" value="1"><span id="q1" ></span><br>
-                            <input type="radio" name="q1" value="2"><span id="q2" ></span><br>
-                            <input type="radio" name="q1" value="3"><span id="q3" ></span><br>
-                            <input type="radio" name="q1" value="4"><span id="q4" ></span><br>
+                        <form id="buttons_form" action="#">
+                            <!--
+                            <input type="radio" id="r1" name="q1" value="1"><span id="q1" ></span><br>
+                            <input type="radio" id="r2" name="q1" value="2"><span id="q2" ></span><br>
+                            <input type="radio" id="r3" name="q1" value="3"><span id="q3" ></span><br>
+                            <input type="radio" id="r4" name="q1" value="4"><span id="q4" ></span><br>
+                            -->
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <button type="button" id="previous_button" class="btn hidden">Previous</button>
-                        <button type="button" id="submit_button" class="btn">Submit answer</button>
+                        <button type="button" id="submit_button" class="btn disabled">Submit answer</button>
                         <span class="warning">Select one of the answers above...</span>
                     </td>
                 </tr>
             </table>
         </div>
+        <div id="another_quiz" class="hidden text-center">
+            <a href="select.html">Take another quiz</a>
+        </div>
+        <p id="credits"></p>
     </div>
 </section>
 <p id="floating_main_link">Return to Bryan's Portfolio</p>

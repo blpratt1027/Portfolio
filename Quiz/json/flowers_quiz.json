@@ -1,0 +1,121 @@
+{
+    "title": "Wildflowers of Western Washington",
+    "questions": [
+        {"q": "This flower emerges in autumn, persisting through winter, and blooms in early summer.  Picking will break the roots and kill the plant."},
+        {"q": "This perennial grows mostly in shady, moist woods, and blooms in late spring and early summer."},
+        {"q": "Though considered native to Washington, this flower is most commonly associated with another state.  It grows in grassy or open areas from sea level to high elevations, and blooms all spring and summer."},
+        {"q": "This perennial grows on a creeping evergreen vine, often forming large mats.  It grows in moist, shady woods and forests from near coastline to timberline.  It blooms all summer."},
+        {"q": "This flower grows in wet places; seeps, streambanks, and damp soils, below treeline.  Though now considered native to Washington, it was introduced from Europe.  It flowers in mid-summer."},
+        {"q": "This perennial grows in disturbed soils, coastal regions, meadows, and moist places at the edges of forests.  It can be found in nearly every county in Washington."},
+        {"q": "The veins of this wildflower are visible to bees in the ultraviolet as nector guides.  It's Latin name means 'hooked.'  It grows in damp streambeds and meadows near trees at all elevations, and blooms in mid-spring."},
+        {"q": "This slightly sticky perennial is the most common species in its genus.  It grows in moist meadows and forest openings from the coast to the mountains, and blooms in mid-summer."},
+        {"q": "This familiar tri-petaled perennial is common to the mountains on both sides of Washington state up to 5000 feet in elevation.  It blooms in early spring."},
+        {"q": "This wildflower's Latin name means 'charming.'  It grows in seaside bluffs and open, drying soils at low to mid elevations.  It is an annual, and blooms in late spring and early summer. "},
+        {"q": "This perennial grows from corms that taste like potato when cooked; it is sometimes called Indian potato.  It grows in moist meadows, slopes, and woodlands at mid to alpine elevations, and blooms in mid spring."},
+        {"q": "This perennial grows on open slopes, meadows, and forest openings at high to alpine elevations, and blooms in mid-summer."}
+    ],
+    "answers": [
+        {"a": [
+            {"option": "Tapertip onion"},
+            {"option": "Fairyslipper"},
+            {"option": "Baldhip rose"},
+            {"option": "Fringed lungwart"}
+        ]
+        },
+        {"a": [
+            {"option": "Pacific starflower"},
+            {"option": "Common yarrow"},
+            {"option": "Drummond's Rockcress"},
+            {"option": "Streambank arnica"}
+        ]
+        },
+        {"a": [
+            {"option": "Pacific rhododendron"},
+            {"option": "Harvest brodiaea"},
+            {"option": "Salmonberry"},
+            {"option": "California poppy"}
+        ]
+        },
+        {"a": [
+            {"option": "Twinflower"},
+            {"option": "Tall mountain shooting star"},
+            {"option": "Great camas"},
+            {"option": "Smooth Douglasia"}
+        ]
+        },
+        {"a": [
+            {"option": "Stream orchid"},
+            {"option": "Self-Heal"},
+            {"option": "Minature lupin"},
+            {"option": "Vanilla leaf"}
+        ]
+        },
+        {"a": [
+            {"option": "Pacific starflower"},
+            {"option": "Twinflower"},
+            {"option": "Red columbine"},
+            {"option": "Self-heal"}
+        ]
+        },
+        {"a": [
+            {"option": "Early Blue Violet"},
+            {"option": "Menzie's lockspur"},
+            {"option": "Elegant lupin"},
+            {"option": "Glacier lily"}
+        ]
+        },
+        {"a": [
+            {"option": "Stream orchid"},
+            {"option": "Fairyslipper"},
+            {"option": "Slender Paintbrush"},
+            {"option": "Hairy Manzanita"}
+        ]
+        },
+        {"a": [
+            {"option": "Red huckleberry"},
+            {"option": "California poppy"},
+            {"option": "Western trillium"},
+            {"option": "Kinnickinnick"}
+        ]
+        },
+        {"a": [
+            {"option": "Red maids"},
+            {"option": "Early Blue Violet"},
+            {"option": "Pearly everlasting"},
+            {"option": "Farewell-To-Spring"}
+        ]
+        },
+        {"a": [
+            {"option": "Subalpine lupin"},
+            {"option": "Western Spring Beauty"},
+            {"option": "Salmonberry"},
+            {"option": "Cape Jewelweed"}
+        ]
+        },
+        {"a": [
+            {"option": "Slender paintbrush"},
+            {"option": "Skunk cabbage"},
+            {"option": "Subalpine Lupine"},
+            {"option": "Farewell-to-spring"}
+        ]
+        }
+    ],
+    "images" : [
+        {"img_src": "images/flowers/flower1.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flower2.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flower3.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flower4.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flower5.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flower6.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flower7.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flower8.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flower9.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flowera.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flowerb.jpg", "alt": "flower"},
+        {"img_src": "images/flowers/flowerc.jpg", "alt": "flower"},
+        {"img_src": "images/assets/done.gif", "alt": "All Done!"}
+    ],
+    "correct_answer":  [{"a": 2}, {"a": 1}, {"a": 4}, {"a": 1}, {"a": 1}, {"a": 4}, {"a": 1}, {"a": 3}, {"a": 3}, {"a": 4}, {"a": 2}, {"a": 3}],
+    "display_image": true,
+    "credit": {"text": "Turner Photographics - Wildflowers.  All images © 1993-2013 Mark Turner", "url": "http://www.pnwflowers.com/"}
+}
