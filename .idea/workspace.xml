@@ -22,11 +22,11 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="quiz_script.js" pinned="false" current="false" current-in-tab="true">
+            <file leaf-file-name="quiz_script.js" pinned="false" current="true" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Quiz/js/quiz_script.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.6738609" vertical-offset="1869" max-vertical-offset="3842">
-                    <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.03723987" vertical-offset="0" max-vertical-offset="3910">
+                    <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
                     <folding />
                   </state>
                 </provider>
@@ -42,9 +42,9 @@
     <favorites_list name="Main" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5163399">
+    <splitter split-orientation="horizontal" split-proportion="0.7915759">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.371134">
+        <splitter split-orientation="vertical" split-proportion="0.8109966">
           <split-first>
             <leaf>
               <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
@@ -77,11 +77,21 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="us_quiz.json" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="us_quiz.json" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Quiz/json/us_quiz.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.832618" vertical-offset="1149" max-vertical-offset="1717">
+                    <state vertical-scroll-proportion="-7.4615383" vertical-offset="1149" max-vertical-offset="1717">
                       <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="index_on_hold.html" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/index_on_hold.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.8333333" vertical-offset="2669" max-vertical-offset="3604">
+                      <caret line="187" column="80" selection-start-line="187" selection-start-column="80" selection-end-line="187" selection-end-column="80" />
                       <folding />
                     </state>
                   </provider>
@@ -114,7 +124,7 @@
               <file leaf-file-name="us_quiz.json" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Quiz/json/us_quiz.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.6421053" vertical-offset="1242" max-vertical-offset="1717">
+                    <state vertical-scroll-proportion="3.3516483" vertical-offset="1242" max-vertical-offset="1717">
                       <caret line="91" column="71" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
                       <folding />
                     </state>
@@ -191,8 +201,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Quiz/select.html" />
         <option value="$PROJECT_DIR$/Quiz/index.html" />
-        <option value="$PROJECT_DIR$/Quiz/js/quiz_script.js" />
         <option value="$PROJECT_DIR$/Quiz/json/us_quiz.json" />
+        <option value="$PROJECT_DIR$/index_on_hold.html" />
+        <option value="$PROJECT_DIR$/Quiz/js/quiz_script.js" />
       </list>
     </option>
   </component>
@@ -244,6 +255,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WellKit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -469,13 +494,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/resume.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EnviroSite/scripts/enviro.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2958">
@@ -1144,14 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Quiz/js/quiz_script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6738609" vertical-offset="1869" max-vertical-offset="3842">
-          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Quiz/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.0" vertical-offset="56" max-vertical-offset="1003">
@@ -1162,8 +1172,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Quiz/json/us_quiz.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.832618" vertical-offset="1149" max-vertical-offset="1717">
+        <state vertical-scroll-proportion="-7.4615383" vertical-offset="1149" max-vertical-offset="1717">
           <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_on_hold.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8333333" vertical-offset="2669" max-vertical-offset="3604">
+          <caret line="187" column="80" selection-start-line="187" selection-start-column="80" selection-end-line="187" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Quiz/js/quiz_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03723987" vertical-offset="0" max-vertical-offset="3910">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
           <folding />
         </state>
       </provider>
