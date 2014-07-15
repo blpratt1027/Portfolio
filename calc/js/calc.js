@@ -1,75 +1,73 @@
 /**
  * Created by Bryan on 5/14/2014.
  */
-/* TODO for enhanced (Portfolio) version...
-*   Find a way to limit, shorten, or shrink display for exponential numbers
-*   A better Pi icon?
-*   Improve media queries.
-*   - Look for a better way to control the height of the buttons than with 'line-height' - need to be able to use
-*     % rather than px.
-*   Improve comments.
-* */
 (function() {
+    "use strict";
     $(document).ready(function() {
+
         // Variables required throughout the app
-        var number = null;      // Variable for storing the number in the display before clearing it
-        var operation = "";     // Keeps track of the operator key last pressed
-        var displayCleared = false;
-        var calcComplete = false;
-        var helpVisible = false;
-        var shiftOn = false;
+        var currentValue = 0,   // Value of number to be displayed after calculations are complete.  Display will be
+                            //  formatted from this value.
+            number = null,      // Variable for storing the number in the display before clearing it
+            operation = "",     // Keeps track of the operator key last pressed
+            displayCleared = false,
+            calcComplete = false,
+            helpVisible = false,
+            shiftOn = false,
 
-        // Assign controls to variables to reduce jQuery calls
-        var display = $("#display");
-        var calcButton = $(".button");
-        var helpIcon = $("#help_icon");
-        var keyboard = $("body");
-        var helpScreen = $("#help_popup");
+            // Assign controls to variables to reduce jQuery calls
+            display = $("#display"),
+            calcButton = $(".button"),
+            helpIcon = $(".helpIcon"),
+            keyboard = $("body"),
+            helpScreen = $("#help_popup"),
 
-        // Key code constants (keydown - keypress does not work in Firefox.
-        // This makes it necessary to check for Shift to detect upper case keys.)
-        var SHIFT = 16;
-        var CLEAR = 67; // 'C'
-        var BACK = 8; // Backspace
-        var ESC = 27;
-        var SIGN = 83; // 'S'
-        var PERCENT = 80; // 'P'
-        var SQUARE_ROOT = 82; // 'R'
-        var PI_KEY = 73; // 'I'
-        var SQUARED = 81; // 'Q'
-        var DIVIDE = 191;
-        var DIVIDE_NUM_PAD = 111;
-        var MULTIPLY_NUM_PAD = 106;
-        var MULTIPLY_X = 88; // 'X'
-        var ADD = 61;
-        var ADD_NUM_PAD = 107;
-        var SUBTRACT = 173;
-        var SUBTRACT_NUM_PAD = 109;
-        var ZERO = 48;
-        var ONE = 49;
-        var TWO = 50;
-        var THREE = 51;
-        var FOUR = 52;
-        var FIVE = 53;
-        var SIX = 54;
-        var SEVEN = 55;
-        var EIGHT = 56;
-        var NINE = 57;
-        var ZERO_NUM_PAD = 96;
-        var ONE_NUM_PAD = 97;
-        var TWO_NUM_PAD = 98;
-        var THREE_NUM_PAD = 99;
-        var FOUR_NUM_PAD = 100;
-        var FIVE_NUM_PAD = 101;
-        var SIX_NUM_PAD = 102;
-        var SEVEN_NUM_PAD = 103;
-        var EIGHT_NUM_PAD = 104;
-        var NINE_NUM_PAD = 105;
-        var ENTER = 13;
-        var EQUAL = 187;
-        var HELP = 112;
-        var DECIMAL = 190;
-        var DECIMAL_NUM_PAD = 110;
+            // Key code constants (keydown - keypress does not work in Firefox.
+            // This makes it necessary to check for Shift to detect upper case keys.)
+            SHIFT = 16,
+            CLEAR = 67, // 'C'
+            BACK = 8, // Backspace
+            ESC = 27,
+            SIGN = 83, // 'S'
+            PERCENT = 80, // 'P'
+            SQUARE_ROOT = 82, // 'R'
+            PI_KEY = 73, // 'I'
+            SQUARED = 81, // 'Q'
+            DIVIDE = 191,
+            DIVIDE_NUM_PAD = 111,
+            MULTIPLY_NUM_PAD = 106,
+            MULTIPLY_X = 88, // 'X'
+            ADD = 61,
+            ADD_NUM_PAD = 107,
+            SUBTRACT = 173,
+            SUBTRACT_NUM_PAD = 109,
+            ZERO = 48,
+            ONE = 49,
+            TWO = 50,
+            THREE = 51,
+            FOUR = 52,
+            FIVE = 53,
+            SIX = 54,
+            SEVEN = 55,
+            EIGHT = 56,
+            NINE = 57,
+            ZERO_NUM_PAD = 96,
+            ONE_NUM_PAD = 97,
+            TWO_NUM_PAD = 98,
+            THREE_NUM_PAD = 99,
+            FOUR_NUM_PAD = 100,
+            FIVE_NUM_PAD = 101,
+            SIX_NUM_PAD = 102,
+            SEVEN_NUM_PAD = 103,
+            EIGHT_NUM_PAD = 104,
+            NINE_NUM_PAD = 105,
+            ENTER = 13,
+            EQUAL = 187,
+            HELP = 112,
+            DECIMAL = 190,
+            DECIMAL_NUM_PAD = 110;
+        window.onresize = calculatorSize;
+        calculatorSize();
 
         // Function to process a click or a valid keystroke
         var process = function(id) {
@@ -85,8 +83,17 @@
                     }
                     break;
                 case "back":
-                    currDisplay = currDisplay.slice(0, currDisplay.length - 1);
-                    display.val(currDisplay);
+                    if (currDisplay.indexOf("e+") === -1) {
+                        if (currentValue !== 0) {
+                            currDisplay = currDisplay.slice(0, currDisplay.length - 1);
+                            if (currDisplay === "") {
+                                currentValue = 0;
+                            } else {
+                                currentValue = parseFloat(currDisplay);
+                            }
+                            display.val(trimDisplay(currentValue));
+                        }
+                    }
                     break;
                 case "calculate":
                     if (number !== null) {          // Must be a number in memory to perform the operation on
@@ -94,7 +101,8 @@
                             var newNum = display.val();
                             if (newNum.length > 0) {    // There has to be a number in the display
                                 // Call the doCalculation function, trim decimal length, place the result in the display
-                                display.val(setDecimalLength( doCalculation( number, parseFloat(newNum))));
+                                currentValue = doCalculation( number, parseFloat(newNum));
+                                display.val(trimDisplay(setDecimalLength( currentValue)));
                                 operation = "";
                                 // Flags used to determine how to process the next keystroke / button click.
                                 displayCleared = false;
@@ -105,12 +113,14 @@
                     break;
                 case "sign":
                     if (currDisplay.length > 0) {
-                        display.val(parseFloat(currDisplay) * -1);
+                        currentValue *= -1;
+                        display.val(trimDisplay(currentValue));
                     }
                     break;
                 case "percent":
                     if (currDisplay.length > 0) {
-                        display.val(setDecimalLength(parseFloat(currDisplay) * 0.01));
+                        currentValue *= 0.01;
+                        display.val(trimDisplay(setDecimalLength(currentValue)));
                     }
                     if (operation.length > 0) {
                         id = "calculate";
@@ -120,16 +130,18 @@
                     break;
                 case "sqrt":
                     if (currDisplay.length > 0) {
-                        display.val(setDecimalLength(Math.pow(parseFloat(currDisplay), 0.5) ));
+                        currentValue = Math.pow(currentValue, 0.5);
+                        display.val(trimDisplay(setDecimalLength(currentValue )));
                     }
                     calcComplete = true;    // Treated as a calculation (might have been more consistent to pass it
                                             //  to doCalculation...  This works, though.
                     break;
                 case "x2":      // Square
-                    display.val(setDecimalLength(Math.pow(parseFloat(currDisplay), 2) ));
+                    currentValue = Math.pow(parseFloat(currDisplay), 2);
+                    display.val(trimDisplay(setDecimalLength(currentValue )));
                     break;
                 case "pi":
-                    id = Math.PI.toFixed(10);
+                    id = Math.PI.toFixed(14);
                     process(id);    // Processed the same way as a number button
                     break;
                 case "help":
@@ -147,7 +159,9 @@
                         if (operation.length > 0) {     // An operation is already pending.  Chained operation.
                             newNum = currDisplay;
                             if (newNum.length > 0) {
-                                display.val(setDecimalLength( doCalculation(number, parseFloat(newNum))));
+                                //display.val(trimDisplay(setDecimalLength( doCalculation(number, parseFloat(newNum)))));
+                                currentValue = doCalculation(number, parseFloat(newNum));
+                                display.val(trimDisplay(setDecimalLength(currentValue)));
                             }
                             operation = id.substr(3, id.length - 3);
                             displayCleared = false;
@@ -176,19 +190,32 @@
                         if (operation.length > 0) {
                             if (!displayCleared) {
                                 number = parseFloat(currDisplay);
-                                display.val("");
                                 currDisplay = "";
+                                display.val(currDisplay);
                                 displayCleared = true;
                             }
                         }
                         if (calcComplete) {
                             currDisplay = id;
+                            currentValue = parseFloat(currDisplay);
                             calcComplete = false;
-                        } else
+                        } else {
+                            currDisplay = currDisplay;
                             currDisplay += id;
+                            if (currDisplay === "." || currDisplay === "0.") {
+                                currentValue = 0;
+                            } else {
+                                currentValue = parseFloat(currDisplay);
+                            }
+                        }
 
                         if (currDisplay === ".") {currDisplay = "0."; }
-                        display.val(currDisplay);
+                        //if (currDisplay === "0.") {
+                        if (currDisplay.indexOf(".") > 0) {
+                            display.val(currDisplay);
+                        } else {
+                            display.val(trimDisplay(currentValue));
+                        }
                     }
             } // End switch
         }; // End of process function
@@ -238,10 +265,10 @@
         $("#full_wrapper").draggable();
 
         // All button clicks are handled here.
-        calcButton.mousedown(function() {
-            var id = this.id;
-            process(id);
-        });
+        //calcButton.mousedown(function() {
+            //var id = this.id;
+            //process(id);
+        //});
 
         // Keyboard handling.
         keyboard.keydown(function(event) {
@@ -377,15 +404,13 @@
             process("help");
         });
 
-        $(".button, #calc_wrapper").mousedown(function(event) {
-            event.preventDefault();     // Prevent text from being highlighted by mouse clicks too close together
-        });
+        //$(".button, #calc_wrapper").mousedown(function(event) {
+            //event.preventDefault();     // Prevent text from being highlighted by mouse clicks too close together
+        //});
 
-        $("#floating_main_link").fadeTo(200, 1).delay(2500).fadeTo(600, 0.2);
-        $("#floating_main_link").click(function(){
+        $("#floating_main_link").fadeTo(200, 1).delay(2500).fadeTo(600, 0.2).click(function(){
             window.open("../index.html", "_self");
-        });
-        $("#floating_main_link").hover(
+        }).hover(
             function() {
                 $(this).stop().fadeTo(600, 1);
             },
@@ -394,6 +419,120 @@
             }
         );
 
-        // Whew!  But it works!!
+        // Find a better place for this function
+        function trimDisplay(displayVal) {
+            var temp = displayVal;
+            if (typeof(temp) !== "string") {
+                temp = temp.toString();
+            }
+            if (temp.length > 18) {
+                if (temp.indexOf(".") < 0) {
+                    temp = displayVal.toExponential();
+                } else if (temp.indexOf("e+") > 0) {
+                    var e = temp.indexOf("e+");
+                    var toTrim = temp.length - 18;
+                    var newTemp = temp.slice(0, e - toTrim);
+                    newTemp += temp.slice(e, temp.length);
+                    temp = newTemp;
+                }
+                else {
+                    temp = temp.slice(0, 18);
+                }
+            }
+            // Compensate for rounding errors
+            var dec = temp.indexOf(".");
+            if (dec > 0) {
+                var rem = parseFloat(temp.slice(dec, temp.length));
+                if (rem < 0.0000001) {
+                    temp = Math.floor(temp).toFixed();
+                } else if (rem > 0.999999) {
+                    temp = Math.ceil(temp).toFixed();
+                }
+
+            }
+            return temp;
+        }
+
+        function calculatorSize() {
+            var winHeight = $(window).height();
+            var wrapperWidth, calcWrapperWidth, calcWrapperHeight, height, top, lineHeight, fontSize, supTop, supFontSize, supLineHeight, wideButtonWidth,
+                regularButtonWidth, buttonHeight, displayWidth, displayHeight, displayFont, displayBottomMargin, wrapperMargin, calcPadding, calcMargin;
+            if (winHeight < 695) {
+                height = winHeight - 20;
+                wrapperWidth = height * 0.6268;
+                top = 0;
+            } else {
+                wrapperWidth = 435;
+                height = wrapperWidth / 0.6268;
+                top = 10;
+            }
+            calcPadding = wrapperWidth * 0.025974;
+            calcMargin = calcPadding / 2;
+            calcWrapperWidth = (wrapperWidth - (calcPadding * 2) - (calcMargin * 2)) + 2;
+            calcWrapperHeight = height - 10;
+            displayWidth = (wrapperWidth * 0.885).toString() + "px";
+            displayHeight = height * 0.044444;
+            displayBottomMargin = calcWrapperHeight * 0.02924;
+            fontSize = (height * 0.04611).toString() + "px";
+            buttonHeight = (height * 0.129682759).toString() + "px";
+            lineHeight = buttonHeight;
+            supTop = ((height * 0.02594) * -1).toString()  + "px";
+            supFontSize = (height * 0.02882).toString()  + "px";
+            supLineHeight = (height * 0.11).toString()  + "px";
+            regularButtonWidth = (calcWrapperWidth / 4) - 3; //.toString() + "px";
+            wideButtonWidth = (regularButtonWidth * 2) + 2;
+            displayFont = wrapperWidth * 0.08276;
+            regularButtonWidth = regularButtonWidth.toString() + "px";
+            wrapperMargin = top + "px auto";
+
+            calcPadding = "0 " + calcPadding + "px";
+            calcMargin = 0;
+            $("#full_wrapper").css({"width": wrapperWidth, "height": height, "margin": wrapperMargin});
+            $("#calc_wrapper").css({"height": (calcWrapperHeight), "padding": calcPadding, "margin": calcMargin, "width": calcWrapperWidth});
+            $("body").css({"line-height": lineHeight, "font-size": fontSize});
+            $(".bksp").css({"width": fontSize, "height": fontSize});
+            $(".sup").css({"top": supTop, "font-size": supFontSize, "line-height": supLineHeight});
+            $(".wide").css("width", wideButtonWidth);
+            $(".regular").css("width", regularButtonWidth);
+            $(".button").css("height", buttonHeight);
+            $("#display").css({"width": displayWidth, "height": displayHeight, "font-size": displayFont, "margin-bottom": displayBottomMargin});
+        }
+
+        // Handle mouse event just for closing the help screen if it is open
+        $("body").mousedown(function(evt){
+            if (helpVisible) {
+                helpScreen.slideToggle(400);
+                helpVisible = !helpVisible;
+                evt.stopPropagation();
+            }
+            evt.preventDefault();
+        });
+
+        // This needs to be in a better place
+        $(".button").mousedown(function(evt) {
+            //alert("Clicked...");
+            //var origWidth = $(this).width();
+            var origWidth = parseFloat(this.style.width);
+            var newWidth = origWidth - 1;
+            var origHeight = parseFloat(this.clientHeight);
+            //alert(origHeight);
+            //display.val(origHeight);
+            var newHeight = origHeight - 1;
+            //$(this).clientHeight = newHeight;
+            $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "2px", "border-bottom-width": "2px"});
+            //$(this).css({"border-right-width": "2px"});
+            process(this.id);
+            evt.preventDefault();
+        });
+
+        $(".button").mouseup(function() {
+            //alert("Clicked...");
+            var origWidth = parseFloat(this.style.width);
+            var newWidth = origWidth + 1;
+            var origHeight = parseFloat(this.clientHeight);
+            var newHeight = origHeight + 1;
+            $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "1px", "border-bottom-width": "1px"});
+        });
+
     });
 })();

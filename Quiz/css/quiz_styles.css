@@ -99,6 +99,9 @@ input {
     display: none;
 }
 
+.selection-page {
+    background: rgb(214, 214, 214)  url("../../images/assets/old_moon.png") repeat;
+}
 .selection-wrapper {
     width: 420px;
     height: 150px;
@@ -109,6 +112,8 @@ input {
     margin-top: -75px;
     border: 1px solid #68A;
     border-radius: 10px;
+    background-color: #F0F0F0;
+    box-shadow: 8px 8px 10px 1px rgba(0, 0, 0, 0.67);
 }
 
 .selection-wrapper h1 {
