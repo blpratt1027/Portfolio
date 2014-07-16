@@ -52,6 +52,11 @@ div {
     max-width: 930px;
 }
 
+img {
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px 1px #e0e0e0;
+}
 
 header {
     background: url('../images/Shafts.jpg');
@@ -183,6 +188,20 @@ sub { top:1.25rem; }
 
 .hidden {
     display: none;
+}
+
+.small-image {
+    width: 220px;
+}
+
+.figure-left {
+    float: left;
+    margin-right:8px;
+}
+
+.figure-right {
+    float: right;
+    margin-left:8px;
 }
 
 /* Media queries */

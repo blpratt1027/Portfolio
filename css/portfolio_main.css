@@ -7,7 +7,31 @@ body {
     padding:5px 10px;
 }
 
+#contact_tab ul li {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    list-style: none;
+    line-height: 22px;
+}
+
+#contact_tab a {
+    text-decoration: none;
+}
+
+.uline {
+    text-decoration: underline;
+}
+
 .inline_list {
     display: inline-block;
     list-style-type: none;
 }
+
+.contact-icon {
+    width:24px;
+    margin-right:8px;
+}
+
+.bold {
+    font-weight: bold;
+}
+

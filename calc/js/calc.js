@@ -91,7 +91,7 @@
                             } else {
                                 currentValue = parseFloat(currDisplay);
                             }
-                            display.val(trimDisplay(currentValue));
+                            display.val(CommaFormatted(trimDisplay(currentValue)));
                         }
                     }
                     break;
@@ -102,7 +102,7 @@
                             if (newNum.length > 0) {    // There has to be a number in the display
                                 // Call the doCalculation function, trim decimal length, place the result in the display
                                 currentValue = doCalculation( number, parseFloat(newNum));
-                                display.val(trimDisplay(setDecimalLength( currentValue)));
+                                display.val(CommaFormatted(trimDisplay(setDecimalLength( currentValue))));
                                 operation = "";
                                 // Flags used to determine how to process the next keystroke / button click.
                                 displayCleared = false;
@@ -114,13 +114,13 @@
                 case "sign":
                     if (currDisplay.length > 0) {
                         currentValue *= -1;
-                        display.val(trimDisplay(currentValue));
+                        display.val(CommaFormatted(trimDisplay(currentValue)));
                     }
                     break;
                 case "percent":
                     if (currDisplay.length > 0) {
                         currentValue *= 0.01;
-                        display.val(trimDisplay(setDecimalLength(currentValue)));
+                        display.val(CommaFormatted(trimDisplay(setDecimalLength(currentValue))));
                     }
                     if (operation.length > 0) {
                         id = "calculate";
@@ -137,8 +137,8 @@
                                             //  to doCalculation...  This works, though.
                     break;
                 case "x2":      // Square
-                    currentValue = Math.pow(parseFloat(currDisplay), 2);
-                    display.val(trimDisplay(setDecimalLength(currentValue )));
+                    currentValue = Math.pow(parseFloat(clearComma(currDisplay)), 2);
+                    display.val(CommaFormatted(trimDisplay(setDecimalLength(currentValue ))));
                     break;
                 case "pi":
                     id = Math.PI.toFixed(14);
@@ -161,7 +161,7 @@
                             if (newNum.length > 0) {
                                 //display.val(trimDisplay(setDecimalLength( doCalculation(number, parseFloat(newNum)))));
                                 currentValue = doCalculation(number, parseFloat(newNum));
-                                display.val(trimDisplay(setDecimalLength(currentValue)));
+                                display.val(CommaFormatted(trimDisplay(setDecimalLength(currentValue))));
                             }
                             operation = id.substr(3, id.length - 3);
                             displayCleared = false;
@@ -189,7 +189,7 @@
                         }
                         if (operation.length > 0) {
                             if (!displayCleared) {
-                                number = parseFloat(currDisplay);
+                                number = parseFloat(clearComma(currDisplay));
                                 currDisplay = "";
                                 display.val(currDisplay);
                                 displayCleared = true;
@@ -205,7 +205,7 @@
                             if (currDisplay === "." || currDisplay === "0.") {
                                 currentValue = 0;
                             } else {
-                                currentValue = parseFloat(currDisplay);
+                                currentValue = parseFloat(clearComma(currDisplay));
                             }
                         }
 
@@ -214,7 +214,7 @@
                         if (currDisplay.indexOf(".") > 0) {
                             display.val(currDisplay);
                         } else {
-                            display.val(trimDisplay(currentValue));
+                            display.val(CommaFormatted(trimDisplay(currentValue)));
                         }
                     }
             } // End switch
@@ -534,5 +534,47 @@
             $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "1px", "border-bottom-width": "1px"});
         });
 
+        var CommaFormatted = function(amount) {
+            if (!parseFloat(amount)) { return amount; }  // Don't process if a string value is passed ("Overflow", etc.)
+            var delimiter = ",", // replace comma if desired
+                a = amount.split('.', 2),
+                d = a[1];
+            var i = parseInt(a[0]);
+            if (isNaN(i)) {
+                return '';
+            }
+            var minus = '';
+            if (i < 0) {
+                minus = '-';
+            }
+            i = Math.abs(i);
+            var n = i.toString();
+            a = [];
+            while (n.length > 3) {
+                var nn = n.substr(n.length - 3);
+                a.unshift(nn);
+                n = n.substr(0, n.length - 3);
+            }
+            if (n.length > 0) {
+                a.unshift(n);
+            }
+            n = a.join(delimiter);
+            if (d && d.length < 1) {
+                amount = n;
+            }
+            else {
+                amount = d ? n + '.' + d: n;
+            }
+            amount = minus + amount;
+            return amount;
+        };
+        // end of function CommaFormatted()
+
+        function clearComma(value) {
+            while (value.indexOf(",") > 0){
+                value = value.replace(",", "");
+            }
+            return value;
+        }
     });
 })();

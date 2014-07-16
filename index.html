@@ -1,109 +1,237 @@
 <!DOCTYPE html>
-<!-- Index for temporary Portfolio cover page -->
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1">
-    <!-- Use the HTML5 shiv for production code that may be used on older versions of IE.
-	    OTHERWISE, remove the next three lines. -->
     <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
-    <!-- Link to jQuery if needed.  For implementations where it is known that code will 
-	    NOT run on IE older than 11.0, download the latest released 2.x version, otherwise 
-	    use the CDN to the latest 1.x version.
-	 <script src="http://code.jquery.com/jquery-latest.min.js"></script> <!--
-	 -->
-    <!-- Optional link to jQueryUI.  Check periodically for updated version.  Activate
-	    the jquery-ui stylesheet below when using jQueryUI.
+    <link rel="stylesheet" href="css/HTML5_CSSReset.css">
+    <link rel="stylesheet" href="css/portfolio_main.css">
+    <link rel="stylesheet" href="css/portfolio_tab.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/humanity/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Use CDN link to jQueryUI for now.  Download only required components once established which I'm going to use.-->
 	 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-	 -->
-    <!-- Links for CSS
-	 <link rel="stylesheet" href="">  <!-- Link to project specific CSS file(s) here
-	 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">  <!-- jQueryUI stylesheet -->
-	 <link rel="shortcut icon" href="images/assets/Portfolio.png">		<!-- Link to icon here
-	 -->
-    <style>
-        body {
-            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-            background: rgb(214, 214, 214) url("images/assets/old_moon.png") repeat;
-        }
-        #content_wrapper {
-            width: 420px;
-            height: 300px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -210px;
-            margin-top: -150px;
-            border: 1px solid #68A;
-            border-radius: 10px;
-            background-color: #F0F0F0;
-            box-shadow: 8px 8px 10px 1px rgba(0, 0, 0, 0.67);
-        }
 
-        h1 {
-            font-weight: 100;
-        }
-
-        h1, h3, p {
-            padding: 0 5px;
-            line-height: 10px;
-        }
-
-        a {
-            color: rgba(96, 0, 0, 0.9);
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: rgba(32, 128, 255, 0.85);
-        }
-
-        a:active {
-            color: rgba(255, 128, 32, 0.85);
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        @media only screen and (max-width: 420px) {
-            #content_wrapper {
-                width: 310px;
-                margin-left: -155px;
-            }
-            h1 {
-                font-size: 24px;
-                font-size: 1.5rem;
-            }
-
-            h2 {
-                font-size: 16px;
-                font-size: 1rem;
-            }
-
-            p, li {
-                font-size: 14px;
-                font-size: 0.875rem;
-                /*line-height:48px;*/
-            }
-        }
-
-
-    </style>
-    <title>Bryan Pratt's Portfolio</title>
+	 <link rel="shortcut icon" href="images/assets/Portfolio.png">
+    <title>Bryan L. Pratt - Portfolio</title>
 </head>
 <body>
-<div id="content_wrapper">
-    <h1>Bryan Pratt's Portfolio</h1>
-    <hr>
-    <p>Projects:</p>
-    <ul>
-        <li><a href="Gallery/index.html" title="Link to Gallery">Gallery</a></li>
-        <li><a href="Quiz/select.html" title="Link to Quiz">Quiz</a></li>
-        <li><a href="WellKit/Portfolio.pdf" title="WellKit Project">WellKit Website Project</a></li>
-    </ul>
-</div>
+    <p class="faux_hidden" id="top">Top</p>
+    <div id="tabs">
+        <ul>
+            <li><a href="#portfolio_tab">Portfolio</a> </li>
+            <li><a href="#resume_tab">R&eacute;sum&eacute; </a> </li>
+            <li><a href="#about_tab">Interests</a> </li>
+            <!--<li><a href="#past_tab">Work History</a> </li>-->
+            <li><a href="#contact_tab">Contact Me</a> </li>
+        </ul>
+        <div id="portfolio_tab">
+            <ul id="portfolio_thumbnails" class="inline_list">
+                <li class="inline_list">
+                    <a href="Gallery/index.html" title="Gallery" target="_self">
+                        <figure>
+                            <img src="images/gallery.jpg" alt="Gallery">
+                        </figure>
+                    </a>
+                </li>
+                <li class="inline_list">
+                    <a href="calc/index.html" title="Calculator" target="_self">
+                        <figure>
+                            <img src="images/calc_app.jpg" alt="Calculator">
+                        </figure>
+                    </a>
+                </li>
+                <li class="inline_list">
+                    <a href="Quiz/select.html" title="Quiz" target="_self">
+                        <figure>
+                            <img src="images/quiz_app.jpg" alt="Quiz">
+                        </figure>
+                    </a>
+                </li>
+                <!--  May have to drop this from the portfolio, but I hope to get it done...
+                <li class="inline_list">
+                    <a href="EnviroSite/index.html" title="United for Action" target="_self">
+                        <figure>
+                            <img src="images/enviro_app.jpg" alt="United for Action">
+                        </figure>
+                    </a>
+                </li>
+                -->
+                <li class="inline_list">
+                    <a href="Uplift/index.html" title="Shafts of Light" target="_self">
+                        <figure>
+                            <img src="images/uplift_app.jpg" alt="Shafts of Light">
+                        </figure>
+                    </a>
+                </li>
+                <li class="inline_list">
+                    <a href="WellKit/Portfolio.pdf" title="WellKit Portfolio" target="_self">
+                        <figure>
+                            <img src="images/WellKit.jpg" alt="WellKit Portfolio">
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="resume_tab">
+            <div id="resume_content" class="resume">
+                <h1>
+                    <a href="https://www.linkedin.com/in/bryanpratt" title="Click to see my LinkedIn Profile" target="_blank">
+                        Bryan L. Pratt, Web Developer
+                    </a>
+                </h1>
+
+                <a href="mailto:blpratt1027@gmail.com">Email: blpratt1027@gmail.com</a> |
+                    <a href="https://www.linkedin.com/in/bryanpratt" title="Click to see my LinkedIn Profile"
+                       target="_blank"> LinkedIn: linkedin.com/in/bryanpratt</a> |
+                    <a href="https://github.com/blpratt1027/Portfolio" target="_blank"> GitHub: github.com/blpratt1027/Portfolio</a>
+                <div id="value_statement">
+                    <p>I bring a passion for excellence, a strong work ethic, analytical thinking and problem solving
+                        skills, maturity developed over a lifetime of eclectic work experiences, and a rapidly
+                        expanding set of technical skills.  I am eager to put all of this to work for a quality-driven
+                        organization.</p>
+                </div>
+                <div>
+                    <h3 id="education">Education</h3>
+
+                    <ul>
+                        <li class="level1">&bull; Web Development Certification, Bellevue College, graduated June 2014, GPA in program – 4.0</li>
+                        <li class="level1">&bull; Bachelor of Arts, Seattle Pacific University, graduated Suma Cum Laude, Dean’s List, GPA – 3.9 </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 id="projects">Description of Projects in Portfolio</h3>
+                    <ul>
+                        <li class="level1">&bull; Gallery: A simulated commercial photo gallery written in JavaScript / jQuery and utilizing AJAX /JSON</li>
+                        <li class="level1">&bull; Calculator: An attractive multi-function calculator written in JavaScript / jQuery</li>
+                        <li class="level1">&bull; Quiz: Written in JavaScript / jQuery and utilizing AJAX /JSON to present a variety of quizzes without changing any code</li>
+                        <li class="level1">&bull; Shafts of Light: A personal blog written in JavaScript / jQuery</li>
+                    </ul>
+                </div>
+
+                <div> <a name="tech_skills"></a>
+
+                    <h3 id="technical_skills">Technical Skills</h3>
+
+                    <ul>
+                        <li class="level1">&bull; HTML 5, CSS 3, JavaScript, jQuery, C# 5.0, ASP.NET 4.5, Visual Studio 2012, VBA </li>
+                        <li class="level1">&bull; T-SQL queries, stored procedures, and schema design</li>
+                        <li class="level1">&bull; Microsoft Excel, Word, PowerPoint, Outlook, Visio</li>
+                        <li class="level1">&bull; SAP Crystal Reports 2012</li>
+                        <li class="level1">&bull; Windows XP, Vista, 7, 8, and 8.1</li>
+                    </ul>
+                </div>
+                <a name="ed"></a>
+
+                <div> <a name="work_exp"></a>
+
+                    <h3 id="work_experience">Work Experience</h3>
+
+                    <ul>
+                        <li class="level1">&bull; Software Developer, WellKit - June 2013 - Sept 2013</li>
+                        <li class="level2">&middot; Implemented website UI/UX features per specification using ASP.NET 4.5,
+                            C# 5.0, SQL Server 7, HTML 5 and CSS 3</li>
+                        <li class="level2">&middot; Wrote specification for, developed, and implemented a portion of
+                            the site</li>
+                        <li class="level1">&bull; Support Analyst, Microsoft – 1991 - 2002</li>
+                        <li class="level2">&middot; Wrote utilities for managing software rollouts and standardization,
+                            resulting in greatly streamlined process and reduced downtime and service calls, winning
+                            a company-wide award for “Making It Easier” (Visual Basic, Windows logon scripts)</li>
+                        <li class="level2">&middot; Created and regularly updated software images which were preloaded
+                            onto all Dell computers purchased by Microsoft company-wide</li>
+                        <li class="level1">&bull; Special Education Teacher, Issaquah, Tahoma, and Snoqualmie Valley
+                            School districts, April 2002 – June 2012</li>
+                        <li class="level2">&middot; Managed teams of up to 5 aides scheduling, training, delegating
+                        tasks, and providing feedback</li>
+                        <li class="level2">&middot; Collaborated with multi-disciplinary team to write and maintained
+                            highly detailed individual education plans</li>
+                        <li class="level1">&bull; Data Entry, inventory and infection control, Issaquah Dental Lab,
+                            Feb - Dec 2012</li>
+                        <li class="level2">&middot; Maintained, updated, and created training and procedural materials</li>
+                        <li class="level1">&bull; Customer Service, Microsoft, 1986 – 1991</li>
+                        <li class="level2">&middot; 1st tier escalation for difficult customer situations</li>
+                        <li class="level1">&bull; Member Relations, Thousand Trails (membership campground and RV park
+                            provider), 1985 – 1986</li>
+                        <li class="level2">&middot; Formally recognized for improving processes and reducing costs</li>
+                        <li class="level1">&bull; Radio broadcasting, 1979 - 1985
+                        <li class="level2">&middot; Programmed and managed top-rated automated Spanish language FM
+                            station</li>
+                    </ul>
+                </div>
+                <div> <a name="addl_qual"></a>
+
+                    <h3 id="additional_qualifications">Additional Qualifications</h3>
+
+                    <ul>
+                        <li class="level1">&bull; Excellent research and problem solving skills</li>
+                        <li class="level1">&bull; Strong oral and written communications skills</li>
+                    </ul>
+                </div>
+                <div> <a name="certs"></a>
+
+                    <h3 id="certifications">Certifications</h3>
+
+                    <ul>
+                        <li class="level1">&bull; Microsoft Technical Associate: Software Development Fundamentals (98-361)</li>
+                        <li class="level1">&bull; Microsoft Technical Associate: Windows Operating System Fundamentals (98-349)</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="toc_tab" title="Click to see table of contents">
+                <img src="images/assets/menu-alt.png" alt="Menu icon">
+            </div>
+            <div id="toc" class="hidden">
+                <h4>Table of Contents</h4>
+
+                <ul>
+                    <li><a href="#top" data-id="top">Top</a>
+                    </li>
+                    <li><a href="#ed" data-id="education">Education</a>
+                    </li>
+                    <li><a href="#accomp" data-id="projects">Projects in Portfolio</a>
+                    </li>
+                    <li><a href="#tech_skills" data-id="technical_skills">Technical Skills</a>
+                    </li>
+                    <li><a href="#work_exp" data-id="work_experience">Work Experience</a>
+                    </li>
+                    <li><a href="#addl_qual" data-id="additional_qualifications">Additional Qualifications</a>
+                    </li>
+                    <li><a href="#certs" data-id="certifications">Certifications</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="https://www.linkedin.com/in/bryanpratt" title="Click to see my LinkedIn Profile"
+                            target="_blank">
+                            <img id="linkedin_logo" src="images/assets/LinkedInProfile.gif" alt="LinkedIn Logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="about_tab">
+            <p>About Me content.</p>
+        </div>
+        <div id="contact_tab">
+            <ul>
+                <li><a href="mailto:blpratt1027@gmail.com">
+                    <img class="contact-icon" src="images/assets/email.png"><span class="bold">Email:</span>
+                    <span class="uline"> blpratt1027@gmail.com</span></a>
+                    <em>(preferred method of contact)</em></li>
+                <li><a href="http://www.linkedin.com/in/bryanpratt"><img class="contact-icon" src="images/assets/linked_in.png">
+                    <span class="bold">LinkedIn: </span>
+                    <span class="uline"> linkedin.com/in/bryanpratt</span></a></li>
+                <li><a href="https://github.com/blpratt1027/Portfolio"><img class="contact-icon" src="images/assets/github.png">
+                    <span class="bold">GitHub: </span>
+                    <span class="uline">  github.com/blpratt1027/Portfolio</span></a></li>
+                <li><img class="contact-icon" src="images/assets/phone.png"><span class="bold">Phone: </span> (425) 216-3748</li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/portfolio.js"></script>
+    <script src="js/resume.js"></script>
 </body>
 </html>

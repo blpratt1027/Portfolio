@@ -8,8 +8,10 @@
 "use strict";
 (function (){
     $(document).ready(function() {
-        var scrolling = false;
-        //alert("Hello from the resume.");
+
+        var scrolling = false,
+            tocOpen = false;
+
         $("#toc_tab").click(function() {
             $("#toc").stop().toggle(500);
         });
@@ -19,7 +21,8 @@
         });
 
         $("#toc a").click(function() {
-            var sectionOffset = 0;
+            var sectionOffset = 0,
+                tocTabTop;
             var id = "#" + $(this).attr("data-id");
             if (id !== "#top") {
                 //sectionOffset = 0; //145;
@@ -42,19 +45,46 @@
                 //if (sectionOffset > displayHeight) {
                 //    var tocTop = displayHeight - (divHeight - sectionOffset) + 20;
                 //} else
-                if ((displayHeight - sectionOffset) < 200) {
-                    var tocTop = displayHeight - (divHeight - sectionOffset) + 20;
+                //if ((displayHeight - sectionOffset) < 140) {
+                if (displayHeight - (divHeight - sectionOffset) > displayHeight) {
+                    var tocTop = displayHeight - (divHeight - sectionOffset) + 10;
+                    // The next line is a bit of a hack; the formula above needs to be adjusted...
+                    //tocTop = tocTop < 45 ? 45 : tocTop;
                 } else {
-                    tocTop = 45;
+                    //sectionOffset = $(id).offset().top;
+                    //tocTop = (displayHeight - sectionOffset); // + 45;
+                    tocTop = displayHeight - (divHeight - sectionOffset) + 10;
+                    tocTop = tocTop < 45 ? 45 : tocTop;
                 }
             } else {
                 tocTop = 145;
             }
-            $("#toc_tab").css("top", tocTop);
+            if ((divHeight - sectionOffset) < $("#toc").height()) {
+                tocTabTop = tocTop;
+                tocTop = displayHeight - $("#toc").height();
+            } else {
+                tocTabTop = tocTop;
+            }
+            $("#toc_tab").css("top", tocTabTop);
             $("#toc").css("top", tocTop);
 
             $("#toc").hide();
+            tocOpen = false;
             return false;
+        });
+
+        $("#resume_tab").click(function(evt) {
+            //$("#toc").hide();
+            if (tocOpen)  {
+                $("#toc").hide();
+                tocOpen = false;
+            }
+            if ($("#toc").is(":visible")) {
+                tocOpen = true;
+            };
+            //alert("Status:" + status);
+            //if (status) {$("#toc").hide();}
+            //evt.preventDefault();
         });
 
         $("#portfolio_thumbnails img").each(function() {
