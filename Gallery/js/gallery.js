@@ -141,7 +141,8 @@
             );
 
             gallery2.owlCarousel(
-                {navigation: true,
+                {
+                    navigation: true,
                     items: 7
                 }
             );
@@ -161,7 +162,8 @@
                 }
             });
 
-            $("img").dblclick(function () {
+            //$("img").dblclick(function () {
+            $(".thumb").click(function () {
                 if (!light_box_open) {
                     var imgID = $(this).attr("data-imgID");
                     showLightBoxDialog(imgID);
@@ -261,6 +263,10 @@
             }
         }); // End keyboard handler
 
+        $("#cart_icon").click(function() {
+            populateCart();
+        });
+
         // --- Dialog box related event handlers ---
 
         $("#user_control_panel, .arrow").hover( // Fade 'control panel' (upper right corner) and arrows in and out
@@ -268,7 +274,7 @@
                 $(this).stop().fadeTo(200, 1);
             },
             function () {
-                $(this).stop().fadeTo(600, 0.5);
+                $(this).stop().fadeTo(600, 0.67);
             }
         );
 
@@ -283,7 +289,7 @@
         useBillingCheckbox.change(function () {  // On checkout page
             $("#billing_info_caption").text(" Billing and Shipping Information ");
             $("#shipping_info").slideUp(400, function () {
-                centerDialogVert(checkoutPage);
+                //centerDialogVert(checkoutPage);
             });
             editShippingCheckbox.prop('checked', false).show();
             $("#es_label").show();
@@ -292,7 +298,7 @@
         editShippingCheckbox.change(function (){  // On checkout page
             $("#billing_info_caption").text(" Billing Information ");
             $("#shipping_info").slideDown(400, function () {
-                centerDialogVert(checkoutPage);
+                //centerDialogVert(checkoutPage);
             });
             useBillingCheckbox.prop('checked', false);
             editShippingCheckbox.hide();
@@ -416,7 +422,7 @@
                 img.src = thumb_fullFileName;
                 img.alt = img_title;
                 img.title = img_title + ' - Copyright ' + String.fromCharCode(169) + ' '  + copyright_holder +
-                    '\nDouble-click to open in light box';
+                    '\nClick to open in light box';
                 img.setAttribute('data-full', img_fullFileName);
                 img.setAttribute('data-imgID', i.toFixed());
                 addToEl(fig, img);
@@ -651,7 +657,7 @@
             addToEl(btnWrapper, chkOutBtn);
             addToEl(btnWrapper, closeBtn);
 
-            addedToCartDialogBox.css("width", 320).css("margin-left", -160).css("height", 180).css("border",
+            addedToCartDialogBox.css("width", 320).css("margin-left", -160).css("height", 190).css("border",
                 "solid 4px #484c3c");
             $("#order_conf_inner").css("height", 140).css("margin-bottom", "5px");
             cancel_button = closeAddedToCartConfirm;
@@ -759,7 +765,7 @@
             var tb = crEl('table'),
                 tr = crEl('tr'),
                 th,
-                classes = ["title", "size", "price", "qty", "extprice", "remove"],
+                classes = ["title text-center", "size", "price", "qty", "extprice text-right", "remove"],
                 labels = ["Title", "Size", "Price", "Qty", "Ext Price", ""];
 
             for (var i = 0; i < classes.length; i++) {
@@ -951,10 +957,12 @@
             closeCart();
             closeAddedToCartConfirm(0);
             loadCheckout();
-            var submitButton = createButton('Submit', createOrderValidationPage,
+            var submitButton = createButton('Place Order', createOrderValidationPage,
                     'This is a "mock" site.  Images are not actually for sale.'),
                 cnButton = createButton('Cancel', closeCheckoutPage),
                 buttonWrapper = $('#co_buttons');
+            submitButton.className += " wide-separation";
+            cnButton.className += " wide-separation";
             buttonWrapper.empty();
             addToEl(buttonWrapper, submitButton);
             addToEl(buttonWrapper, cnButton);
@@ -1529,10 +1537,10 @@
             formatted_item_total = '$' + CommaFormatted(CurrencyFormatted(itemsTotal));
             $("#item_total").text(formatted_item_total);
             var shpHndl = 7.95 + (itemCount * 1.25);
-            sh = '$' + CommaFormatted(CurrencyFormatted(shpHndl));
+            sh = '$' +  CommaFormatted(CurrencyFormatted(shpHndl));
             $("#s_h").text(sh);
             var tx = (itemsTotal + shpHndl) * 0.089;
-            tax = '$' + CommaFormatted(CurrencyFormatted(tx));
+            tax = '$' +  CommaFormatted(CurrencyFormatted(tx));
             $("#tx").text(tax);
             var gTotal = itemsTotal + shpHndl + tx;
             grand_total = '$' + CommaFormatted(CurrencyFormatted(gTotal));

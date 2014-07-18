@@ -79,7 +79,12 @@ hr {
 
 #user_control_panel {
     color: #0d0e0b;
-    opacity: 0.4;
+    color: #2A2F2A;
+    opacity: 0.67;
+}
+
+#user_control_panel:hover, .checkout-button:hover {
+    color: #1A4853;
 }
 
 #floating_main_link {
@@ -193,10 +198,10 @@ hr {
     font-size:15px;
     font-weight:normal;
     font-style:normal;
-    height:20px;
-    line-height:20px;
+    height:24px;
+    line-height:24px;
     padding: 0 20px;
-    margin:0 4px;
+    margin:4px 6px;
     text-decoration:none;
     text-align:center;
     text-shadow:1px 1px 2px #bdc2b2;
@@ -219,7 +224,7 @@ hr {
 }
 
 .disabled {
-    color: #CCCCCC;
+    color: #99A399;
     border-color: #a6ac96;
     cursor: default;
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a6ac96), color-stop(1, #e4e6df) );
@@ -253,7 +258,7 @@ hr {
     background-image: url("../images/assets/green_cup.png");
     background-repeat: repeat;
 
-    padding:16px;
+    padding:14px;
     border-radius: 12px;
     box-shadow: 20px 20px 32px rgba(0,0,0,0.75);
 }
@@ -332,8 +337,13 @@ hr {
     margin-bottom: 6px;
 }
 
+.wide-separation {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 .plain-page {
-    background-color: snow;
+    background-color: rgba(255, 255, 255, 0.67);
     background-image: none;
 }
 
@@ -359,7 +369,7 @@ hr {
 .gallery-frame {
     border: 1px solid rgba(255, 255, 255, 0.67);
     border-radius: 6px;
-    padding:3px;
+    padding: 4px 10px;
     box-shadow: 3px 3px 8px 1px rgba(255, 255, 255, 0.5);
     margin: 4px 0;
 }
@@ -400,7 +410,7 @@ hr {
     margin-top: 0 !important;
 }
 
-.thumb:hover {
+.thumb:hover, #cart_icon:hover {
     cursor: pointer;
 }
 
@@ -521,7 +531,7 @@ hr {
 }
 
 .cart-column-qty {
-    width: 30px;
+    width: 60px;
     text-align: center;
 }
 

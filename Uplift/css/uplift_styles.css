@@ -320,3 +320,42 @@ sub { top:1.25rem; }
     }
 }
 
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 36px;
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 15px;
+        font-size: 0.938rem;
+    }
+
+    h3 {
+        font-size: 14px;
+        font-size:0.875rem;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-size:0.938rem;
+    }
+
+    p {
+        font-size:13px;
+        font-size:0.8125rem;
+    }
+
+    .right_pad {
+        padding-left: 16px;
+    }
+
+    .left_pad {
+        padding-right: 16px;
+    }
+    #narrow_subhead {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+}
+

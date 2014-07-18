@@ -29,3 +29,17 @@ article, aside, figure, figcaption, footer, header, nav, section {
     text-shadow: 2px 2px 8px rgba(73, 48, 18, 0.4);
     margin:8px;
 }
+
+@media only screen and (max-width: 530px) {
+    .title {
+        font-size: 32px;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .title {
+        font-size: 24px;
+        font-size: 1.5rem;
+    }
+}

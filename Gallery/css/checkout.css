@@ -47,7 +47,7 @@
     font-size: 15px;
     font-size: 0.9375rem;
     font-style: normal;
-    margin-top: 2px; /* 4px;*/
+    margin: 5px 4px 8px 4px; /* 4px;*/
 }
 
 .checkout-table {

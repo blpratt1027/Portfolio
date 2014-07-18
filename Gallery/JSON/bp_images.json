@@ -5,7 +5,7 @@
     "disclaimer": [
         { "para": "This is a 'mock' site created for educational purposes.  No orders are placed from this site and no user data is saved."},
         { "para": "The images on this site are from the public domain, (primarily from Wikipedia Commons), are <em>not</em> copyrighted, and <em>are not</em> for sale."},
-        { "para": "All references in this site to 'copyright', and all 'prices,' are for demonstration purposes only."}
+        { "para": "All references in this site to 'copyright', and all 'prices,' are for demonstration purposes only to create a simulation of a 'real' commercial site."}
     ],
     "galleries": [
         {"id": "flora",

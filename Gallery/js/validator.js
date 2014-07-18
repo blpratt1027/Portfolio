@@ -115,9 +115,13 @@ var validateFields = function(fieldInfo) {
                     }
                     break;
                 case 'csc':
-                    cardType = $('#' + fieldInfo[e].conditions.card_type_field).val();
-                    if (cardType === "amx") cscLen = 4;
-                    if (retValue.length !== cscLen) errorMsg = "Invalid security #.";
+                    if (isNaN(retValue)) {
+                        errorMsg = "Invalid security #.";
+                    } else {
+                        cardType = $('#' + fieldInfo[e].conditions.card_type_field).val();
+                        if (cardType === "amx") cscLen = 4;
+                        if (retValue.length !== cscLen) errorMsg = "Invalid security #.";
+                    }
                     break;
             }
         } else {

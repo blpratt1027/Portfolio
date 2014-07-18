@@ -13,6 +13,7 @@
             displayCleared = false,
             calcComplete = false,
             helpVisible = false,
+            helpClosed = false,
             shiftOn = false,
 
             // Assign controls to variables to reduce jQuery calls
@@ -66,6 +67,7 @@
             HELP = 112,
             DECIMAL = 190,
             DECIMAL_NUM_PAD = 110;
+
         window.onresize = calculatorSize;
         calculatorSize();
 
@@ -98,14 +100,8 @@
                 case "calculate":
                     if (number !== null) {          // Must be a number in memory to perform the operation on
                         if (operation.length > 0) { // An operation must be selected
-                            var newNum = display.val();
-                            if (newNum.length > 0) {    // There has to be a number in the display
-                                // Call the doCalculation function, trim decimal length, place the result in the display
-                                currentValue = doCalculation( number, parseFloat(newNum));
-                                display.val(CommaFormatted(trimDisplay(setDecimalLength( currentValue))));
+                            if (performCalculation(currDisplay)) {
                                 operation = "";
-                                // Flags used to determine how to process the next keystroke / button click.
-                                displayCleared = false;
                                 calcComplete = true;
                             }
                         }
@@ -147,24 +143,15 @@
                 case "help":
                     helpScreen.slideToggle(400);
                     helpVisible = !helpVisible;
+                    helpClosed = !helpClosed;
                     break;
                 // If id === none of the values above, id is either a number or an operation.
                 default:
                     if(id.indexOf("op") === 0) {    // Operation keys
-                        // TODO - Can this code can be consolidated, redundancy reduced? Fix this for Portfolio version
-                        // Probably.  This is the code that makes stringed operations possible, e.g. 2 + 5 / 3 - 2.
-                        // The code is redundant with 'case: "calculate"' in the 'process' function, so this needs
-                        // work.  Because the situations are different, it promises to be a bit dicey, so I'm
-                        // leaving it alone for now.
                         if (operation.length > 0) {     // An operation is already pending.  Chained operation.
-                            newNum = currDisplay;
-                            if (newNum.length > 0) {
-                                //display.val(trimDisplay(setDecimalLength( doCalculation(number, parseFloat(newNum)))));
-                                currentValue = doCalculation(number, parseFloat(newNum));
-                                display.val(CommaFormatted(trimDisplay(setDecimalLength(currentValue))));
+                            if (performCalculation(currDisplay)) {
+                                operation = id.substr(3, id.length - 3);
                             }
-                            operation = id.substr(3, id.length - 3);
-                            displayCleared = false;
                         } else {
                             // Only assign an operator if there is data in the display
                             if (currDisplay.length > 0 ) {
@@ -200,12 +187,13 @@
                             currentValue = parseFloat(currDisplay);
                             calcComplete = false;
                         } else {
-                            currDisplay = currDisplay;
-                            currDisplay += id;
-                            if (currDisplay === "." || currDisplay === "0.") {
-                                currentValue = 0;
-                            } else {
-                                currentValue = parseFloat(clearComma(currDisplay));
+                            if (currDisplay.length < 18) {
+                                currDisplay += id;
+                                if (currDisplay === "." || currDisplay === "0.") {
+                                    currentValue = 0;
+                                } else {
+                                    currentValue = parseFloat(clearComma(currDisplay));
+                                }
                             }
                         }
 
@@ -453,14 +441,31 @@
             return temp;
         }
 
+        // This function needs a logical home...
+        function performCalculation (currDisplay) {
+            var calcPerformed = false;
+            if(currDisplay.length > 0) {
+                currentValue = doCalculation( number, parseFloat(currDisplay));
+                display.val(CommaFormatted(trimDisplay(setDecimalLength( currentValue))));
+                displayCleared = false;
+                calcPerformed = true;
+            }
+            return calcPerformed;
+        }
+
         function calculatorSize() {
-            var winHeight = $(window).height();
-            var wrapperWidth, calcWrapperWidth, calcWrapperHeight, height, top, lineHeight, fontSize, supTop, supFontSize, supLineHeight, wideButtonWidth,
+            var winHeight = $(window).height(),
+                wrapperWidth, calcWrapperWidth, calcWrapperHeight, height, top, lineHeight, fontSize, supTop, supFontSize, supLineHeight, wideButtonWidth,
                 regularButtonWidth, buttonHeight, displayWidth, displayHeight, displayFont, displayBottomMargin, wrapperMargin, calcPadding, calcMargin;
-            if (winHeight < 695) {
-                height = winHeight - 20;
+            if (winHeight < 500) {
+                height = winHeight;
                 wrapperWidth = height * 0.6268;
                 top = 0;
+                $("body").css({"margin": 0});
+            } else if (winHeight < 695) {
+                height = winHeight - 20;
+                wrapperWidth = height * 0.6268;
+                top = 10;
             } else {
                 wrapperWidth = 435;
                 height = wrapperWidth / 0.6268;
@@ -496,42 +501,35 @@
             $(".regular").css("width", regularButtonWidth);
             $(".button").css("height", buttonHeight);
             $("#display").css({"width": displayWidth, "height": displayHeight, "font-size": displayFont, "margin-bottom": displayBottomMargin});
+            var helpIcon = $("#keyboard_icon");
+            if (top === 10) {
+                helpIcon.show();
+            } else {helpIcon.hide();}
         }
-
-        // Handle mouse event just for closing the help screen if it is open
-        $("body").mousedown(function(evt){
-            if (helpVisible) {
-                helpScreen.slideToggle(400);
-                helpVisible = !helpVisible;
-                evt.stopPropagation();
-            }
-            evt.preventDefault();
-        });
 
         // This needs to be in a better place
         $(".button").mousedown(function(evt) {
-            //alert("Clicked...");
-            //var origWidth = $(this).width();
-            var origWidth = parseFloat(this.style.width);
-            var newWidth = origWidth - 1;
-            var origHeight = parseFloat(this.clientHeight);
-            //alert(origHeight);
-            //display.val(origHeight);
-            var newHeight = origHeight - 1;
-            //$(this).clientHeight = newHeight;
-            $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "2px", "border-bottom-width": "2px"});
-            //$(this).css({"border-right-width": "2px"});
-            process(this.id);
-            evt.preventDefault();
+            if (!helpVisible) {
+                var newWidth = ($("#calc_wrapper").width() / 4) - 4;
+                if ($(this).hasClass("wide")) {
+                    newWidth = (newWidth * 2) + 3;
+                }
+                var newHeight = ($("#full_wrapper").height() * 0.129682759) - 1;
+                $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "2px", "border-bottom-width": "2px"});
+                process(this.id);
+            }
         });
 
         $(".button").mouseup(function() {
-            //alert("Clicked...");
-            var origWidth = parseFloat(this.style.width);
-            var newWidth = origWidth + 1;
-            var origHeight = parseFloat(this.clientHeight);
-            var newHeight = origHeight + 1;
-            $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "1px", "border-bottom-width": "1px"});
+            if (!helpVisible) {
+                var newWidth = ($("#calc_wrapper").width() / 4) - 3;
+                if ($(this).hasClass("wide")) {
+                    newWidth = (newWidth * 2) + 2;
+                }
+                var newHeight = $("#full_wrapper").height() * 0.129682759;
+                $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "1px", "border-bottom-width": "1px"});
+            }
+            if (helpClosed) {helpClosed = false;}
         });
 
         var CommaFormatted = function(amount) {

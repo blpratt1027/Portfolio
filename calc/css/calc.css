@@ -7,15 +7,18 @@ article, aside, figure, figcaption, footer, header, nav, section {
     The default css will be changed to adapt to the specific screen size. */
 body {
     /* Cool code for keeping image full screen and resizing found on CSS Hint */
+    /*
     background: url(../images/wood.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    */
 
     /*font-size: 32px;    /* Fallback for browsers that don't support rem */
     /*font-size: 2rem;
     line-height: 90px; */
+    background: url(../images/linen.png) repeat;
 }
 
 label {
