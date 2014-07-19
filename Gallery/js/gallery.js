@@ -1009,6 +1009,23 @@
                     'conditions': {'required': false,
                         'type': 'tel'}
                 },
+                {'fieldname': "s_zip",
+                    'conditions': {'required': false,
+                        'type': 'zip'}
+                },
+                {'fieldname': "s_email",
+                    'conditions': {'required': false,
+                        'type': 'email'}
+                },
+                {'fieldname': "s_confirm_email",
+                    'conditions': {'required': false,
+                        'type': 'email'},
+                    'match': 's_email'
+                },
+                {'fieldname': "s_phone",
+                    'conditions': {'required': false,
+                        'type': 'tel'}
+                },
                 {'fieldname': "card_type",
                     'conditions': {'required': true}
                 },

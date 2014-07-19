@@ -243,6 +243,7 @@
                         <div id="s_state_list" class="in-line"></div>
                         <label class="co-label" for="s_zip">ZIP: </label>
                             <input class="short-input co-input" id="s_zip" maxlength="10">
+                        <span id="s_zip_error" class="error hidden"></span>
                     </td>
                 </tr>
                 <tr>
@@ -251,8 +252,10 @@
                     </td>
                     <td class="right-col">
                         <input class="co-input" id="s_email" type="email" maxlength="254">
+                        <span id="s_email_error" class="error hidden"></span>
                         <label class="co-label" for="s_confirm_email">Confirm Email address</label>
                         <input class="co-input" id="s_confirm_email" type="email" maxlength="254">
+                        <span id="s_confirm_email_error" class="error hidden"></span>
                     </td>
                 </tr>
                 <tr>
@@ -262,6 +265,7 @@
                     <td class="right-col">
                         <input class="co-input" id="s_phone" type="tel" maxlength="14" placeholder="(Optional)"
                                title="Optional.  May be used in the event of a shipping problem.">
+                        <span id="s_phone_error" class="error hidden"></span>
                     </td>
                 </tr>
             </table>
