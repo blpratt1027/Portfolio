@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19947506" vertical-offset="2160" max-vertical-offset="3723">
-              <caret line="184" column="98" selection-start-line="184" selection-start-column="98" selection-end-line="184" selection-end-column="98" />
+            <state vertical-scroll-proportion="0.17847769" vertical-offset="306" max-vertical-offset="3723">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
               </folding>
@@ -655,8 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19947506" vertical-offset="2160" max-vertical-offset="3723">
-          <caret line="184" column="98" selection-start-line="184" selection-start-column="98" selection-end-line="184" selection-end-column="98" />
+        <state vertical-scroll-proportion="0.17847769" vertical-offset="306" max-vertical-offset="3723">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
           </folding>
