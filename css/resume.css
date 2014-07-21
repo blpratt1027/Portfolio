@@ -15,30 +15,11 @@ hr {
     text-align: center;
 }
 
-.statement {
-    width: 85%;
-    margin: 9px 18px; /* 36px 18px 18px 18px;*/
-    /*text-align: center;*/
-    font-size: 16px;
-    font-size: 1rem;
-    font-style: italic;
-}
-
 #resume_content {
     max-width: 1024px;
 }
-#keywords {
-    font-size: 11px;
-    font-size: 0.688rem;
-    font-style: italic;
-    line-height: 12px;
-    line-height: 0.75rem;
-    margin-top: 30px;
-    color: #aaaaaa;
-}
 
 #toc, #toc_tab {
-    position: absolute;
     position: fixed;
     top: 145px;
     left: 11px;
@@ -102,6 +83,14 @@ hr {
     margin:auto;
 }
 
+.statement {
+    width: 85%;
+    margin: 9px 18px;
+    font-size: 16px;
+    font-size: 1rem;
+    font-style: italic;
+}
+
 .hidden {
     display: none;
 }
@@ -143,11 +132,13 @@ hr {
     text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* It appears that there are no h2s
 .resume h2 {
     font-size: 22px;
     font-size: 1.375rem;
     font-style: normal;
 }
+*/
 
 .resume h3 {
     text-align: left;
@@ -173,6 +164,7 @@ hr {
     font-size:17px;
     font-size:1.125rem;
     margin-bottom: 0;
+    margin-top: 20px;
 }
 
 .sub {
@@ -195,8 +187,9 @@ hr {
 .contact {
     margin-left: 20px;
     font-size: 15px;
-    font-size: 0.9375;
+    font-size: 0.9375rem;
 }
+
 .contact li {
     list-style: none;
     display: inline;
@@ -217,3 +210,150 @@ a:active {
     color: rgba(255, 128, 32, 0.85) !important;
 }
 
+@media only screen
+    and (max-width: 800px) {
+    #toc li {
+        line-height: 32px;
+        line-height: 2rem;
+    }
+
+    .resume {
+        line-height: 18px;
+        line-height: 1.125rem;
+    }
+
+    .resume h1 {
+        font-size:20px;
+        font-size:1.25rem;
+        line-height: 32px;
+        line-height: 2rem;
+    }
+
+
+    .resume h3 {
+        font-size: 16px;
+        font-size: 1rem;
+        /* Check this */
+        margin:24px 0 12px 0;
+    }
+
+    /*.resume p, li {
+        line-height: 20px;
+        line-height: 1.25rem;
+    }*/
+
+    .statement {
+        width: 93%;
+        margin: 9px 18px;
+        font-size: 14px;
+        font-size: 0.875rem;
+    }
+
+    .level1 {
+        /* check margins */
+        margin-left:28px;
+        margin-left: 1.75rem;
+        font-size: 14px;
+        font-size: 0.875rem;
+    }
+
+    .job-title {
+        font-size:15px;
+        font-size:0.9375rem;
+        margin-bottom: 0;
+        margin-top: 16px;
+    }
+
+    .sub {
+        /* Check this... */
+        margin-left: 44px;
+        margin-left: 2.75rem;
+    }
+
+    .level2 {
+        /* Check margins... */
+        margin-left:40px;
+        margin-left: 2.5rem;
+        font-size: 13px;
+        font-size: 0.8125rem;
+    }
+
+    .contact {
+        font-size: 13px;
+        font-size: 0.8125rem;
+    }
+
+}
+
+@media only screen
+and (max-width: 400px) {
+    #toc li {
+        line-height: 38px;
+        line-height: 2.25rem;
+    }
+
+    .resume {
+        line-height: 16px;
+        line-height: 1rem;
+    }
+
+    .resume h1 {
+        font-size:15px;
+        font-size:0.9375rem;
+        line-height: 20px;
+        line-height: 1.25rem;
+    }
+
+
+    .resume h3 {
+        font-size: 14px;
+        font-size: 0.875rem;
+        /* Check this */
+        margin:24px 0 12px 0;
+    }
+
+    /*.resume p, li {
+        line-height: 16px;
+        line-height: 1rem;
+    }*/
+
+    .statement {
+        width: 97%;
+        margin: 9px 18px;
+        font-size: 11px;
+        font-size: 0.6875rem;
+    }
+
+    .level1 {
+        /* check margins */
+        margin-left:28px;
+        margin-left: 1.75rem;
+        font-size: 11px;
+        font-size: 0.6875rem;
+    }
+
+    .job-title {
+        font-size:12px;
+        font-size:0.75rem;
+        margin-bottom: 0;
+        margin-top: 14px;
+    }
+
+    .sub {
+        /* Check this... */
+        margin-left: 44px;
+        margin-left: 2.75rem;
+    }
+
+    .level2 {
+        /* Check margins... */
+        margin-left:40px;
+        margin-left: 2.5rem;
+        font-size: 10px;
+        font-size: 0.625rem;
+    }
+    .contact {
+        font-size: 10px;
+        font-size: 0.625rem;
+    }
+}

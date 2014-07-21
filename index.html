@@ -4,6 +4,9 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
     <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
@@ -13,8 +16,7 @@
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/humanity/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <!-- Use CDN link to jQueryUI for now.  Download only required components once established which I'm going to use.-->
-	 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 
 	 <link rel="shortcut icon" href="images/assets/Portfolio.png">
     <title>Bryan L. Pratt &ndash; Portfolio</title>
@@ -26,7 +28,6 @@
             <li><a href="#portfolio_tab">Portfolio</a> </li>
             <li><a href="#resume_tab">R&eacute;sum&eacute; </a> </li>
             <!--<li><a href="#about_tab">Interests</a> </li>-->
-            <!--<li><a href="#past_tab">Work History</a> </li>-->
             <li><a href="#contact_tab">Contact Me</a> </li>
         </ul>
         <div id="portfolio_tab">
@@ -53,7 +54,7 @@
                         </figure>
                     </a>
                 </li>
-                <!--  May have to drop this from the portfolio, but I hope to get it done...
+                <!--  To be added at a later date...
                 <li class="inline_list">
                     <a href="EnviroSite/index.html" title="United for Action" target="_self">
                         <figure>
@@ -111,10 +112,18 @@
                 <div>
                     <h3 id="projects">Description of Projects in Portfolio</h3>
                     <ul>
-                        <li class="level1">&bull; Gallery: A simulated commercial photo gallery written in JavaScript / jQuery and utilizing AJAX /JSON</li>
-                        <li class="level1">&bull; Calculator: An attractive multi-function calculator written in JavaScript / jQuery</li>
-                        <li class="level1">&bull; Quiz: Written in JavaScript / jQuery, utilizes AJAX /JSON to deliver multiple quizzes</li>
-                        <li class="level1">&bull; Shafts of Light: A personal blog written in JavaScript / jQuery</li>
+                        <li class="level1">&bull;
+                            <a href="Gallery/index.html">Gallery</a>
+                            : A simulated commercial photo gallery written in JavaScript / jQuery and utilizing AJAX /JSON</li>
+                        <li class="level1">&bull; <a href="calc/index.html">Calculator</a>
+                            : An attractive multi-function calculator written in JavaScript / jQuery</li>
+                        <li class="level1">&bull;
+                            <a href="Quiz/select.html">Quiz</a>
+                            : Written in JavaScript / jQuery, utilizes AJAX /JSON to deliver multiple quizzes</li>
+                        <li class="level1">&bull; <a href="Uplift/index.html">Shafts of Light</a>
+                            : A personal blog written in JavaScript / jQuery</li>
+                        <li class="level1">&bull; <a href="WellKit/Portfolio.pdf">WellKit Internship Portfolio</a>
+                            : A detailed report on work that I did at WellKit Corporation</li>
                     </ul>
                 </div>
 
@@ -147,8 +156,10 @@
                         <li class="level1 sub">WellKit Corporation, Bellevue WA<span class="float-right">June 2013 &ndash; Sept 2013</span> </li>
                         <li class="level2">&middot; Implemented website UI/UX features per specification using ASP.NET 4.5,
                             C# 5.0, SQL Server 7, HTML 5 and CSS 3</li>
-                        <li class="level2">&middot; Wrote specification for, developed, and implemented a portion of
-                            the site</li>
+                        <li class="level2">&middot; Wrote specification for, developed and implemented a portion of the
+                            site (“News”) and an accompanying administration page</li>
+                        <li class="level2">&middot; Wrote T-SQL stored procedures and C# classes for handling the data
+                            associated with each corresponding query</li>
                         <li class="level1 job-title">&bull; Data Entry, inventory and infection control</li>
                         <li class="level2 sub">Issaquah Dental Lab, Issaquah WA<span class="float-right">Feb &ndash; Dec 2012</span></li>
                         <li class="level2">&middot; Maintained, updated, and created training and procedural materials</li>
@@ -157,19 +168,24 @@
                         <li class="level2 sub">Issaquah, Tahoma, and Snoqualmie Valley WA School districts<span class="float-right"> April 2002 – June 2012</span></li>
                         <li class="level2">&middot; Collaborated with multi-disciplinary team to write and maintained
                             highly detailed individual education plans</li>
+                        <li class="level2">&middot; Designed, created, and delivered specially designed instruction to
+                            students with special learning needs</li>
                         <li class="level2">&middot; Maintained daily communication with parents, administrators, and
-                            among inter-disciplinary teams, addressing concerns, resolving conflicts, and providing
-                            solutions, assisting parents through the process of coming to terms with their children’s
-                            unique issues and coping with a complex educational system, all within stringent legal
-                            constraints</li>
-                        <li class="level2">&middot; Managed teams of up to 5 aides scheduling, training, delegating
+                            multi-disciplinary teams, addressing concerns, resolving conflicts, and providing
+                            solutions</li>
+                        <li class="level2">&middot; Assisted parents through the process of coming to terms with their
+                            children’s unique issues, and with the process of negotiating a complex educational
+                            system</li>
+                        <li class="level2">&middot; Managed teams of up to 5 aides in scheduling, training, delegating
                             tasks, and providing feedback</li>
                         <li class="level1 job-title">&bull; Support Analyst</li>
                         <li class="level2 sub">Microsoft, Redmond WA<span class="float-right">1995 &ndash; 2002</span></li>
-                        <li class="level2">&middot; Wrote utilities in QuickBasic, Visual Basic, and Windows logon
-                            script for managing software rollouts and standardization, resulting in greatly streamlined
-                            process and reduced downtime and service calls, winning a company-wide award for “Making
-                            It Easier”</li>
+                        <li class="level2">&middot; Used QuickBasic, Visual Basic, and Windows logon script to write
+                            utilities for managing software rollouts and standardization.  This greatly streamlined the
+                            rollout process and reduced downtime and service calls, and won a company-wide award for
+                            “Making It Easier”</li>
+                        <li class="level2">&middot; Created and regularly updated software images which were preloaded
+                            onto all Dell computers purchased by Microsoft company-wide</li>
                         <li class="level1 job-title">&bull; Desktop Support</li>
                         <li class="level2 sub">Microsoft, Redmond WA<span class="float-right">1991 &ndash; 1995</span></li>
                         <li class="level2">&middot; Responded to requests for assistance from members of Inside Sales
@@ -179,19 +195,23 @@
                             solution</li>
                         <li class="level1 job-title">&bull; Customer Service</li>
                         <li class="level2 sub">Microsoft, Redmond WA<span class="float-right">1986 &ndash; 1991</span></li>
-                        <li class="level2">Telephone customer service support, dealing with defective product
-                            replacement, product upgrades, and customer complaints</li>
-                        <li class="level2">&middot; First tier escalation for difficult customer situations due to
-                            excellent conflict resolution skills and calm, confident demeanor</li>
+                        <li class="level2">&middot; Provided telephone customer service support, dealt with defective
+                            product replacement, product upgrades, and customer complaints</li>
+                        <li class="level2">&middot; Handled first tier escalation for difficult customer situations due
+                            to excellent conflict resolution skills, empathy and a calm, confident demeanor</li>
+                        <li class="level2">&middot; Pioneered &ldquo;customer first&rdquo; paradigm within the
+                            department</li>
                         <li class="level1 job-title">&bull; Member Relations</li>
                         <li class="level2 sub">Thousand Trails (membership campground and RV park provider)<span class="float-right">1986</span></li>
-                        <li class="level2">&middot; Responded to member-reported issues at Thousand Trail “Preserves”
-                            (RV park / campgrounds), researching circumstances, interviewing persons involved, and
-                            seeking resolution with members via written communication</li>
+                        <li class="level2">&middot; Responded to member-reported issues at Thousand Trail
+                            &ldquo;Preserves&rdquo; (RV park / campgrounds), researched circumstances, interviewed
+                            persons involved, and sought resolution with members via written communication</li>
                         <li class="level1 job-title">&bull; Clerk</li>
                         <li class="level2 sub">Thousand Trails, Bellevue WA<span class="float-right">1985 &ndash; 1986</span></li>
-                        <li class="level2">Facilitated communication and transmission of materials between the home office and 43 “preserves”</li>
-                        <li class="level2">Identified and implemented cost cutting measures resulting in $12,000 annual savings and earning annual award</li>
+                        <li class="level2">Facilitated communication and transmission of materials between the home
+                            office and 43 &ldquo;preserves&rdquo;</li>
+                        <li class="level2">Identified and implemented cost cutting measures resulting in $12,000 annual
+                            savings and earning annual award</li>
                         <li class="level1 job-title">&bull; Program Manager, Production Manager, Music Director (Radio broadcasting)</li>
                         <li class="level2 sub">KENE, Toppenish, WA and KFTN, Provo UT<span class="float-right">1979 &ndash; 1985</span></li>
                         <li class="level2">&middot; Programmed and operated top-rated automated Spanish language FM station</li>
@@ -202,12 +222,16 @@
                     </ul>
                 </div>
                 <div> <a name="certs"></a>
-
                     <h3 id="certifications">Certifications</h3>
-
                     <ul>
                         <li class="level1">&bull; Microsoft Technical Associate: Software Development Fundamentals (98-361)</li>
                         <li class="level1">&bull; Microsoft Technical Associate: Windows Operating System Fundamentals (98-349)</li>
+                    </ul>
+                </div>
+                <div> <a name="lang"></a>
+                    <h3 id="languages">Languages</h3>
+                    <ul>
+                        <li class="level1">Speak, read, and write Spanish at basic working proficiency level</li>
                     </ul>
                 </div>
 
@@ -225,6 +249,7 @@
                     <li><a href="#tech_skills" data-id="technical_skills">Technical Skills</a></li>
                     <li><a href="#work_exp" data-id="work_experience">Work Experience</a></li>
                     <li><a href="#certs" data-id="certifications">Certifications</a></li>
+                    <li><a href="#lang" data-id="languages">Languages</a></li>
                     <hr>
                     <li>
                         <a href="https://www.linkedin.com/in/bryanpratt" title="Click to see my LinkedIn Profile"
@@ -235,7 +260,7 @@
                 </ul>
             </div>
         </div>
-        <!--
+        <!-- To be added at a later date
         <div id="about_tab">
             <p>About Me content.</p>
         </div>

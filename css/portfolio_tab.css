@@ -3,12 +3,6 @@ article, aside, figure, figcaption, footer, header, nav, section {
     display: block;
 }
 
-/* #portfolio_tab ul, li {
-    display: inline-block;
-    list-style-type: none;
-}
-*/
-
 #portfolio_tab a {
     text-decoration: none;
 }

@@ -16,7 +16,13 @@
             helpClosed = false,
             shiftOn = false,
 
+            // Flag for IE (to handle specific IE related issues)
+            browser = navigator.userAgent,
+            isIE = (browser.indexOf("MSIE") > -1 || browser.indexOf("rv:11.0") > -1),
+
             // Assign controls to variables to reduce jQuery calls
+            fullWrapper = $("#full_wrapper"),
+            calcWrapper = $("#calc_wrapper"),
             display = $("#display"),
             calcButton = $(".button"),
             helpIcon = $(".helpIcon"),
@@ -72,7 +78,7 @@
         calculatorSize();
 
         // Function to process a click or a valid keystroke
-        var process = function(id) {
+        function process(id) {
             var currDisplay = display.val();
             switch (id) {
                 case "clear":
@@ -87,6 +93,7 @@
                 case "back":
                     if (currDisplay.indexOf("e+") === -1) {
                         if (currentValue !== 0) {
+                            currDisplay = clearComma(currDisplay);
                             currDisplay = currDisplay.slice(0, currDisplay.length - 1);
                             if (currDisplay === "") {
                                 currentValue = 0;
@@ -163,11 +170,7 @@
                         if (currDisplay === "0") {
                             if (id === "0") {
                                 id = "";
-                            } else if (id !== ".") {  // TODO - This should never occur because of how "." is handled.
-                                                        // Check and fix / remove as needed.
-                                currDisplay = "";
-                            }
-                        }
+                            }                         }
                         // Special case for "."  Allow only once in a number.
                         if (currDisplay.indexOf("." && !displayCleared) >= 0 ){
                             if (id === ".") {
@@ -206,10 +209,10 @@
                         }
                     }
             } // End switch
-        }; // End of process function
+        } // End of process function
 
         // Function for performing calculations
-        var doCalculation = function(num1, num2) {
+        function doCalculation(num1, num2) {
             var result;
             switch (operation) {
                 case "add":
@@ -232,10 +235,10 @@
             }
             // Note - can't do parseFloat here because text is returned in the case of division by 0.
             return result;
-        };
+        }
 
         // Set the number of decimals to be displayed (max = 10).  Also handles errors (NaN) and overflows (Infinity)
-        var setDecimalLength = function(num) {
+        function setDecimalLength(num) {
             if (isNaN(num)) {
                 num = "Error";
             } else if (!isFinite(num)) {
@@ -247,16 +250,10 @@
                 }
             }
             return num;
-        };
+        }
 
         // Use jQuery UI to make the calculator draggable
-        $("#full_wrapper").draggable();
-
-        // All button clicks are handled here.
-        //calcButton.mousedown(function() {
-            //var id = this.id;
-            //process(id);
-        //});
+        fullWrapper.draggable();
 
         // Keyboard handling.
         keyboard.keydown(function(event) {
@@ -270,6 +267,7 @@
                     break;
                 case BACK:
                     process("back");
+                    event.preventDefault();
                     break;
                 case HELP:
                     process("help");
@@ -382,7 +380,6 @@
             }
         });
 
-        // There are actually two help icons on the full-screen version; they disappear when sized for a small device
         helpIcon.click(function () {
             process("help");
         });
@@ -391,10 +388,6 @@
         helpScreen.click(function() {
             process("help");
         });
-
-        //$(".button, #calc_wrapper").mousedown(function(event) {
-            //event.preventDefault();     // Prevent text from being highlighted by mouse clicks too close together
-        //});
 
         $("#floating_main_link").fadeTo(200, 1).delay(2500).fadeTo(600, 0.2).click(function(){
             window.open("../index.html", "_self");
@@ -484,7 +477,7 @@
             supTop = ((height * 0.02594) * -1).toString()  + "px";
             supFontSize = (height * 0.02882).toString()  + "px";
             supLineHeight = (height * 0.11).toString()  + "px";
-            regularButtonWidth = (calcWrapperWidth / 4) - 3; //.toString() + "px";
+            regularButtonWidth = (calcWrapperWidth / 4) - 3;
             wideButtonWidth = (regularButtonWidth * 2) + 2;
             displayFont = wrapperWidth * 0.08276;
             regularButtonWidth = regularButtonWidth.toString() + "px";
@@ -492,14 +485,14 @@
 
             calcPadding = "0 " + calcPadding + "px";
             calcMargin = 0;
-            $("#full_wrapper").css({"width": wrapperWidth, "height": height, "margin": wrapperMargin});
-            $("#calc_wrapper").css({"height": (calcWrapperHeight), "padding": calcPadding, "margin": calcMargin, "width": calcWrapperWidth});
+            fullWrapper.css({"width": wrapperWidth, "height": height, "margin": wrapperMargin});
+            calcWrapper.css({"height": (calcWrapperHeight), "padding": calcPadding, "margin": calcMargin, "width": calcWrapperWidth});
             $("body").css({"line-height": lineHeight, "font-size": fontSize});
             $(".bksp").css({"width": fontSize, "height": fontSize});
             $(".sup").css({"top": supTop, "font-size": supFontSize, "line-height": supLineHeight});
             $(".wide").css("width", wideButtonWidth);
             $(".regular").css("width", regularButtonWidth);
-            $(".button").css("height", buttonHeight);
+            calcButton.css("height", buttonHeight);
             $("#display").css({"width": displayWidth, "height": displayHeight, "font-size": displayFont, "margin-bottom": displayBottomMargin});
             var helpIcon = $("#keyboard_icon");
             if (top === 10) {
@@ -508,25 +501,27 @@
         }
 
         // This needs to be in a better place
-        $(".button").mousedown(function(evt) {
-            if (!helpVisible) {
-                var newWidth = ($("#calc_wrapper").width() / 4) - 4;
+        calcButton.mousedown(function(evt) {
+            //if (!isIE) {
+            //}
+            if (!helpVisible && !isIE) {
+                var newWidth = (calcWrapper.width() / 4) - 4;
                 if ($(this).hasClass("wide")) {
                     newWidth = (newWidth * 2) + 3;
                 }
-                var newHeight = ($("#full_wrapper").height() * 0.129682759) - 1;
+                var newHeight = (fullWrapper.height() * 0.129682759) - 1;
                 $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "2px", "border-bottom-width": "2px"});
-                process(this.id);
             }
+            process(this.id);
         });
 
-        $(".button").mouseup(function() {
-            if (!helpVisible) {
-                var newWidth = ($("#calc_wrapper").width() / 4) - 3;
+        calcButton.mouseup(function() {
+            if (!helpVisible && !isIE) {
+                var newWidth = (calcWrapper.width() / 4) - 3;
                 if ($(this).hasClass("wide")) {
                     newWidth = (newWidth * 2) + 2;
                 }
-                var newHeight = $("#full_wrapper").height() * 0.129682759;
+                var newHeight = fullWrapper.height() * 0.129682759;
                 $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "1px", "border-bottom-width": "1px"});
             }
             if (helpClosed) {helpClosed = false;}

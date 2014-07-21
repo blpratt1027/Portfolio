@@ -7,8 +7,6 @@
     margin-left: -512px;
     margin-left: -32rem;
     padding: 5px;
-    /*background-color:snow;
-    background-image: none;*/
 }
 
 
@@ -42,12 +40,12 @@
 }
 
 .co-fieldset {
-    padding: 2px; /*6px 2px 4px 2px;*/
+    padding: 2px;
     border: 2px groove #CCCCCC;
     font-size: 15px;
     font-size: 0.9375rem;
     font-style: normal;
-    margin: 5px 4px 8px 4px; /* 4px;*/
+    margin: 5px 4px 8px 4px;
 }
 
 .checkout-table {
@@ -189,7 +187,7 @@
 }
 
 .summary-title {
-    width:305px;
+    width:335px;
     font-weight: bold;
     text-align: right;
 }

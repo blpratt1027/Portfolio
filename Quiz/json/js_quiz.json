@@ -17,7 +17,7 @@
             {"option": "One of the .NET family of languages."},
             {"option": "A scripting language for running batch processes."},
             {"option": "A sequential programming language used for applications written for the Linux operating system."},
-            {"option": "A dynamic, object oriented, event driven language used most often in web browsers."}
+            {"option": "A dynamically typed, object oriented, event driven language used most often in web browsers."}
             ]
         },
         {"a": [

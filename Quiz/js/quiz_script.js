@@ -1,7 +1,6 @@
 /**
  * Created by Bryan on 5/28/2014.
  * Upgrade to use AJAX / JSON completed: July 10, 2014.
- * Alpha 1 release to portfolio: July 10, 2014
  *
  */
 'use strict';
@@ -47,7 +46,7 @@
         $.getJSON(quiz_file, function(data){
             $(".title").html(data.title);
             for (var q = 0; q < data.questions.length; q++) {
-                questions.push(data.questions[q].q)
+                questions.push(data.questions[q].q);
             }
 
             for (var a = 0; a < data.answers.length; a++) {
@@ -144,7 +143,6 @@
                     rBtn.name = 'q1';
                     rBtn.value = i + 1;
                     qSpan = crEl('span');
-                    //qSpan.id = 'q' + (i + 1).toFixed();
                     qSpan.innerHTML = answers[question_count][i];
                     addToEl(buttonsForm, rBtn);
                     addToEl(buttonsForm, qSpan);

@@ -6,7 +6,6 @@
  */
 (function() {
     $(document).ready(function() {
-        //alert("Hello World!");
         $("#tabs").tabs();
     });
 })();

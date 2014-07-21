@@ -353,6 +353,29 @@
                 $("#security_code_help").attr("title", helpPrompt).fadeIn(300);
             } else {$("#security_code_help").hide(); }
         });  // End card_type change event handler
+
+        // Limit input in zip code fields to numbers and dash only
+        $("#b_zip, #s_zip").on("keyup", function() {
+            var txt = $(this).val().split("-");
+            var tmp = "";
+            for (var i in txt) {
+                if (isNaN(txt[i])) {
+                    txt[i] = txt[i].slice(0, txt[i].length - 1);
+                }
+                if (i > 0) tmp += "-";
+                tmp += txt[i];
+                $(this).val(tmp);
+            }
+        });
+
+        // Limit input in credit card and csc fields to numbers only
+        $("#card_number, #security_code").on("keyup", function() {
+            var txt = $(this).val();
+            if (isNaN(txt)) {
+                txt = txt.slice(0, txt.length - 1);
+                $(this).val(txt);
+            }
+        });
 // ---------- End event handlers -------------
 
 // ----------------------- Functions -----------------------
@@ -1070,7 +1093,7 @@
                 tb.className = "order-conf-table";
                 var tr = crEl('tr'),
                     th, td,
-                    classes = ["title text-center confirmation-item-title", "size", "price", "qty", "extprice",
+                    classes = ["title text-center confirmation-item-title", "size", "price text-right", "qty text-right", "extprice text-right",
                         "remove"],
                     labels = ["Title", "Size", "Price", "Qty", "Ext Price", ""];
                 for (i = 0; i < classes.length; i++) {
@@ -1658,7 +1681,7 @@
             if (enteredPwd === pwd){
                 if (data_file.indexOf('bp') > 0) {
                     data_file = "JSON/images.json";
-                } else { data_file = "JSON/bp_images.json"}
+                } else { data_file = "JSON/bp_images.json";}
                 storage.set('dataFile', data_file);
                 shoppingCart = [];
                 location.reload(true);

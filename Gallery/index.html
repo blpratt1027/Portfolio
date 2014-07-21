@@ -1,15 +1,17 @@
 <!DOCTYPE html>
+<!-- Gallery index.html -->
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="initial-scale=1">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <!-- TODO - local copy of jQuery for when I am off-line.  Remove before deploying -->
-    <!--<script src="js/jquery-1.9.1.min.js"></script>-->
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.storageapi.min.js"></script>
 
@@ -80,7 +82,6 @@
                 </div>
                 <hr>
                 <div id="cart_button" class="text-center">
-                    <!--<p id="add_to_cart_button" class="button-style disabled">Add to Cart</p>-->
                 </div>
             </div>
             <div id="full_image_wrapper" class="inner-border in-line-float">
@@ -203,7 +204,7 @@
         </fieldset>
         <fieldset class="co-fieldset" id="shipping_info">
             <legend> Shipping Information </legend>
-            <input class="co-input" type="checkbox" id="use_billing" ><span class="detail"> Use billing information</span><br> <!-- TODO - make this a label -->
+            <input class="co-input" type="checkbox" id="use_billing" ><span class="detail"> Use billing information</span><br>
 
             <table class="checkout-table">
                 <tr>
@@ -352,7 +353,6 @@
 <section>   <!-- Order confirmation page -->
     <div id="order_confirmation" class="pop-up thick-border auto-height hidden">
         <div id="oc_close"></div>
-        <!--<img id="close_confirmation_icon" class="close-icon" src="images/assets/Close.png" alt="Close icon" title="Close">-->
         <h2 class="slim-h in-line">Order Confirmation</h2>
         <p class="float-right detail in-line">This is a mock site.  No order will be placed.</p>
         <div class="inner-border plain-page">
