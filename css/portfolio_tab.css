@@ -3,6 +3,53 @@ article, aside, figure, figcaption, footer, header, nav, section {
     display: block;
 }
 
+h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 100;
+    color: #493012;
+    text-shadow: 2px 2px 8px rgba(73, 48, 18, 0.4);
+    margin:8px 0;
+}
+
+h4 {
+    font-weight: 100;
+    font-style: italic;
+    margin: 2px 11px;
+    font-size:14px;
+    font-size: 0.875rem;
+    color: #808080;
+}
+
+h4:hover {
+    cursor: pointer;
+    color: rgba(32, 128, 255, 0.85);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+h4:active {
+    color: rgba(255, 128, 32, 0.85);
+}
+
+h5 {
+    font-weight: 100;
+    font-style: italic;
+    margin: 2px 0 6px 8px;
+    font-family: Garamond, 'Times New Roman', serif;
+    color: #6a451a;
+}
+
+figcaption {
+    margin-left: 10px;
+    font-size:15px;
+    font-size: 0.9375rem;
+    color: #6a451a;
+}
+
+#tabs {
+    height: 150px;
+}
+
 #portfolio_tab a {
     text-decoration: none;
 }
@@ -22,6 +69,59 @@ article, aside, figure, figcaption, footer, header, nav, section {
     color: #493012;
     text-shadow: 2px 2px 8px rgba(73, 48, 18, 0.4);
     margin:8px;
+}
+
+.img-wrapper {
+    float: left;
+    display: inline-block;
+}
+
+.description-text {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 8px 8px 12px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.97);
+    font-size: 14px;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 140px;
+    left: 10%;
+    width: 75%;
+    margin: auto;
+}
+
+.description-text p {
+    line-height: 17px;
+    margin: 2px 2px 8px 2px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.close-button {
+    margin-top: 5px;
+    padding: 1px 20px;
+    display: inline-block;
+    border: 1px solid #d0d0d0;
+    color: #dadada;
+    font-style: italic;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #5a5a5a;
+    color: rgba(32, 128, 255, 0.85);
+    border-color: #5a5a5a;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.33);
+}
+
+.close-button:active {
+    box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 128, 32, 0.85);
 }
 
 @media only screen and (max-width: 530px) {

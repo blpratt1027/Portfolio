@@ -132,14 +132,6 @@ hr {
     text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* It appears that there are no h2s
-.resume h2 {
-    font-size: 22px;
-    font-size: 1.375rem;
-    font-style: normal;
-}
-*/
-
 .resume h3 {
     text-align: left;
     font-size: 18px;

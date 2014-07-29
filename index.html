@@ -25,59 +25,102 @@
     <p class="faux_hidden" id="top">Top</p>
     <div id="tabs">
         <ul>
-            <li><a href="#portfolio_tab">Portfolio</a> </li>
-            <li><a href="#resume_tab">R&eacute;sum&eacute; </a> </li>
+            <li id="port" class="tab-id"><a href="#portfolio_tab">Portfolio</a> </li>
+            <li id="res" class="tab-id"><a href="#resume_tab">R&eacute;sum&eacute; </a> </li>
             <!--<li><a href="#about_tab">Interests</a> </li>-->
-            <li><a href="#contact_tab">Contact Me</a> </li>
+            <li id="cont" class="tab-id"><a href="#contact_tab">Contact Me</a> </li>
         </ul>
         <div id="portfolio_tab">
             <h1 class="title">Bryan L. Pratt's Portfolio</h1>
-            <ul id="portfolio_thumbnails" class="inline_list">
-                <li class="inline_list">
+            <h5>Click any image below...</h5>
+
+            <div id="images_wrapper">
+                <div class="img-wrapper">
                     <a href="Gallery/index.html" title="Gallery" target="_self">
                         <figure>
                             <img src="images/gallery.jpg" alt="Gallery">
                         </figure>
                     </a>
-                </li>
-                <li class="inline_list">
+                    <div class="item-description">
+                        <h4>Description...</h4>
+                        <div class="hidden description-text">
+                            <h2>Gallery</h2>
+                            <p>A simulated commercial photo gallery featuring three slide shows and a light box.  “Customers” can “order” prints of each of the photos in various sizes.  This was the “capstone” project for my last client-side programming class at Bellevue College.</p>
+                            <p>This site was built using JavaScript, jQuery, jQuery UI, AJAX / JSON, and OWL Graphic’s OWL Carousel jQuery plugin.</p>
+                            <p>The code for this site can be used for different galleries by simply providing a different set of images, and a JSON file containing the paths and file names of the images, descriptions, and prices for the images.  Only the reference to the JSON file has to be changed in the code.</p>
+                            <p>I looked at several plugins for the light box, but could not find one that provided the flexibility for what I had in mind, so I created my own.  I also wrote my own data validator for the same reason.</p>
+                            <p>Dialog boxes (including the light box) are created dynamically, and are modal and draggable.</p>
+                            <p>While not a major design goal, the site does implement some principles of responsive web design, especially for the light box.  While not yet optimized for a small hand-held device, the site should work well on a tablet.</p>
+                            <div class="center-text">
+                                <p class="close-button center-text">Close</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
                     <a href="calc/index.html" title="Calculator" target="_self">
                         <figure>
                             <img src="images/calc_app.jpg" alt="Calculator">
                         </figure>
                     </a>
-                </li>
-                <li class="inline_list">
+                    <h4>Description...</h4>
+                    <div class="hidden description-text">
+                        <h2>Calculator</h2>
+                        <p>A multi-function calculator was written using JavaScript, jQuery, and jQuery UI for an assignment in a client-side programming class at Bellevue College.</p>
+                        <p>This app follows the principles of responsive web design, setting the size of each element in code on load, and readjusting sizes proportionately every time the browser window is resized.  It resizes down to the size of a small, hand-held device.</p>
+                        <p>The calculator is draggable.</p>
+                        <div class="center-text">
+                            <p class="close-button center-text">Close</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
                     <a href="Quiz/select.html" title="Quiz" target="_self">
                         <figure>
                             <img src="images/quiz_app.jpg" alt="Quiz">
                         </figure>
                     </a>
-                </li>
-                <!--  To be added at a later date...
-                <li class="inline_list">
-                    <a href="EnviroSite/index.html" title="United for Action" target="_self">
-                        <figure>
-                            <img src="images/enviro_app.jpg" alt="United for Action">
-                        </figure>
-                    </a>
-                </li>
-                -->
-                <li class="inline_list">
+                    <h4>Description...</h4>
+                    <div class="hidden description-text">
+                        <h2>Quiz</h2>
+                        <p>This app was written in JavaScript, jQuery and AJAX / JSON as an assignment for a client-side programming class at Bellevue College.</p>
+                        <p>Three quizzes are available for the app to demonstrate that different quizzes can be presented simply by changing the JSON file where the quiz data is stored and the images associated with the quiz.  The code for all three quizzes is identical.</p>
+                        <p>This app follows principles of responsive web design using CSS media queries.</p>
+                        <div class="center-text">
+                            <p class="close-button center-text">Close</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
                     <a href="Uplift/index.html" title="Shafts of Light" target="_self">
                         <figure>
                             <img src="images/uplift_app.jpg" alt="Shafts of Light">
                         </figure>
                     </a>
-                </li>
-                <li class="inline_list">
+                    <h4>Description...</h4>
+                    <div class="hidden description-text">
+                        <h2>Shafts of Light</h2>
+                        <p>This is a personal blog that I wrote on my own to practice jQuery methods that I was learning at Bellevue College.  It follows principles of responsive web design using CSS media queries.</p>
+                        <p>I hope to expand on this blog as a place to share stories that help to demonstrate that goodness and kindness still exist in an increasingly greedy and self-absorbed world.</p>
+                        <div class="center-text">
+                            <p class="close-button center-text">Close</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
                     <a href="WellKit/Portfolio.pdf" title="WellKit Portfolio" target="_self">
                         <figure>
                             <img src="images/WellKit.jpg" alt="WellKit Portfolio">
                         </figure>
                     </a>
-                </li>
-            </ul>
+                    <h4>Description...</h4>
+                    <div class="hidden description-text">
+                        <p>WellKit Internship Portfolio</p>
+                        <p>I did an internship with WellKit Corporation in Bellevue, Washington during Summer 2013 quarter.  I helped in the creation of a web site for the company.  This report describes the work I did there in detail.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div id="resume_tab">
             <div id="resume_content" class="resume">
@@ -166,7 +209,7 @@
                         <li class="level2">&middot; Recognized for increasing accuracy rate of data entry</li>
                         <li class="level1 job-title">&bull; Special Education Teacher</li>
                         <li class="level2 sub">Issaquah, Tahoma, and Snoqualmie Valley WA School districts<span class="float-right"> April 2002 – June 2012</span></li>
-                        <li class="level2">&middot; Collaborated with multi-disciplinary teams to write and maintained
+                        <li class="level2">&middot; Collaborated with multidisciplinary teams to write and maintained
                             highly detailed individual education plans</li>
                         <li class="level2">&middot; Designed, created, and delivered specially designed instruction to
                             students with special learning needs</li>
@@ -283,5 +326,10 @@
     </div>
     <script src="js/portfolio.js"></script>
     <script src="js/resume.js"></script>
+    <?php include 'counter/counter.php'; ?>
+    <div id="show_count" class="hidden">
+        <p>Count...</p>
+        <?php include 'counter/showcounter.php'; ?>
+    </div>
 </body>
 </html>

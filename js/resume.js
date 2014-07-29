@@ -66,11 +66,6 @@
             }
         });
 
-        $("#portfolio_thumbnails img").each(function() {
-            var altTag = $(this).attr("alt");
-            $(this).after("<figcaption>" + altTag + "</figcaption>");
-        });
-
          $(document).scroll(function() {
             if (scrolling) {
                 scrolling = false;

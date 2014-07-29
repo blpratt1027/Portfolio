@@ -504,6 +504,7 @@
         calcButton.mousedown(function(evt) {
             //if (!isIE) {
             //}
+            fullWrapper.draggable("disable");
             if (!helpVisible && !isIE) {
                 var newWidth = (calcWrapper.width() / 4) - 4;
                 if ($(this).hasClass("wide")) {
@@ -525,6 +526,7 @@
                 $(this).css({"width": newWidth, "height": newHeight, "border-right-width": "1px", "border-bottom-width": "1px"});
             }
             if (helpClosed) {helpClosed = false;}
+            fullWrapper.draggable("enable");
         });
 
         var CommaFormatted = function(amount) {

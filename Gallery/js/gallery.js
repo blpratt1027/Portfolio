@@ -724,7 +724,7 @@
 
             dv = crEl('div');
             dv.className = 'text-center button-footer';
-            var button_labels = ['<span class="u">Y</span>es', ' <span class="u">N</span>o ', ' Cancel'];
+            var button_labels = ['Yes', ' No ', ' Cancel'];
             for (var i = 0; i < 3; i++) {
                 if (i === 0) {
                     p = createButton(button_labels[i], deleteItem);
@@ -750,8 +750,8 @@
                 var h = 'Empty Cart?',
                     msg = [ 'Are you sure you want to delete all items from your cart?'],
                     buttons = [
-                    {'title': '<span class="u">Y</span>es '},
-                    {'title': ' <span class="u">N</span>o '},
+                    {'title': 'Yes '},
+                    {'title': ' No '},
                     {'title': ' Cancel'}
                     ],
                     handlers = [emptyCart, closeConfirmEmptyCart, closeConfirmEmptyCart],
@@ -950,7 +950,7 @@
             var chkOutBtn = createButton('Checkout ',checkOut,
                 'This is a "mock" site.  Images are not actually for sale.');
             chkOutBtn.id = 'checkout';
-            var emptyCartBtn = createButton(' <span class="u">E</span>mpty Cart ',confirmEmptyCartDialog);
+            var emptyCartBtn = createButton(' Empty Cart ',confirmEmptyCartDialog);
             emptyCartBtn.id = 'empty_cart_button';
             if (shoppingCart.length === 0) {
                 chkOutBtn.className += ' disabled';
@@ -976,25 +976,27 @@
         } // End populateShoppingCart
 
         function checkOut() {
-            closeLightBox();
-            closeCart();
-            closeAddedToCartConfirm(0);
-            loadCheckout();
-            var submitButton = createButton('Place Order', createOrderValidationPage,
-                    'This is a "mock" site.  Images are not actually for sale.'),
-                cnButton = createButton('Cancel', closeCheckoutPage),
-                buttonWrapper = $('#co_buttons');
-            submitButton.className += " wide-separation";
-            cnButton.className += " wide-separation";
-            buttonWrapper.empty();
-            addToEl(buttonWrapper, submitButton);
-            addToEl(buttonWrapper, cnButton);
-            cancel_button = closeCheckoutPage;
-            default_button = createOrderValidationPage;
-            emptyCartActive = false;
-            addOverlay();
-            checkoutPage.show();
-            $("#b_first_name").focus();
+            if (shoppingCart.length) {
+                closeLightBox();
+                closeCart();
+                closeAddedToCartConfirm(0);
+                loadCheckout();
+                var submitButton = createButton('Place Order', createOrderValidationPage,
+                        'This is a "mock" site.  Images are not actually for sale.'),
+                    cnButton = createButton('Cancel', closeCheckoutPage),
+                    buttonWrapper = $('#co_buttons');
+                submitButton.className += " wide-separation";
+                cnButton.className += " wide-separation";
+                buttonWrapper.empty();
+                addToEl(buttonWrapper, submitButton);
+                addToEl(buttonWrapper, cnButton);
+                cancel_button = closeCheckoutPage;
+                default_button = createOrderValidationPage;
+                emptyCartActive = false;
+                addOverlay();
+                checkoutPage.show();
+                $("#b_first_name").focus();
+            }
         } // End checkOut function
 
         function createOrderValidationPage() {
