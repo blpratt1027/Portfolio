@@ -7,6 +7,21 @@
 (function() {
     $(document).ready(function() {
 
+        // Verify version
+        var versionFile = "JSON/version.json",
+            currVersion,
+            storedVersion;
+
+        $.getJSON(versionFile, function(data){
+            currVersion = data.version;
+            var storage = $.localStorage;
+            storedVersion = storage.get('version');
+            if (currVersion !== storedVersion) {
+                storage.set('version', currVersion);
+                location.reload();
+            }
+        });
+
         $("#tabs").tabs();
 
         $(".tab-id").click(function() {

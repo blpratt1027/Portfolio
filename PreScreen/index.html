@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+	 <link rel="stylesheet" href="css/prescreen.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>BlackRock Exercise</title>
+</head>
+<body>
+    <div id="intro">
+        <h1>BlackRock PreScreening exercise</h1>
+        <p>Here are the specifications for this exercise...<p>
+        <hr>
+        <pre>
+    1) Write CSS/HTML code that will animate a box on hover (change size, color, add shading)
+    2) Use JavaScript DOM to switch Box 1 and Box 2.
+    &lt;div id=”container”>
+        &lt;div class=”box1”>Box 1&lt;/div>
+        &lt;div class=”box2”>Box 2&lt;/div>
+    &lt;/div>
+    3) Use either Javascript or D3 to create a car mpg bar chart using the following data, use names for labels.
+    var cars = [{
+        class: "Two-Seaters",
+        name: "Honda CR-Z",
+        mpg: 37
+    },{
+        class: "Minicompacts",
+        name: "Scion iQ",
+        mpg: 37
+    },{
+        class: "Compacts",
+        name: "Toyota Prius",
+        mpg: 50
+    },{
+        class: "Large",
+        name: "Ford C-MAX Hybrid",
+        mpg: 43
+    },{
+        class: "Small Station Wagons",
+        name: "BMW 328d xDrive Sports Wagon",
+        mpg: 35
+    }]
+        </pre>
+        <hr>
+        <div class="center">
+            <p class="button-style" id="begin">Click to View...</p>
+        </div>
+    </div>
+    <div id="wrapper1" class="hidden">
+        <div class="changeable">
+            <p>Move the mouse over me...</p>
+        </div>
+        <div id="container">
+            <div id="box1">
+                <p>Box 1
+                <span class="small">...click me...</span>
+                </p>
+            </div>
+            <div id="box2">
+                <p>Box 2
+                    <span class="small">...click me...</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper2" >
+    </div>
+    <div id="button_div" class="center hidden">
+        <p id="continue_button" class="button-style">Click to view the Car MPG Chart</p>
+        <p id="view_spec" class="button-style">View Spec</p>
+    </div>
+    <script src="js/prescreen.js"></script>
+</body>
+</html>
