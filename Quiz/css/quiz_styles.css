@@ -25,7 +25,16 @@ td {
 }
 
 input {
+    text-indent: -1rem;
     margin-left: 1rem;
+    margin-bottom: 4px;
+}
+
+.radioText {
+    display: block;
+    margin-top: -18px;
+    margin-bottom: 4px;
+    margin-left: 36px;
 }
 
 #image {

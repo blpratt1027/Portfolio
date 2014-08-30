@@ -7,6 +7,22 @@
 (function() {
     $(document).ready(function(){
 
+        // Verify version
+        var versionFile = "json/version.json",
+            currVersion,
+            storedVersion;
+
+        $.getJSON(versionFile, function(data){
+            currVersion = data.version;
+            var storage = $.localStorage;
+            storedVersion = storage.get('version');
+            if (currVersion !== storedVersion) {
+                storage.set('version', currVersion);
+                location.reload();
+            }
+        });
+
+
         // ---- Variables and arrays used throughout the application ----
         var quiz_complete = false,
             question_count= 0,
@@ -144,9 +160,9 @@
                     rBtn.value = i + 1;
                     qSpan = crEl('span');
                     qSpan.innerHTML = answers[question_count][i];
+                    qSpan.className = 'radioText';
                     addToEl(buttonsForm, rBtn);
                     addToEl(buttonsForm, qSpan);
-                    addToEl(buttonsForm, crEl('br'));
                 }
                 mainImage.attr("src", images[question_count].img_src).attr("alt", images[question_count].alt).fadeIn(800);
                 $('#quiz_question input[type=radio]').prop("checked", false);  // Clear the radio buttons

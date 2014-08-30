@@ -25,9 +25,7 @@
         $("#tabs").tabs();
 
         $(".tab-id").click(function() {
-            var tabID = this.id;
-            //alert(tabID + " tab clicked...");
-            tabHeight(tabID);
+            tabHeight();
         });
 
         tabHeight("port");
@@ -40,7 +38,9 @@
 
         $("#images_wrapper img").each(function() {
             var altTag = $(this).attr("alt");
-            $(this).after("<figcaption>" + altTag + "</figcaption>");
+            if (altTag !== undefined) {
+                $(this).after("<figcaption>" + altTag + "</figcaption>");
+            }
         });
 
         $("h4").click(function() {
@@ -58,9 +58,11 @@
 
         window.onresize = tabHeight;
 
-        function tabHeight(tabID) {
-            var tabHeight;
-            if (tabID == "port") {
+        function tabHeight() {
+            var tabHeight,
+                tabID = $("#tabs").tabs('option', 'active');  /* Thanks to 'Contra' on StackOverflow for this code for
+                                                                 finding the active tab! */
+            if (tabID === 0) {
                 var winWidth = $(window).width();
                 var imgPerRow = Math.floor((winWidth - 79) / 268);
                 var rows;
@@ -84,7 +86,7 @@
                         break;
                 }
                 tabHeight = (rows * 316) + 150;
-            } else if (tabID == "res") {
+            } else if (tabID === 1) {
                 tabHeight = $("#resume_content").height() + 80;
             } else {
                 tabHeight = $("#contact_tab").height() + 80;

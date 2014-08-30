@@ -3,6 +3,7 @@ article, aside, figure, figcaption, footer, header, nav, section {
     display: block;
 }
 
+
 h2 {
     font-size: 20px;
     font-size: 1.25rem;
@@ -18,7 +19,7 @@ h4 {
     margin: 2px 11px;
     font-size:14px;
     font-size: 0.875rem;
-    color: #808080;
+    color: #B03050;
 }
 
 h4:hover {
@@ -39,6 +40,14 @@ h5 {
     color: #6a451a;
 }
 
+figure img {
+    width:250px;
+    border:3px solid #cccccc;
+    border-radius: 5px;
+    margin: 6px;
+    box-shadow: 2px 2px 6px #C0C0C0;
+}
+
 figcaption {
     margin-left: 10px;
     font-size:15px;
@@ -52,14 +61,6 @@ figcaption {
 
 #portfolio_tab a {
     text-decoration: none;
-}
-
-#portfolio_tab img {
-    width:250px;
-    border:3px solid #cccccc;
-    border-radius: 5px;
-    margin: 6px;
-    box-shadow: 2px 2px 6px #C0C0C0;
 }
 
 .title {
@@ -100,6 +101,51 @@ figcaption {
     text-align: center;
 }
 
+.portrait-img {
+    width: 40px;
+    height: 40px;
+    margin: 3px 25px 3px 15px;
+    box-shadow: 3px 3px 4px 1px #cccccc;
+}
+
+.portrait-img-lg {
+    width: 120px;
+    height: 107px;
+}
+
+.float-left {
+    float: left;
+}
+
+.quote {
+    color: #5a6a8a;
+}
+
+.big-quo {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 32px;
+    font-size: 2rem;
+    font-style: italic;
+    vertical-align: baseline;
+    position: relative;
+    top: 12px;
+}
+
+.td-align-top {
+    vertical-align: text-top;
+    padding: 0;
+}
+
+.td-align-bottom {
+    vertical-align: text-bottom;
+    width: 80px;
+}
+
+.emph {
+    font-weight: bold;
+    color: #4a5a7a;
+}
+
 .close-button {
     margin-top: 5px;
     padding: 1px 20px;
@@ -124,6 +170,18 @@ figcaption {
     color: rgba(255, 128, 32, 0.85);
 }
 
+.github-link {
+    text-decoration: underline;
+}
+
+.contact-div {
+    display: inline-block;
+}
+
+.contact-div-left {
+    width: 160px;
+}
+
 @media only screen and (max-width: 530px) {
     .title {
         font-size: 32px;
@@ -131,9 +189,10 @@ figcaption {
     }
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 452px) {
     .title {
         font-size: 24px;
         font-size: 1.5rem;
     }
 }
+

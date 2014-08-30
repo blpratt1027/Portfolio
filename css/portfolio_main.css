@@ -26,6 +26,11 @@ body {
     list-style-type: none;
 }
 
+.em-text {
+    font-style: italic;
+    color: #A22;
+}
+
 .contact-icon {
     width:24px;
     margin-right:8px;
