@@ -206,6 +206,53 @@
                         </div>
                     </div>
                 </div>
+                <div class="img-wrapper">
+                    <a href="Multimedia/Index.html" title="Multimedia in Web Design" target="_self">
+                        <figure>
+                            <img src="images/mm_site.jpg" alt="Multimedia in Web Design">
+                        </figure>
+                    </a>
+                    <h4>Description...</h4>
+                    <div class="hidden description-text">
+                        <h2>Multimedia in Web Design</h2>
+                        <p>This site was a group project from my first quarter in the Web Development program at
+                        Bellevue College, Winter Quarter, 2013.  The five of us on the team contributed content, but
+                        I designed and wrote the code for the site entirely on my own.</p>
+                        <p>I had my very first introduction to CSS two weeks before beginning this project, and fell in
+                        love with it.  By the time I finished the site less than two weeks later, I had less than one
+                        month of experience with CSS.  The site is constructed entirely with HTML and CSS; the only
+                        JavaScript is for the very simple slide show on the home page.</p>
+                        <p>I have left the code exactly as I wrote it then without modification (except for the addition
+                        of a splash screen and a button to return to the Portfolio).  I certainly would write much
+                        cleaner, more efficient code today, and would make copious use of JavaScript, jQuery, AJAX and
+                        JSON.  I present it here because I am quite proud of how quickly I was able to learn CSS and
+                        use it to create something I think is quite presentable.</p>
+                        <h4 class="github-link"><a href="https://github.com/blpratt1027/Portfolio/tree/master/Multimedia"
+                                                   title="Click here to see Multimedia in Web Design source code"
+                                                   target="_blank">Click here to see the code
+                            for this project on GitHub.</a></h4>
+                        <div class="center-text">
+                            <p class="close-button center-text">Close</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <a href="Results/results.html" title="Test Results" target="_self">
+                        <figure>
+                            <img src="images/results.jpg" alt="Test Results">
+                        </figure>
+                    </a>
+                    <h4>Description...</h4>
+                    <div class="hidden description-text">
+                        <h2>Test Results</h2>
+                        <p>One of the agencies I have been working with has had me take previsor tests to demonstrate
+                            my technical skills in HTML, JavaScript, and T-SQL.  Results of the tests are displayed
+                            on this page.</p>
+                        <div class="center-text">
+                            <p class="close-button center-text">Close</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

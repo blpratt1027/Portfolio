@@ -46,6 +46,7 @@
         $("h4").click(function() {
             var text = $(this).next();
             text.slideToggle();
+            window.scrollTo(0, 0);
         });
 
         $(".description-text").click(function(){
@@ -67,25 +68,29 @@
                 var imgPerRow = Math.floor((winWidth - 79) / 268);
                 var rows;
                 switch (imgPerRow) {
-                    case 5:
+                    case 7:
                         rows = 1;
                         break;
+                    case 6:
+                    case 5:
                     case 4:
-                    case 3:
                         rows = 2;
                         break;
-                    case 2:
+                    case 3:
                         rows = 3;
+                        break;
+                    case 2:
+                        rows = 4;
                         break;
                     case 1:
                     case 0:
-                        rows = 5;
+                        rows = 7;
                         break;
                     default:
                         rows = 1;
                         break;
                 }
-                tabHeight = (rows * 316) + 150;
+                tabHeight = (rows * 303) + 150;
             } else if (tabID === 1) {
                 tabHeight = $("#resume_content").height() + 80;
             } else {
