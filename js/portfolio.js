@@ -28,7 +28,7 @@
             tabHeight();
         });
 
-        tabHeight("port");
+        tabHeight(0);
 
         $(window).keyup(function(evt) {
             if (evt.which === 113) {
@@ -59,10 +59,13 @@
 
         window.onresize = tabHeight;
 
-        function tabHeight() {
-            var tabHeight,
-                tabID = $("#tabs").tabs('option', 'active');  /* Thanks to 'Contra' on StackOverflow for this code for
-                                                                 finding the active tab! */
+        function tabHeight(tabID) {
+            var tabHeight;
+            if (isNaN(tabID)) {
+                tabID = $("#tabs").tabs('option', 'active');
+                /* Thanks to 'Contra' on StackOverflow for this code for
+                 finding the active tab! */
+            }
             if (tabID === 0) {
                 var winWidth = $(window).width();
                 var imgPerRow = Math.floor((winWidth - 79) / 268);
@@ -93,9 +96,15 @@
                 tabHeight = (rows * 303) + 150;
             } else if (tabID === 1) {
                 tabHeight = $("#resume_content").height() + 80;
-            } else {
+            } else if (tabID === 2) {
                 tabHeight = $("#contact_tab").height() + 80;
+            } else if (tabID === 3) {
+                tabHeight = $("#references_tab").height() + 80;
+            } else {
+                // Debug only code
+                alert("New tab added!  Change tabHeight function to accommodate!")
             }
+
             $("#tabs").css("height", tabHeight);
         }
     });

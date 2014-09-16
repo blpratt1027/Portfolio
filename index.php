@@ -30,6 +30,7 @@
             <li id="res" class="tab-id"><a href="#resume_tab">R&eacute;sum&eacute; </a> </li>
             <!--<li><a href="#about_tab">Interests</a> </li>-->
             <li id="cont" class="tab-id"><a href="#contact_tab">Contact Me</a> </li>
+            <li id="ref" class="tab-id"><a href="#references_tab">References</a></li>
         </ul>
         <div id="portfolio_tab">
             <h1 class="title">Bryan L. Pratt's Portfolio</h1>
@@ -422,6 +423,14 @@
                     </ul>
                 </div>
 
+                <div> <a name="res-ref"></a>
+                    <h3 id="references">References</h3>
+                    <p class="level1">
+                        Click the 'References' tab <a class="reference-contact" href="#top">
+                        above</a> for a list of professional and personal references.
+                    </p>
+                </div>
+
             </div>
             <div id="toc_tab" title="Click to see table of contents">
                 <img src="images/assets/menu-alt.png" alt="Menu icon">
@@ -437,6 +446,7 @@
                     <li><a href="#work_exp" data-id="work_experience">Work Experience</a></li>
                     <li><a href="#certs" data-id="certifications">Certifications</a></li>
                     <li><a href="#lang" data-id="languages">Languages</a></li>
+                    <li><a href="#res-ref" data-id="references">References</a></li>
                     <hr>
                     <li>
                         <a href="https://www.linkedin.com/in/bryanpratt" title="Click to see my LinkedIn Profile"
@@ -470,7 +480,71 @@
                     <li><a href="https://github.com/blpratt1027/Portfolio"><img class="contact-icon" src="images/assets/github.png">
                         <span class="bold"> GitHub: </span>
                         <span class="uline">  github.com/blpratt1027/Portfolio</span></a></li>
-                    <li><img class="contact-icon" src="images/assets/phone.png"><span class="bold"> Phone: </span> (425) 216-3748</li>
+                    <li><img class="contact-icon" src="images/assets/phone.png"><span class="bold"> Phone: </span> <a href="tel:4252163748">(425) 216-3748</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="references_tab">
+            <h5>Click on each person's name to go to his or her LinkedIn profile. </h5>
+            <h5>Additional contact information available
+                <a class="reference-contact" href="mailto:blpratt1027@gmail.com?subject=Reference contact information"
+                   target="_blank"> upon request</a>.</h5>
+            <h2>Professional References</h2>
+            <div class="ref-div ref-div-left">
+                <p>
+                    <a class="reference-contact" href="https://www.linkedin.com/profile/view?id=122017472&authType=NAME_SEARCH&authToken=dYgW&locale=en_US&trk=tyah2&trkInfo=tarId%3A1409859684233%2Ctas%3AMichael%20Kysar%2Cidx%3A1-1-1" target="_blank" title="Click to see Michael Kysar's profile on LinkedIn">
+                    Michael Kysar
+                    </a></p>
+                <ul class="ref-list">
+                    <li>President, Publishing Foundations Corp.</li>
+                    <li>Former President, Wellkit Corp.</li>
+                    <li>Former Technical Program Manager, original MSNBC website</li>
+                    <li>Former Documentation Team Lead, Microsoft</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="ref-div ref-div-left">
+                <p>
+                    <a class="reference-contact" href="https://www.linkedin.com/profile/view?id=2299888&authType=name&authToken=mWc0&trk=prof-sb-browse_map-photo" target="_blank" title="Click to see Sandra Eisert's profile on LinkedIn">
+                    Sandra Eisert
+                    </a></p>
+                <ul class="ref-list">
+                    <li>CEO, Wellkit Corp., Media Consultant</li>
+                    <li>Former White House Picture Editor</li>
+                    <li>Former Senior Editor and Director of Graphics, MSNBC</li>
+                    <li>Pulitzer Prize winning Design Director and Senior Graphics Editor, San Jose Mercury News</li>
+                    <li class="tag-line">Click <a class="reference-contact" href="http://sandraeisert.com/EisertBio.pdf" target="_blank" title="Sandra Eisert's Bio">here</a> to read Sandra's bio...</li>
+                </ul>
+            </div>
+            <hr>
+            <h2>Personal References</h2>
+            <div class="ref-div ref-div-left">
+                <p>
+                    <a class="reference-contact" href="mailto:john.greer@encouragingcommunity.com?subject=Requesting reference for Bryan L. Pratt" target="_blank" title="Click to send email to John Greer">
+                    John Greer
+                    </a></p>
+                <ul class="ref-list">
+                    <li>Senior Software Engineer, Realty in Motion</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="ref-div ref-div-left">
+                <p>
+                    <a class="reference-contact" href="https://www.linkedin.com/profile/view?id=20756615&authType=NAME_SEARCH&authToken=A7_k&locale=en_US&trk=tyah2&trkInfo=tarId%3A1409861512156%2Ctas%3Aj.%20scott%20bowen%2Cidx%3A1-1-1" target="_blank" title="Click to see Scott Bowen's profile on LinkedIn">
+                    J. Scott Bowen
+                </a></p>
+                <ul class="ref-list">
+                    <li>MD, Valley Radiologists</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="ref-div ref-div-left">
+                <p>
+                    <a class="reference-contact" href="https://www.linkedin.com/profile/view?id=10597241&authType=NAME_SEARCH&authToken=jn_r&locale=en_US&trk=tyah2&trkInfo=tarId%3A1409861680928%2Ctas%3Aphillip%20garding%2Cidx%3A1-1-1" target="_blank" title="Click to see Phil Garding's profile on LinkedIn">
+                    Phillip Garding
+                </a></p>
+                <ul class="ref-list">
+                    <li>Senior Program Manager (Skype), Microsoft</li>
                 </ul>
             </div>
         </div>

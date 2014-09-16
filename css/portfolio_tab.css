@@ -34,6 +34,8 @@ h4:active {
 
 h5 {
     font-weight: 100;
+    font-size: 17.5px;
+    font-size: 1.09375rem;
     font-style: italic;
     margin: 2px 0 6px 8px;
     font-family: Garamond, 'Times New Roman', serif;
@@ -53,6 +55,18 @@ figcaption {
     font-size:15px;
     font-size: 0.9375rem;
     color: #6a451a;
+}
+
+.ref-list li {
+    list-style: none;
+    margin-left: 16px;
+    margin-left: 1rem;
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin-left: 24px;
+    margin-left: 1.5rem;
+    text-indent: -24px;
+    text-indent: -1.5rem;
 }
 
 #tabs {
@@ -175,12 +189,29 @@ figcaption {
     text-decoration: underline;
 }
 
-.contact-div {
+.contact-div, .ref-div {
     display: inline-block;
+    vertical-align: top;
+}
+
+.ref-div-right {
+    display: inline-block;
+    vertical-align: top;
+    padding: 16px 20px;
 }
 
 .contact-div-left {
     width: 160px;
+}
+
+.ref-div-left {
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.tag-line {
+    margin-top: 4px;
+    padding-left: 12px;
 }
 
 @media only screen and (max-width: 530px) {

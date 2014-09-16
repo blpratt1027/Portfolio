@@ -24,7 +24,7 @@ function switchPicture() {
 // JavaScript / jQuery functions added for inclusion in the Portfolio
 $(document).ready(function() {
     $("#floating_main_link").fadeTo(200, 1).delay(2500).fadeTo(800, 0.2).click(function(){
-        window.open("../index.html", "_self");
+        window.open("../index.php", "_self");
     }).hover(
         function() {
             $(this).stop().fadeTo(600, 1);

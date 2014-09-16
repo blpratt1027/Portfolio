@@ -40,4 +40,7 @@ body {
     font-weight: bold;
 }
 
-
+.reference-contact {
+    color: #8F182A !important;
+    font-style: italic;
+}
