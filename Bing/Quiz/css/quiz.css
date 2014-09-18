@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f0f2f1;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+h1, input {
+    margin: 8px;
+}
+
+.wrapper {
+    width: 500px;
+    margin: 10px auto;
+    border: 1px solid rgba(0, 0, 0, 0.85);
+    box-shadow: 12px 12px 8px 3px rgba(0, 0, 0, 0.35);
+    background-color: #f8fbfa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.question {
+    font-weight: bold;
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
